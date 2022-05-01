@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Login Popup">
-      <change afterPath="$PROJECT_DIR$/src/components/RegistrationPopUp.js" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Registration Popup">
+      <change afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginPopUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,8 @@
       <workItem from="1651227729587" duration="3346000" />
       <workItem from="1651232005346" duration="1444000" />
       <workItem from="1651347074228" duration="1879000" />
-      <workItem from="1651401847321" duration="1397000" />
+      <workItem from="1651401847321" duration="1439000" />
+      <workItem from="1651419835904" duration="4669000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -98,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651348914162</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Registration Popup">
+      <created>1651407169042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651407169042</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic setup with navigator and routing" />
     <MESSAGE value="Login Popup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Popup" />
+    <MESSAGE value="Registration Popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration Popup" />
   </component>
 </project>

@@ -1,13 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Form, Modal} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 
 const LoginPopUp = props => {
+    const [accountsData, setAccountsData] = useState(null);
+    const [loginData, setLoginData] = useState({"email": "", "password": ""});
 
-    const handleSubmit = () => {
-        console.log("submitted form");
+
+    const handleSubmit = event => {
+        //event.preventDefault();
+        accountsData.forEach(account => {
+            if(account.email === loginData.email && account.password === loginData.password){
+                props.switchPopUp();
+            }
+        });
     }
+
+
+    const handleChange = event => {
+        setLoginData({...loginData, [event.target.name]: event.target.value});
+    }
+
+
+    useEffect(() => {
+        fetch('http://localhost:3001/accounts')
+            .then(responseData => {
+                return responseData.json()
+            })
+            .then(data => {
+                setAccountsData(data);
+            })
+    }, [] );
+
 
     return (
         <div>
@@ -17,6 +42,17 @@ const LoginPopUp = props => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
+
+                        <Form.Group>
+                            <Form.Label>E-Mail</Form.Label>
+                            <Form.Control onChange={handleChange} name="email"/>
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Passwort</Form.Label>
+                            <Form.Control onChange={handleChange} name="password"/>
+                        </Form.Group>
+
                         <Button variant="primary" type="submit">
                             Speichern
                         </Button>
@@ -24,6 +60,7 @@ const LoginPopUp = props => {
                                 className="mx-2">
                             Abbrechen
                         </Button>
+
                     </Form>
                 </Modal.Body>
             </Modal>

@@ -1,0 +1,18 @@
+{
+    "accounts": [
+        {
+            "id": 0,
+            "forename": "Max",
+            "surname": "Mustermann",
+            "birthdate": "01.01.1970",
+            "email": "max.mustermann@email.com",
+            "password": "SicheresPW123"
+        }
+    ],
+    "cars": [
+        {
+            "id": 0,
+            "features": "..."
+        }
+    ]
+}
