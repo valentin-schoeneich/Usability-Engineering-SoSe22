@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Basic setup with navigator and routing">
-      <change afterPath="$PROJECT_DIR$/src/components/LoginPopUp.js" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Login Popup">
+      <change afterPath="$PROJECT_DIR$/src/components/RegistrationPopUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
@@ -81,7 +81,8 @@
       <workItem from="1651227662021" duration="66000" />
       <workItem from="1651227729587" duration="3346000" />
       <workItem from="1651232005346" duration="1444000" />
-      <workItem from="1651347074228" duration="1793000" />
+      <workItem from="1651347074228" duration="1879000" />
+      <workItem from="1651401847321" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -90,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651233415485</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Login Popup">
+      <created>1651348914162</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651348914162</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic setup with navigator and routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic setup with navigator and routing" />
+    <MESSAGE value="Login Popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Popup" />
   </component>
 </project>

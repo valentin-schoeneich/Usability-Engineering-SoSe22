@@ -2,6 +2,7 @@ import React,  { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import LoginPopUp from "./LoginPopUp";
+import RegistrationPopUp from "./RegistrationPopUp";
 
 
 const Navigator = props => {
@@ -26,11 +27,13 @@ const Navigator = props => {
                     </Nav>
                     <Button variant="link" onClick={switchLoginPopUp}>Login</Button>
                     {loginPopUp
-                        ? <LoginPopUp showPopUp={loginPopUp} switchPopUp={switchLoginPopUp}
-                                 uuid={props.uuid} pid={props.pid} perf={props.perf}/>
+                        ? <LoginPopUp showPopUp={loginPopUp} switchPopUp={switchLoginPopUp}/>
                         : null}
                     <Navbar.Text>|</Navbar.Text>
                     <Button variant="link" onClick={switchRegistrationPopUp}>Registierung</Button>
+                    {registrationPopUp
+                        ? <RegistrationPopUp showPopUp={registrationPopUp} switchPopUp={switchRegistrationPopUp}/>
+                        : null}
                 </Container>
             </Navbar>
         </>
