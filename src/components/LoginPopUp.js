@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {Form, Modal} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
@@ -6,13 +6,18 @@ import Button from "react-bootstrap/Button";
 const LoginPopUp = props => {
     const [accountsData, setAccountsData] = useState(null);
     const [loginData, setLoginData] = useState({"email": "", "password": ""});
+    const [loginState, setLoginState] = useState(false);
 
 
     const handleSubmit = event => {
-        //event.preventDefault();
+        event.preventDefault();
         accountsData.forEach(account => {
+            //debugger
             if(account.email === loginData.email && account.password === loginData.password){
+                setLoginState(true);
                 props.switchPopUp();
+            } else {
+                setLoginState(false);
             }
         });
     }
@@ -50,7 +55,10 @@ const LoginPopUp = props => {
 
                         <Form.Group>
                             <Form.Label>Passwort</Form.Label>
-                            <Form.Control onChange={handleChange} name="password"/>
+                            <Form.Control onChange={handleChange} name="password" isInvalid={loginState}/>
+                            <Form.Control.Feedback type="invalid">
+                                E-Mail oder Password falsch!
+                            </Form.Control.Feedback>
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
