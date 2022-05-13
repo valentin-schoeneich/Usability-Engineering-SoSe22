@@ -25,12 +25,12 @@ const Navigator = props => {
                     <Nav className="me-auto">
                         <Nav.Link href="">Auto mieten</Nav.Link>
                     </Nav>
-                    <Button variant="link" onClick={switchLoginPopUp}>Login</Button>
+                    <Button variant="link" onClick={switchLoginPopUp} style={{ textDecoration: 'none' }}>Anmelden</Button>
                     {loginPopUp
                         ? <LoginPopUp showPopUp={loginPopUp} switchPopUp={switchLoginPopUp}/>
                         : null}
                     <Navbar.Text>|</Navbar.Text>
-                    <Button variant="link" onClick={switchRegistrationPopUp}>Registierung</Button>
+                    <Button variant="link" onClick={switchRegistrationPopUp} style={{ textDecoration: 'none' }}>Registieren</Button>
                     {registrationPopUp
                         ? <RegistrationPopUp showPopUp={registrationPopUp} switchPopUp={switchRegistrationPopUp}/>
                         : null}

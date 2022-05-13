@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 const LoginPopUp = props => {
     const [accountsData, setAccountsData] = useState(null);
     const [loginData, setLoginData] = useState({"email": "", "password": ""});
-    const [loginState, setLoginState] = useState(false);
+    const [loginErr, setLoginErr] = useState(false);
 
 
     const handleSubmit = event => {
@@ -14,10 +14,10 @@ const LoginPopUp = props => {
         accountsData.forEach(account => {
             //debugger
             if(account.email === loginData.email && account.password === loginData.password){
-                setLoginState(true);
+                setLoginErr(false);
                 props.switchPopUp();
             } else {
-                setLoginState(false);
+                setLoginErr(true);
             }
         });
     }
@@ -43,7 +43,7 @@ const LoginPopUp = props => {
         <div>
             <Modal show={props.showPopUp} onHide={props.switchPopUp} size="xl">
                 <Modal.Header closeButton>
-                    <Modal.Title>Login</Modal.Title>
+                    <Modal.Title>Anmelden</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
@@ -55,7 +55,7 @@ const LoginPopUp = props => {
 
                         <Form.Group>
                             <Form.Label>Passwort</Form.Label>
-                            <Form.Control onChange={handleChange} name="password" isInvalid={loginState}/>
+                            <Form.Control onChange={handleChange} name="password" isInvalid={loginErr}/>
                             <Form.Control.Feedback type="invalid">
                                 E-Mail oder Password falsch!
                             </Form.Control.Feedback>

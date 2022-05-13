@@ -1,12 +1,22 @@
 {
     "accounts": [
-        {
+            {
             "id": 0,
             "forename": "Max",
             "surname": "Mustermann",
-            "birthdate": "01.01.1970",
+            "gender": "male",
+            "birthdate": "1970-01-01",
             "email": "max.mustermann@email.com",
             "password": "SicheresPW123"
+        },
+        {
+            "forename": "Arno",
+            "surname": "Nühm",
+            "gender": "male",
+            "birthdate": "1985-07-15",
+            "email": "arno.nuehm@mail.com",
+            "password": "SehrSicher123",
+            "id": 1
         }
     ],
     "cars": [
