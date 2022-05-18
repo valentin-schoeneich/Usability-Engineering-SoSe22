@@ -3,7 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import LoginPopUp from "./LoginPopUp";
 import RegistrationPopUp from "./RegistrationPopUp";
-
+import carlogo from "../imgs/rent-a-car.png";
 
 const Navigator = props => {
     const [loginPopUp, setLoginPopUp] = useState(false);
@@ -21,7 +21,13 @@ const Navigator = props => {
         <>
             <Navbar bg="dark" variant="dark" >
                 <Container>
-                    <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
+                    <a href="/">
+                        <img src={carlogo} style={{
+                        resizeMode: "stretch",
+                        height: 50,
+                        width: 100
+                        }} href="/"></img>
+                    </a>
                     <Nav className="me-auto">
                         <Nav.Link href="">Auto mieten</Nav.Link>
                     </Nav>
