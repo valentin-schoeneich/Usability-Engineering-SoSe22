@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Navbar changes on successfull login">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Fix: being logged out after reload/routing">
+      <change afterPath="$PROJECT_DIR$/src/components/LoginRegistration/MyAccount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +103,7 @@
       <workItem from="1652513921754" duration="2141000" />
       <workItem from="1652819248711" duration="614000" />
       <workItem from="1653038624207" duration="7010000" />
-      <workItem from="1653065823188" duration="3043000" />
+      <workItem from="1653065823188" duration="4917000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -145,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653047080277</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix: being logged out after reload/routing">
+      <created>1653069023809</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653069023809</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +178,7 @@
     <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
     <MESSAGE value="Navbar changes on successfull login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar changes on successfull login" />
+    <MESSAGE value="Fix: being logged out after reload/routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: being logged out after reload/routing" />
   </component>
 </project>

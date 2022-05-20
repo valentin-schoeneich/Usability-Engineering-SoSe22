@@ -37,7 +37,7 @@ const Navigator = props => {
                             <NavDropdown title={JSON.parse(window.localStorage.getItem("accountData")).forename
                                         + " " + JSON.parse(window.localStorage.getItem("accountData")).surname}
                             onSelect={handleSelect}>
-                                <NavDropdown.Item eventKey="0" href="/">Profil</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="0" href="/myAccount">Mein Konto</NavDropdown.Item>
                                 <NavDropdown.Item eventKey="1">Abmelden</NavDropdown.Item>
                             </NavDropdown>
                         </>
