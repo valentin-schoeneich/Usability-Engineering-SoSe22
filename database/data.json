@@ -17,6 +17,15 @@
             "email": "arno.nuehm@mail.com",
             "password": "SehrSicher123",
             "id": 1
+        },
+        {
+            "forename": "test",
+            "surname": "tester",
+            "gender": "male",
+            "birthdate": "1985-07-15",
+            "email": "1",
+            "password": "1",
+            "id": 2
         }
     ],
     "cars": [

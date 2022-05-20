@@ -1,39 +1,38 @@
 import React,  { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
-import LoginPopUp from "./LoginPopUp";
-import RegistrationPopUp from "./RegistrationPopUp";
+import LoginButton from "./LoginRegistration/LoginButton";
+import RegistrationButton from "./LoginRegistration/RegistrationButton";
 
 
 const Navigator = props => {
-    const [loginPopUp, setLoginPopUp] = useState(false);
-    const [registrationPopUp, setRegistrationPopUp] = useState(false);
+    const [accountData, setAccountData] = useState({});
 
-    const switchLoginPopUp = () => {
-        setLoginPopUp(show => !show);
+    const handleLogin = account => {
+        setAccountData(account);
     }
-
-    const switchRegistrationPopUp = () => {
-        setRegistrationPopUp(show => !show);
-    }
-
+//<Navbar.Text>{accountData.forename + " " + accountData.surname}</Navbar.Text>
     return (
         <>
             <Navbar bg="dark" variant="dark" >
                 <Container>
+
                     <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="">Auto mieten</Nav.Link>
                     </Nav>
-                    <Button variant="link" onClick={switchLoginPopUp} style={{ textDecoration: 'none' }}>Anmelden</Button>
-                    {loginPopUp
-                        ? <LoginPopUp showPopUp={loginPopUp} switchPopUp={switchLoginPopUp}/>
-                        : null}
-                    <Navbar.Text>|</Navbar.Text>
-                    <Button variant="link" onClick={switchRegistrationPopUp} style={{ textDecoration: 'none' }}>Registieren</Button>
-                    {registrationPopUp
-                        ? <RegistrationPopUp showPopUp={registrationPopUp} switchPopUp={switchRegistrationPopUp}/>
-                        : null}
+                    {Object.keys(accountData).length === 0
+                        ? <>
+                            <LoginButton onLogin={handleLogin}/>
+                            <Navbar.Text>|</Navbar.Text>
+                            <RegistrationButton/>
+                        </>
+                        : <>
+                            <NavDropdown title={accountData.forename + " " + accountData.surname}>
+                                <NavDropdown.Item href="/">Profil</NavDropdown.Item>
+                                <NavDropdown.Item href="/">Abmelden</NavDropdown.Item>
+                            </NavDropdown>
+                        </>
+                        }
                 </Container>
             </Navbar>
         </>

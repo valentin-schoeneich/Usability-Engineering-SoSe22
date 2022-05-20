@@ -5,16 +5,15 @@ import Button from "react-bootstrap/Button";
 
 const LoginPopUp = props => {
     const [accountsData, setAccountsData] = useState(null);
-    const [loginData, setLoginData] = useState({"email": "", "password": ""});
+    const [loginData, setLoginData] = useState({});
     const [loginErr, setLoginErr] = useState(false);
-
 
     const handleSubmit = event => {
         event.preventDefault();
         accountsData.forEach(account => {
-            //debugger
             if(account.email === loginData.email && account.password === loginData.password){
                 setLoginErr(false);
+                props.onLogin(account);
                 props.switchPopUp();
             } else {
                 setLoginErr(true);
