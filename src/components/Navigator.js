@@ -5,12 +5,19 @@ import RegistrationButton from "./LoginRegistration/RegistrationButton";
 
 
 const Navigator = props => {
-    const [accountData, setAccountData] = useState({});
+    const [accountData, setAccountData] = useState(JSON.parse(window.localStorage.getItem("accountData")));
 
     const handleLogin = account => {
-        setAccountData(account);
+        window.localStorage.setItem("accountData", JSON.stringify(account));
+        setAccountData(JSON.parse(window.localStorage.getItem("accountData")));
     }
-//<Navbar.Text>{accountData.forename + " " + accountData.surname}</Navbar.Text>
+
+    const handleSelect = event => {
+        if(event === "1"){
+            handleLogin({});
+        }
+    }
+
     return (
         <>
             <Navbar bg="dark" variant="dark" >
@@ -27,9 +34,11 @@ const Navigator = props => {
                             <RegistrationButton/>
                         </>
                         : <>
-                            <NavDropdown title={accountData.forename + " " + accountData.surname}>
-                                <NavDropdown.Item href="/">Profil</NavDropdown.Item>
-                                <NavDropdown.Item href="/">Abmelden</NavDropdown.Item>
+                            <NavDropdown title={JSON.parse(window.localStorage.getItem("accountData")).forename
+                                        + " " + JSON.parse(window.localStorage.getItem("accountData")).surname}
+                            onSelect={handleSelect}>
+                                <NavDropdown.Item eventKey="0" href="/">Profil</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="1">Abmelden</NavDropdown.Item>
                             </NavDropdown>
                         </>
                         }
@@ -40,3 +49,6 @@ const Navigator = props => {
 }
 
 export default Navigator;
+
+//<Navbar.Text>{accountData.forename + " " + accountData.surname}</Navbar.Text>
+//Object.keys(accountData).length === 0

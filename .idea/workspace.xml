@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Structure of cars json">
-      <change afterPath="$PROJECT_DIR$/src/components/LoginRegistration/LoginButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationButton.js" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Navbar changes on successfull login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/LoginPopUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RegistrationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,8 @@
       <workItem from="1652474562331" duration="3240000" />
       <workItem from="1652513921754" duration="2141000" />
       <workItem from="1652819248711" duration="614000" />
-      <workItem from="1653038624207" duration="6466000" />
+      <workItem from="1653038624207" duration="7010000" />
+      <workItem from="1653065823188" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -142,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652447228663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Navbar changes on successfull login">
+      <created>1653047080277</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653047080277</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +168,7 @@
     <MESSAGE value="Registration Popup" />
     <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure of cars json" />
+    <MESSAGE value="Navbar changes on successfull login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar changes on successfull login" />
   </component>
 </project>
