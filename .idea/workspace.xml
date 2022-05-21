@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Fix: being logged out after reload/routing">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Bug: window.localStorage null on app start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653069023809</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug: window.localStorage null on app start">
+      <created>1653126597780</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653126597780</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +186,7 @@
     <MESSAGE value="Structure of cars json" />
     <MESSAGE value="Navbar changes on successfull login" />
     <MESSAGE value="Fix: being logged out after reload/routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: being logged out after reload/routing" />
+    <MESSAGE value="Bug: window.localStorage null on app start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug: window.localStorage null on app start" />
   </component>
 </project>

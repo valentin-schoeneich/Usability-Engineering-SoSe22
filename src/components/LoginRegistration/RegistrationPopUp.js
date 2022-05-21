@@ -11,7 +11,7 @@ const RegistrationPopUp = props => {
 
     const findFormErrors = () => {
         const newErrors = {};
-        const now = new Date().getTime();
+        //const now = new Date().getTime();
         //const regexEmail = new RegExp("");
 
         if(!registrationData || registrationData.forename === undefined || registrationData.forename === "") newErrors.forename = "Bitte geben Sie einen Vornamen ein";
@@ -44,7 +44,9 @@ const RegistrationPopUp = props => {
                 method: 'POST',
                 headers: {"Content-Type": "application/json" },
                 body: JSON.stringify(registrationData)
-            })
+            });
+            window.localStorage.setItem("accountData", JSON.stringify(registrationData));
+            window.location.reload(true);
             props.switchPopUp();
         }
     }

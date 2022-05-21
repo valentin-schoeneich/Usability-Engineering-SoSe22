@@ -15,6 +15,7 @@ const Navigator = props => {
     const handleSelect = event => {
         if(event === "1"){
             handleLogin({});
+            window.location.reload(true);
         }
     }
 
