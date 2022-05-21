@@ -27,7 +27,7 @@ const Navigator = props => {
                     <Nav className="me-auto">
                         <Nav.Link href="">Auto mieten</Nav.Link>
                     </Nav>
-                    {Object.keys(accountData).length === 0
+                    {accountData === null || Object.keys(accountData).length === 0
                         ? <>
                             <LoginButton onLogin={handleLogin}/>
                             <Navbar.Text>|</Navbar.Text>
