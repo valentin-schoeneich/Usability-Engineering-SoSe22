@@ -1,0 +1,15 @@
+/*@import "~react-image-gallery/styles/scss/image-gallery.scss";*/
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+#unimportantDetails{
+    display: none;
+}
+
+#bordered{
+    border: 2px solid black;
+}
+
+#arrow{
+    transform: rotate(180deg);
+    height: 20px;
+}
