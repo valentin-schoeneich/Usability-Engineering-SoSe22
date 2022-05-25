@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Bug: window.localStorage null on app start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login_registration" />
+        <entry key="$PROJECT_DIR$" value="detailPage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,21 +40,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/Documents/Usability-Engineering-SoSe22&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\valen\Documents\Usability-Engineering-SoSe22\src\components\LoginRegistration" />
