@@ -1,8 +1,8 @@
 import './DetailPage.css';
 import React from 'react';
-import car from "./imgs/car.png";
-import car2 from "./imgs/car2.png";
-import arrow from "./imgs/arrow.svg"
+import car from "../../imgs/car.png";
+import car2 from "../../imgs/car2.png";
+import arrow from "../../imgs/arrow.svg"
 import {Button, Col, Container, Row, NavLink} from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 
