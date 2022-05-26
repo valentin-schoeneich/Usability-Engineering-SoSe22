@@ -2,7 +2,7 @@ import React,  { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import LoginButton from "./LoginRegistration/LoginButton";
 import RegistrationButton from "./LoginRegistration/RegistrationButton";
-
+import carlogo from "../imgs/rent-a-car.png";
 
 const Navigator = props => {
     const [accountData, setAccountData] = useState(JSON.parse(window.localStorage.getItem("accountData")));
@@ -23,6 +23,13 @@ const Navigator = props => {
         <>
             <Navbar bg="dark" variant="dark" >
                 <Container>
+                    <a href="/">
+                        <img src={carlogo} style={{
+                        resizeMode: "stretch",
+                        height: 50,
+                        width: 100
+                        }} href="/"></img>
+                    </a>
 
                     <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
                     <Nav className="me-auto">
@@ -50,6 +57,3 @@ const Navigator = props => {
 }
 
 export default Navigator;
-
-//<Navbar.Text>{accountData.forename + " " + accountData.surname}</Navbar.Text>
-//Object.keys(accountData).length === 0
