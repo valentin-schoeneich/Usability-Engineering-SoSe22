@@ -1,6 +1,6 @@
 {
     "accounts": [
-            {
+        {
             "id": 0,
             "forename": "Max",
             "surname": "Mustermann",
@@ -26,40 +26,6 @@
             "email": "1",
             "password": "1",
             "id": 2
-        }
-    ],
-    "cars": [
-        {
-            "id": 0,
-            "pricePerDay": "250",
-            "deposit": "500",
-            "kilometerLimit": "",
-            "booked": [
-                {
-                    "from": "2022-05-13",
-                    "to":  "2022-05-18"
-                },
-                {
-                    "from": "2022-06-03",
-                    "to":  "2022-06-05"
-                }
-            ],
-            "details": {
-                "class": "Oberklasse",
-                "brand": "Mercedes",
-                "model": "S-Klasse",
-                "seats": 5,
-                "doors": 4,
-                "gearbox": "automatic",
-                "aircon": true,
-                "infotainment": true,
-                "navigation": true
-            },
-            "protectionServices": {
-                "fullyComprehensiveInsurance": true,
-                "glassTireProtection": true,
-                "underbodyProtection":true
-            }
         }
     ],
     "cars": [
