@@ -12,12 +12,6 @@
     "cars": [
         {
             "id": 0,
-            "features": "..."
-        }
-    ],
-    "cars": [
-        {
-            "id": 0,
             "pricePerDay": "250",
             "deposit": "500",
             "kilometerLimit": "",
