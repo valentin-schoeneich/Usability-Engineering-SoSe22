@@ -1,0 +1,11 @@
+.icon{
+    height: 20px;
+}
+
+.group{
+    margin-bottom: 16px;
+}
+
+.group label{
+    margin-bottom: 0;
+}
