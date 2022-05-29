@@ -3,6 +3,8 @@ import React from 'react';
 import car from "../../imgs/car.png";
 import car2 from "../../imgs/car2.png";
 import arrow from "../../imgs/arrow.svg"
+import has from "../../imgs/hasDetail.png"
+import didntHave from "../../imgs/didntHasDetail.png"
 import {Button, Col, Container, NavLink, Row} from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 
@@ -32,6 +34,34 @@ function calculateFinalPrice(){
     document.getElementById("finalPrice").textContent = pricePerDay * days + deposit;
 }
 
+function extras(){
+    let ulhas = document.getElementById("unimportantDetails");
+    ulhas.innerHTML = "";
+    let uldidnthave = document.getElementById("didntHaveUnimportantDetails");
+    uldidnthave.innerHTML = "";
+    let list = [["Navi", true],["Infotainment", false],["Klimaanlage", true]];
+    for(var i = 0; i<list.length; i++){
+        let li = document.createElement("li");
+        let img = document.createElement("img");
+
+        li.appendChild(img);
+        li.appendChild(document.createTextNode(" " + list[i][0]));
+
+        if(list[i][1]){
+            img.setAttribute("src", has);
+            ulhas.appendChild(li);
+        } else {
+            img.setAttribute("src", didntHave);
+            uldidnthave.appendChild(li);
+        }
+    }
+}
+
+function onLoad(){
+    calculateFinalPrice();
+    extras();
+}
+
 
 
 const DetailPage = props => {
@@ -48,7 +78,7 @@ const DetailPage = props => {
     ]
 
     return (
-        <Container>
+        <Container onLoad={onLoad}>
             <h1>Dein Auton</h1>
             <Row>
                 <Col>
@@ -73,34 +103,17 @@ const DetailPage = props => {
                             <li>Kilometerlimit: <span>100</span>km</li>
                         </ul>
                         <div id={"summary"}><span id={"finalPrice"}>X</span>€ (inkl. Kaution) vom <span id={"from"}>11.11.2022</span> bis <span id={"to"}>11.12.2022</span></div>
-                        <Button id={"bookButton"} onClick={calculateFinalPrice}>Jetzt Buchen (Test zur Preisberechnung)</Button>
+                        <Button id={"bookButton"}>Jetzt Buchen </Button>
                     </div>
                 </Col>
             </Row>
+            <hr/>
             <Row >
                 <Col>
+                    <h3>Ausstatung</h3>
                     <ul id={"unimportantDetails"}>
-                        <li>mit Navi</li>
-                        <li>mit Klimaanlage</li>
-                        <li>mit Infotainment</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
-                        <li>unwichtig: 500</li>
+                    </ul>
+                    <ul id={"didntHaveUnimportantDetails"}>
                     </ul>
                 </Col>
             </Row>

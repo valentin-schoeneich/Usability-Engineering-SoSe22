@@ -21,3 +21,15 @@
     margin-left: 16px;
 }
 
+#unimportantDetails li img, #didntHaveUnimportantDetails li img{
+    height: 20px;
+}
+
+#unimportantDetails, #didntHaveUnimportantDetails{
+    list-style: none;
+}
+
+.image-gallery{
+    height: 350px;
+}
+
