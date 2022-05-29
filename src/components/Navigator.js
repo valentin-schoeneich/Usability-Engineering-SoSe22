@@ -28,7 +28,7 @@ const Navigator = props => {
                         resizeMode: "stretch",
                         height: 50,
                         width: 100
-                        }} href="/"></img>
+                        }} href="/" alt="car-img"></img>
                     </a>
 
                     <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>

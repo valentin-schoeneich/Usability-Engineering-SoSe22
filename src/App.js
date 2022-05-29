@@ -1,12 +1,26 @@
 import './App.css';
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./components/homepage/Homepage";
 import Navigator from "./components/Navigator"
 import MyAccount from "./components/LoginRegistration/MyAccount"
 import CarFilterPage from "./components/CarFilter/CarFilterPage";
 
+
 function App() {
+
+
+    useEffect(() => {
+        fetch('http://localhost:3001/cars')
+            .then(responseData => {
+                return responseData.json()
+            })
+            .then(data => {
+                window.localStorage.setItem("carsData", JSON.stringify(data));
+                //console.log(JSON.parse(window.localStorage.getItem("carsData")));
+            })
+    }, [] );
+
 
     return (
         <div>
@@ -23,3 +37,4 @@ function App() {
 }
 
 export default App;
+// /:location/:startDate/:endDate
