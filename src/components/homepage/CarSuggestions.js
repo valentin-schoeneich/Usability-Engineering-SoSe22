@@ -2,13 +2,12 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import {useEffect, useState} from "react";
 import Homepage from "./Homepage";
-
 const CarSuggestions = props => {
     const handleRent = event => {
-
+        window.location.href = "http://localhost:3000/"+props.carData?props.carData.id:"";
     }
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card id="card" style={{width: '18rem'}}>
             <Card.Img variant="top" src={props.carData?props.carData.img:""}
                       onClick={handleRent}/>
             <Card.Body>

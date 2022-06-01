@@ -25,21 +25,18 @@ const Homepage = props => {
                 <SearchFields></SearchFields>
             </Container>
             <Container className="suggestions">
-                <Col>
+                <Col className="col">
                     <CarSuggestions carData = {carsData?carsData[0]:""}></CarSuggestions>
                 </Col>
-                <Col>
+                <Col className="col">
                     <CarSuggestions carData = {carsData?carsData[1]:""}></CarSuggestions>
-                </Col>
-                <Col>
+                </Col >
+                <Col className="col">
                     <CarSuggestions carData = {carsData?carsData[2]:""}></CarSuggestions>
                 </Col>
             </Container>
         </div>
     );  
 }
-
-
-
 
 export default Homepage;

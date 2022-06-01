@@ -2,9 +2,12 @@
     margin-top: 7%;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-between;
 }
 .search {
     align-self: center;
     margin-top: 7%;
+}
+.col {
+     justify-content: center;
 }
