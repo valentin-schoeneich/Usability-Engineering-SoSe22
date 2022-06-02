@@ -21,11 +21,11 @@
     margin-left: 16px;
 }
 
-#unimportantDetails li img, #didntHaveUnimportantDetails li img{
+.has_or_not li img{
     height: 20px;
 }
 
-#unimportantDetails, #didntHaveUnimportantDetails{
+.has_or_not{
     list-style: none;
 }
 

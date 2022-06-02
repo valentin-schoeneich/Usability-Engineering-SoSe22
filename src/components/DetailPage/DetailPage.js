@@ -34,13 +34,10 @@ function calculateFinalPrice(){
     document.getElementById("finalPrice").textContent = pricePerDay * days + deposit;
 }
 
-function extras(){
-    let ulhas = document.getElementById("unimportantDetails");
+function createList(ulhas, uldidnthave, list){
     ulhas.innerHTML = "";
-    let uldidnthave = document.getElementById("didntHaveUnimportantDetails");
     uldidnthave.innerHTML = "";
-    let list = [["Navi", true],["Infotainment", false],["Klimaanlage", true]];
-    for(var i = 0; i<list.length; i++){
+    for(let i = 0; i<list.length; i++){
         let li = document.createElement("li");
         let img = document.createElement("img");
 
@@ -55,6 +52,25 @@ function extras(){
             uldidnthave.appendChild(li);
         }
     }
+}
+
+function extras(){
+    let ausstatunghas = document.getElementById("unimportantDetails");
+    let ausstatungdidnthave = document.getElementById("didntHaveUnimportantDetails");
+
+    let assistencehas = document.getElementById("assistence");
+    let assistencedidnthave = document.getElementById("didntHaveassistence");
+
+    let insurencehas = document.getElementById("insurence");
+    let insurencedidnthave = document.getElementById("didntHaveinsurence");
+
+    let ausstatung = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
+    let assistence = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
+    let insurence = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
+
+    createList(ausstatunghas, ausstatungdidnthave, ausstatung);
+    createList(assistencehas, assistencedidnthave, assistence);
+    createList(insurencehas, insurencedidnthave, insurence);
 }
 
 function onLoad(){
@@ -92,7 +108,7 @@ const DetailPage = props => {
                         <li>Schatung: <span>manuel</span></li>
                         <li><p>S-Klasse Merceds</p></li>
                     </ul>
-                    <NavLink href={"#unimportantDetails"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
+                    <NavLink href={"#scrollTo"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
                 </Col>
                 <Col>
                     <div id="bordered">
@@ -110,10 +126,28 @@ const DetailPage = props => {
             <hr/>
             <Row >
                 <Col>
-                    <h3>Ausstatung</h3>
-                    <ul id={"unimportantDetails"}>
+                    <h3 id="scrollTo">Ausstatung</h3>
+                    <ul id={"unimportantDetails"} className="has_or_not">
                     </ul>
-                    <ul id={"didntHaveUnimportantDetails"}>
+                    <ul id={"didntHaveUnimportantDetails"} className="has_or_not">
+                    </ul>
+                </Col>
+            </Row>
+            <Row >
+                <Col>
+                    <h3>Assistenssysteme</h3>
+                    <ul id={"assistence"} className="has_or_not">
+                    </ul>
+                    <ul id={"didntHaveassistence"} className="has_or_not">
+                    </ul>
+                </Col>
+            </Row>
+            <Row >
+                <Col>
+                    <h3>Versicherungen</h3>
+                    <ul id={"insurence"} className="has_or_not">
+                    </ul>
+                    <ul id={"didntHaveinsurence"} className="has_or_not">
                     </ul>
                 </Col>
             </Row>
