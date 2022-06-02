@@ -5,6 +5,9 @@ import Button from "react-bootstrap/Button";
 import paypalIcon from "../../imgs/BookingPage/Paypal.png";
 import kreditkarteIcon from "../../imgs/BookingPage/Kreditkarte.png";
 import barIcon from "../../imgs/BookingPage/Bargeld.png";
+import {useState} from 'react';
+import AbortPopup from "./AbortPopup";
+import SuccessPopup from "./SuccessPopup";
 
 function refreshPaymentMethode(){
     document.getElementById("Zahlungsart").textContent = document.querySelector('input[name="zahlungsart"]:checked').value;
@@ -12,10 +15,21 @@ function refreshPaymentMethode(){
 
 const BookingPage = props => {
 
+    const [abortPopUp, setAbortPopUp] = useState(false);
+    const [successPopUp, setSuccessPopUp] = useState(false);
+
+    const switchAbortPopUp = () => {
+        setAbortPopUp(show => !show);
+    }
+
+    const switchSuccessPopUp = () => {
+        setSuccessPopUp(show => !show);
+    }
+
     return (
         <Container>
             <h1>Letzter Schritt zum Auto</h1>
-            <Form>
+            <Form onSubmit={switchSuccessPopUp}>
                 <Form.Group className="group">
                     <Form.Label htmlFor="forename">Vorname</Form.Label>
                     <Form.Control id="forename" name="forename" required/>
@@ -61,9 +75,15 @@ const BookingPage = props => {
                 <Button variant="primary" type="submit">
                     Zahlungspflichtig Buchen
                 </Button>
-                <Button variant="danger" type="button">
+                {successPopUp
+                    ? <SuccessPopup showPopUp={successPopUp} switchPopUp={switchSuccessPopUp}/>
+                    : null}
+                <Button variant="danger" type="button" onClick={switchAbortPopUp}>
                     Abbrechen
                 </Button>
+                {abortPopUp
+                    ? <AbortPopup showPopUp={abortPopUp} switchPopUp={switchAbortPopUp}/>
+                    : null}
             </Form>
         </Container>
     );
