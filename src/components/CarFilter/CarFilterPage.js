@@ -1,18 +1,27 @@
 import React,  { useState } from 'react';
 import Button from "react-bootstrap/Button";
 import { useParams } from "react-router-dom"
-import Filter from "./Filter";
+import ClassFilter from "./ClassFilter";
 import Col from "react-bootstrap/cjs/Col";
 import CarTile from "./CarTile";
 import Container from "react-bootstrap/cjs/Container";
 import {Row} from "react-bootstrap";
+import Filter from "./Filter";
 
 
 const CarFilterPage = props => {
-    const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
-    const [filteredCars, setFilteredCars] = useState(carsData);
     const { location, startDate, endDate } = useParams();
+    const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+    const [filters, setFilters] = useState({"class": "", "location": location});
+    const [rerender, setRerender] = useState(false);
 
+    const switchRerender = () => {
+        setRerender(rerender => !rerender);
+    }
+
+    const setFiltersState = (filterKey, filterValue) => {
+        setFilters({...filters, [filterKey]: filterValue});
+    }
 
     return (
         <>
@@ -20,12 +29,20 @@ const CarFilterPage = props => {
             <Container>
                 <Row>
                     <Col>
-                        <Filter carsData={carsData} filteredCars={filteredCars} setFilteredCars={setFilteredCars}
-                            location={location} startDate={startDate} endDate={endDate}/>
+                        <ClassFilter filters={filters} setFiltersState={setFiltersState}
+                            location={location} startDate={startDate} endDate={endDate} switchRerender={switchRerender}/>
+                        <Filter filterName="Fahrzeugklasse" dataKey="class" filters={filters} setFiltersState={setFiltersState}
+                                names={["Sportwagen", "Oberklasse", "Mittelklasse", "Kompaktklasse"]}
+                                selectedNames={{"Sportwagen": false, "Oberklasse": false, "Mittelklasse": false, "Kompaktklasse": false}}/>
                     </Col>
                     <Col>
-                        {filteredCars.map((car, key) => {
-                            return <CarTile car={car} key={key}/>;
+                        {carsData.filter(car => {
+                            if(filters.class === "") return true;
+                            let render = true;
+                            if(car.details.class !== filters.class) render = false;
+                            return render;
+                        }).map((car, index) => {
+                            return <CarTile car={car} key={index}/>;
                         })}
                     </Col>
                 </Row>

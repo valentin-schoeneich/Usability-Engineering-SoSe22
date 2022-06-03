@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="CarFilterPage">
-      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="General changes across the app for the car filter page">
+      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/ClassFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +110,9 @@
       <workItem from="1653724091511" duration="6364000" />
       <workItem from="1653811829791" duration="11536000" />
       <workItem from="1653836205150" duration="1407000" />
+      <workItem from="1653855638522" duration="2925000" />
+      <workItem from="1654072494582" duration="6502000" />
+      <workItem from="1654254939194" duration="11776000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -171,7 +170,35 @@
       <option name="project" value="LOCAL" />
       <updated>1653126597780</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CarFilterPage expanded with filter and car tiles section">
+      <created>1653855779392</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653855779392</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Car tiles component">
+      <created>1653855794222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653855794222</updated>
+    </task>
+    <task id="LOCAL-00011" summary="filter component">
+      <created>1653855805270</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653855805270</updated>
+    </task>
+    <task id="LOCAL-00012" summary="General changes across the app for the car filter page">
+      <created>1653855871320</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653855871320</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +224,10 @@
     <MESSAGE value="Navbar changes on successfull login" />
     <MESSAGE value="Fix: being logged out after reload/routing" />
     <MESSAGE value="Bug: window.localStorage null on app start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug: window.localStorage null on app start" />
+    <MESSAGE value="CarFilterPage expanded with filter and car tiles section" />
+    <MESSAGE value="Car tiles component" />
+    <MESSAGE value="filter component" />
+    <MESSAGE value="General changes across the app for the car filter page" />
+    <option name="LAST_COMMIT_MESSAGE" value="General changes across the app for the car filter page" />
   </component>
 </project>

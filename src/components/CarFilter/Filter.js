@@ -4,14 +4,24 @@ import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 
 
-const Filter = props => {
-    const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
-    const [openCarclass, setOpenCarclass] = useState(false);
+const ClassFilter = props => {
+    const [openFilterSection, setOpenFilterSection] = useState(false);
+    const [selected, setSelected] = useState(props.selectedNames);
+    let cards = [];
 
+    const switchSelected = (carclass) => {
+        setSelected( {...selected, [carclass]: !selected[carclass]});
+    }
 
-    const handleClickCarclass = event => {
-        let carclass = event.target.innerText;
-        debugger
+    const handleFilterClick = event => {
+        let carclass = event.target.getAttribute("name");
+        let flippedSelected = !selected[carclass];
+        switchSelected(carclass);
+        if(flippedSelected){
+            props.setFiltersState(props.dataKey, carclass);
+        } else {
+            props.setFiltersState(props.dataKey, "");
+        }
     }
 
 
@@ -19,57 +29,37 @@ const Filter = props => {
         <>
             <Card style={{ width: '30rem' }}>
                 <Card.Header
-                    onClick={() => setOpenCarclass(!openCarclass)}
+                    onClick={() => setOpenFilterSection(!openFilterSection)}
                     aria-controls="example-collapse-text"
-                    aria-expanded={openCarclass}
+                    aria-expanded={openFilterSection}
                 >
-                    Fahrzeugklasse {openCarclass ? " ᐱ" : " ᐯ"}
+                    {props.filterName} {openFilterSection ? " ᐱ" : " ᐯ"}
                 </Card.Header>
 
-                    <Collapse in={openCarclass}>
-                        <div id="example-collapse-text">
-                            <Container>
-                                <Row>
-                                    <Col>
-                                        <Card style={{ width: '10rem' }} onClick={handleClickCarclass} name="Sportwagen">
-                                            <Card.Header>Sportwagen Bild</Card.Header>
-                                            <Card.Body>
-                                                Sportwagen
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col>
-                                        <Card style={{ width: '10rem' }} onClick={handleClickCarclass} name="Oberklasse">
-                                            <Card.Header>Oberklasse Bild</Card.Header>
-                                            <Card.Body>
-                                                Oberklasse
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col>
-                                        <Card style={{ width: '10rem' }} onClick={handleClickCarclass} name="Mittelklasse">
-                                            <Card.Header>Mittelklasse Bild</Card.Header>
-                                            <Card.Body>
-                                                Mittelklasse
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col>
-                                        <Card style={{ width: '10rem' }} onClick={handleClickCarclass} name="Kompaktklasse">
-                                            <Card.Header>Mittelklasse Bild</Card.Header>
-                                            <Card.Body>
-                                                Mittelklasse
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
-                    </Collapse>
-
+                <Collapse in={openFilterSection}>
+                    <div id="example-collapse-text">
+                        <Container>
+                            <Row>
+                                {props.names.forEach((name, index) =>{
+                                    cards.push(
+                                        <Col key={index}>
+                                            <Card border={selected[name] ? "dark" : ""} style={{ width: '10rem' }} onClick={handleFilterClick} >
+                                                <Card.Header name={name}>{name}</Card.Header>
+                                                <Card.Body name={name}>
+                                                    {name}
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                    );
+                                })}
+                                {cards}
+                            </Row>
+                        </Container>
+                    </div>
+                </Collapse>
             </Card>
-         </>
+        </>
     );
 }
 
-export default Filter;
+export default ClassFilter;

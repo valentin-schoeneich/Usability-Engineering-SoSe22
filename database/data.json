@@ -49,6 +49,72 @@
                 "class": "Oberklasse",
                 "brand": "Mercedes",
                 "model": "S-Klasse",
+                "seats": 4,
+                "doors": 4,
+                "gearbox": "automatic",
+                "aircon": true,
+                "infotainment": true,
+                "navigation": true
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": true,
+                "glassTireProtection": true,
+                "underbodyProtection":true
+            }
+        },
+        {
+            "id": 1,
+            "pricePerDay": "600",
+            "deposit": "700",
+            "kilometerLimit": "",
+            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "booked": [
+                {
+                    "from": "2022-05-13",
+                    "to":  "2022-05-18"
+                },
+                {
+                    "from": "2022-06-03",
+                    "to":  "2022-06-05"
+                }
+            ],
+            "details": {
+                "class": "Sportwagen",
+                "brand": "Ferrari",
+                "model": "F40",
+                "seats": 2,
+                "doors": 2,
+                "gearbox": "manual",
+                "aircon": true,
+                "infotainment": false,
+                "navigation": false
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": true,
+                "glassTireProtection": true,
+                "underbodyProtection":true
+            }
+        },
+        {
+            "id": 2,
+            "pricePerDay": "180",
+            "deposit": "300",
+            "kilometerLimit": "",
+            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "booked": [
+                {
+                    "from": "2022-05-13",
+                    "to":  "2022-05-18"
+                },
+                {
+                    "from": "2022-06-03",
+                    "to":  "2022-06-05"
+                }
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "Mercedes",
+                "model": "C-Klasse",
                 "seats": 5,
                 "doors": 4,
                 "gearbox": "automatic",
