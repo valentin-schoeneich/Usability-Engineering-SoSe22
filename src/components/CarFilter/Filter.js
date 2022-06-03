@@ -20,7 +20,7 @@ const ClassFilter = props => {
         if(flippedSelected){
             props.setFiltersState(props.dataKey, carclass);
         } else {
-            props.setFiltersState(props.dataKey, "");
+            props.setFiltersState(props.dataKey, carclass, true);
         }
     }
 

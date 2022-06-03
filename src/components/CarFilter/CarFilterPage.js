@@ -12,15 +12,24 @@ import Filter from "./Filter";
 const CarFilterPage = props => {
     const { location, startDate, endDate } = useParams();
     const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
-    const [filters, setFilters] = useState({"class": "", "location": location});
-    const [rerender, setRerender] = useState(false);
+    const [filters, setFilters] = useState({"class": []});
 
-    const switchRerender = () => {
-        setRerender(rerender => !rerender);
-    }
 
-    const setFiltersState = (filterKey, filterValue) => {
-        setFilters({...filters, [filterKey]: filterValue});
+    const setFiltersState = (filterKey, filterValue, deleteValue=false) => {
+        /* TODO: checke ob filters[filterKey] ein array, ansonsten setFilters({...filters, [filterKey]: filterValue})
+         wenn deleteValue === true, dann setFilters({...filters, [filterKey]: ""}) */
+        if(!deleteValue){
+            filters[filterKey].push(filterValue);
+            setFilters({...filters, [filterKey]: filters[filterKey]});
+        } else {
+            filters[filterKey].forEach((filter, index) => {
+                if(filter === filterValue){
+                    filters[filterKey].splice(index, 1)
+                }
+            });
+            setFilters({...filters, [filterKey]: filters[filterKey]});
+        }
+
     }
 
     return (
@@ -29,8 +38,9 @@ const CarFilterPage = props => {
             <Container>
                 <Row>
                     <Col>
-                        <ClassFilter filters={filters} setFiltersState={setFiltersState}
-                            location={location} startDate={startDate} endDate={endDate} switchRerender={switchRerender}/>
+                        {/*<ClassFilter filters={filters} setFiltersState={setFiltersState}/>*/}
+                        {/* TODO komplexe filter zB mit einem Slider müssen leider als extra Komponente gebaut werden, ist aber
+                        mehr oder weniger copy paste vom Basis Filter + ein paar Änderungen */}
                         <Filter filterName="Fahrzeugklasse" dataKey="class" filters={filters} setFiltersState={setFiltersState}
                                 names={["Sportwagen", "Oberklasse", "Mittelklasse", "Kompaktklasse"]}
                                 selectedNames={{"Sportwagen": false, "Oberklasse": false, "Mittelklasse": false, "Kompaktklasse": false}}/>
@@ -38,8 +48,10 @@ const CarFilterPage = props => {
                     <Col>
                         {carsData.filter(car => {
                             if(filters.class === "") return true;
-                            let render = true;
-                            if(car.details.class !== filters.class) render = false;
+                            let render = false;
+                            filters.class.forEach(carclass => {
+                                if(car.details.class === carclass) render = true;
+                            });
                             return render;
                         }).map((car, index) => {
                             return <CarTile car={car} key={index}/>;
