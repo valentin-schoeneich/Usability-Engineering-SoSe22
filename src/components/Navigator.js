@@ -33,7 +33,7 @@ const Navigator = props => {
 
                     <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="">Auto mieten</Nav.Link>
+                        <Nav.Link href="/carFilter">Auto mieten</Nav.Link>
                     </Nav>
                     {accountData === null || Object.keys(accountData).length === 0
                         ? <>

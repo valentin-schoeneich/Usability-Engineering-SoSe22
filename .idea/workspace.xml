@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Create filter components dynamically + made basic filtering work">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Samll filter fix + TODOS for further filter concepts">
+      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/ClassFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterSectionWithCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +114,12 @@
       <workItem from="1653836205150" duration="1407000" />
       <workItem from="1653855638522" duration="2925000" />
       <workItem from="1654072494582" duration="6502000" />
-      <workItem from="1654254939194" duration="14531000" />
+      <workItem from="1654254939194" duration="17763000" />
+      <workItem from="1654291449170" duration="188000" />
+      <workItem from="1654330028951" duration="7803000" />
+      <workItem from="1654347926787" duration="620000" />
+      <workItem from="1654350187385" duration="794000" />
+      <workItem from="1654419175902" duration="7082000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -202,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654267985254</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Samll filter fix + TODOS for further filter concepts">
+      <created>1654270744463</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654270744463</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +250,7 @@
     <MESSAGE value="filter component" />
     <MESSAGE value="General changes across the app for the car filter page" />
     <MESSAGE value="Create filter components dynamically + made basic filtering work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create filter components dynamically + made basic filtering work" />
+    <MESSAGE value="Samll filter fix + TODOS for further filter concepts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Samll filter fix + TODOS for further filter concepts" />
   </component>
 </project>

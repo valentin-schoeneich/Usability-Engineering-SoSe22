@@ -49,17 +49,17 @@
                 "class": "Oberklasse",
                 "brand": "Mercedes",
                 "model": "S-Klasse",
-                "seats": 4,
-                "doors": 4,
-                "gearbox": "automatic",
-                "aircon": true,
-                "infotainment": true,
-                "navigation": true
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
             },
             "protectionServices": {
-                "fullyComprehensiveInsurance": true,
-                "glassTireProtection": true,
-                "underbodyProtection":true
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection":"true"
             }
         },
         {
@@ -82,17 +82,17 @@
                 "class": "Sportwagen",
                 "brand": "Ferrari",
                 "model": "F40",
-                "seats": 2,
-                "doors": 2,
-                "gearbox": "manual",
-                "aircon": true,
-                "infotainment": false,
-                "navigation": false
+                "seats": "2",
+                "doors": "2",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "false",
+                "navigation": "false"
             },
             "protectionServices": {
-                "fullyComprehensiveInsurance": true,
-                "glassTireProtection": true,
-                "underbodyProtection":true
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection":"true"
             }
         },
         {
@@ -104,28 +104,57 @@
             "booked": [
                 {
                     "from": "2022-05-13",
-                    "to":  "2022-05-18"
+                    "to": "2022-05-18"
                 },
                 {
                     "from": "2022-06-03",
-                    "to":  "2022-06-05"
+                    "to": "2022-06-05"
                 }
             ],
             "details": {
                 "class": "Mittelklasse",
                 "brand": "Mercedes",
                 "model": "C-Klasse",
-                "seats": 5,
-                "doors": 4,
-                "gearbox": "automatic",
-                "aircon": true,
-                "infotainment": true,
-                "navigation": true
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
             },
             "protectionServices": {
-                "fullyComprehensiveInsurance": true,
-                "glassTireProtection": true,
-                "underbodyProtection":true
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 2,
+            "pricePerDay": "80",
+            "deposit": "100",
+            "kilometerLimit": "",
+            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "booked": [
+                {
+                    "from": "2022-06-15",
+                    "to":  "2022-06-19"
+                }
+            ],
+            "details": {
+                "class": "Kompaktklasse",
+                "brand": "Mercedes",
+                "model": "A-Klasse",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection":"true"
             }
         }
     ]

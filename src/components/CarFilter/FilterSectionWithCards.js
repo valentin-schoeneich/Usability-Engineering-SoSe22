@@ -4,23 +4,23 @@ import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 
 
-const ClassFilter = props => {
+const FilterSectionWithCards = props => {
     const [openFilterSection, setOpenFilterSection] = useState(false);
     const [selected, setSelected] = useState(props.selectedNames);
     let cards = [];
 
-    const switchSelected = (carclass) => {
-        setSelected( {...selected, [carclass]: !selected[carclass]});
+    const switchSelected = (selectedName) => {
+        setSelected( {...selected, [selectedName]: !selected[selectedName]});
     }
 
     const handleFilterClick = event => {
-        let carclass = event.target.getAttribute("name");
-        let flippedSelected = !selected[carclass];
-        switchSelected(carclass);
+        let selectedName = event.target.getAttribute("name");
+        let flippedSelected = !selected[selectedName];
+        switchSelected(selectedName);
         if(flippedSelected){
-            props.setFiltersState(props.dataKey, carclass);
+            props.setFiltersState(props.dataKey, selectedName);
         } else {
-            props.setFiltersState(props.dataKey, carclass, true);
+            props.setFiltersState(props.dataKey, selectedName, true);
         }
     }
 
@@ -32,6 +32,7 @@ const ClassFilter = props => {
                     onClick={() => setOpenFilterSection(!openFilterSection)}
                     aria-controls="example-collapse-text"
                     aria-expanded={openFilterSection}
+                    style={{textAlign: 'right'}}
                 >
                     {props.filterName} {openFilterSection ? " ᐱ" : " ᐯ"}
                 </Card.Header>
@@ -62,4 +63,4 @@ const ClassFilter = props => {
     );
 }
 
-export default ClassFilter;
+export default FilterSectionWithCards;
