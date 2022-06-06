@@ -2,11 +2,11 @@ import './App.css';
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./components/homepage/Homepage";
-import Navigator from "./components/Navigator"
+import Navigator from "./components/Navigator";
 import MyAccount from "./components/LoginRegistration/MyAccount"
 import CarFilterPage from "./components/CarFilter/CarFilterPage";
-
-
+import Footer from "./components/Footer";
+import React from 'react';
 function App() {
 
 
@@ -32,6 +32,11 @@ function App() {
                     <Route path="/carFilter" element={<CarFilterPage/>} />
                 </Routes>
             </BrowserRouter>
+            <div style={{position: "absolute",
+                bottom: "0",
+                width: "100%"}}>
+                <Footer/>
+            </div>
         </div>
     );
 }
