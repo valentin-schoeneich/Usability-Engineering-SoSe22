@@ -4,7 +4,8 @@ import CarSuggestions from "./CarSuggestions";
 import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 import './Homepage.css';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+
 const Homepage = props => {
     const [carsData, setCarsData] = useState(null);
     const handleRent = event => {
@@ -25,13 +26,13 @@ const Homepage = props => {
                 <SearchFields></SearchFields>
             </Container>
             <Container className="suggestions">
-                <Col className="col">
+                <Col style={{marginRight:"3%"}}>
                     <CarSuggestions carData = {carsData?carsData[0]:""}></CarSuggestions>
                 </Col>
-                <Col className="col">
+                <Col style={{marginLeft:"3%",marginRight:"3%"}}>
                     <CarSuggestions carData = {carsData?carsData[1]:""}></CarSuggestions>
                 </Col >
-                <Col className="col">
+                <Col style={{marginLeft:"3%"}}>
                     <CarSuggestions carData = {carsData?carsData[2]:""}></CarSuggestions>
                 </Col>
             </Container>
