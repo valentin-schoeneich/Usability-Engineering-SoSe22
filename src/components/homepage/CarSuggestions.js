@@ -1,9 +1,8 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import {useEffect, useState} from "react";
-import Homepage from "./Homepage";
-import React, { Component }  from 'react';
+//import {useEffect, useState} from "react";
+//import Homepage from "./Homepage";
 const CarSuggestions = props => {
     const handleRent = event => {
         window.location.href = "http://localhost:3000/"+props.carData?props.carData.id:"";

@@ -7,14 +7,15 @@ import Container from "react-bootstrap/cjs/Container";
 
 
 const SearchFields = props => {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-    var todayDate = yyyy + '-' + mm + '-' + dd;
-    console.log(todayDate)
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yyyy = today.getFullYear();
+    let todayDate = yyyy + '-' + mm + '-' + dd;
     const [searchData, setSearchData] = useState({"location": "", "startDate": "", "endDate":""});
     const [errors, setErrors] = useState({});
+
+
     const findFormErrors = () => {
         const newErrors = {};
         if(!searchData || searchData.location === undefined || searchData.location === "") newErrors.location = "Bitte wählen Sie einen Ort aus";
@@ -22,6 +23,8 @@ const SearchFields = props => {
         if(!searchData || searchData.endDate === undefined || searchData.endDate === "") newErrors.endDate = "Bitte wählen Sie ein Enddatum aus";
         return newErrors;
     }
+
+
     const handleChange = event => {
         setSearchData({...searchData, [event.target.name]: event.target.value});
     }
@@ -98,9 +101,6 @@ const SearchFields = props => {
                 </Button>
             </Form>
         </Container>
-
-
-
     );
 }
 export default SearchFields;

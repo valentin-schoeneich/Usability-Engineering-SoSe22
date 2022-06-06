@@ -6,7 +6,6 @@ import Navigator from "./components/Navigator";
 import MyAccount from "./components/LoginRegistration/MyAccount"
 import CarFilterPage from "./components/CarFilter/CarFilterPage";
 import Footer from "./components/Footer";
-import React from 'react';
 function App() {
 
 
