@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Redesign of filter componenets for more flexibility">
-      <change afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterStyle.css" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Placed all filters + bug fixes + styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/LoginPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/LoginPopUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationPopUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,7 @@
       <workItem from="1654350187385" duration="794000" />
       <workItem from="1654419175902" duration="7082000" />
       <workItem from="1654437779896" duration="2247000" />
-      <workItem from="1654506091449" duration="4566000" />
+      <workItem from="1654506091449" duration="6076000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654438074766</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Placed all filters + bug fixes + styling">
+      <created>1654519842698</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654519842698</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +263,7 @@
     <MESSAGE value="Create filter components dynamically + made basic filtering work" />
     <MESSAGE value="Samll filter fix + TODOS for further filter concepts" />
     <MESSAGE value="Redesign of filter componenets for more flexibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redesign of filter componenets for more flexibility" />
+    <MESSAGE value="Placed all filters + bug fixes + styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Placed all filters + bug fixes + styling" />
   </component>
 </project>

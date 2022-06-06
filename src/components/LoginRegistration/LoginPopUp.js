@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import {Form, Modal} from "react-bootstrap";
+import {Form, Modal, Row, Col} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 
@@ -47,17 +47,21 @@ const LoginPopUp = props => {
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
 
-                        <Form.Group>
-                            <Form.Label>E-Mail</Form.Label>
+                        <Form.Group as={Row} className="mb-3">
+                            <Form.Label column sm={3} md={5} lg={3}>E-Mail</Form.Label>
+                            <Col sm={9} md={7} lg={9}>
                             <Form.Control onChange={handleChange} name="email"/>
+                            </Col>
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Passwort</Form.Label>
+                        <Form.Group as={Row} className="mb-3">
+                            <Form.Label column sm={3} md={5} lg={3}>Passwort</Form.Label>
+                            <Col sm={9} md={7} lg={9}>
                             <Form.Control onChange={handleChange} name="password" isInvalid={loginErr}/>
                             <Form.Control.Feedback type="invalid">
                                 E-Mail oder Password falsch!
                             </Form.Control.Feedback>
+                            </Col>
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
