@@ -29,17 +29,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Date placeholder">
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imgs/carBackground.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/imgs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -87,6 +84,9 @@
     <property name="ts.external.directory.path" value="C:\Users\vince\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vince\workspace\Usability-Engineering-SoSe22\src\imgs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vince\workspace\Usability-Engineering-SoSe22\src\components\homepage" />
     </key>
@@ -147,7 +147,7 @@
       <workItem from="1653848373646" duration="3985000" />
       <workItem from="1654046833035" duration="1860000" />
       <workItem from="1654048738126" duration="3190000" />
-      <workItem from="1654443196823" duration="7326000" />
+      <workItem from="1654443196823" duration="11157000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654051992964</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="footer">
+      <created>1654518150258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654518150258</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,17 +234,19 @@
     <MESSAGE value="Date placeholder" />
     <MESSAGE value="Json Recommendations" />
     <MESSAGE value="today min date" />
-    <option name="LAST_COMMIT_MESSAGE" value="today min date" />
+    <MESSAGE value="footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="967" y="490" key="#ESLint" timestamp="1653122815396">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="967" y="490" key="#ESLint/0.0.2194.1194/-1920.0.1280.680@0.0.2194.1194" timestamp="1653122815396" />
-    <state x="234" y="0" key="CommitChangelistDialog2" timestamp="1654051991290">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="401" y="0" key="CommitChangelistDialog2" timestamp="1654518147730">
+      <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="234" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1654051991290" />
+    <state x="401" y="0" key="CommitChangelistDialog2/0.0.2194.1194/-1920.0.1280.680@0.0.2194.1194" timestamp="1654518147730" />
     <state x="484" y="241" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1653391725365">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -266,10 +275,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="490" y="254" key="VCS.ChangelistChooser/0.0.1280.680@0.0.1280.680" timestamp="1653391681196" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1654052000114">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="399" y="130" key="Vcs.Push.Dialog.v2" timestamp="1654518220588">
+      <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1654052000114" />
+    <state x="399" y="130" key="Vcs.Push.Dialog.v2/0.0.2194.1194/-1920.0.1280.680@0.0.2194.1194" timestamp="1654518220588" />
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1653840365261">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
