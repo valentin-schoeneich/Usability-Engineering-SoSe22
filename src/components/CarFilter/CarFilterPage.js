@@ -1,11 +1,9 @@
 import React,  { useState } from 'react';
-import Button from "react-bootstrap/Button";
 import { useParams } from "react-router-dom"
 import Col from "react-bootstrap/cjs/Col";
 import CarTile from "./CarTile";
 import Container from "react-bootstrap/cjs/Container";
 import {Row} from "react-bootstrap";
-import FilterSectionWithCards from "./FilterSectionWithCards";
 import FilterSection from "./FilterSection";
 import FilterCards from "./FilterCards";
 
@@ -16,7 +14,8 @@ const CarFilterPage = props => {
     const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
     const [filters, setFilters] = useState({"class": [], "seats": [], "gearbox": [],
                                                 "doors": [], "aircon": [], "infotainment": [],
-                                                  "navigation": []});
+                                                "navigation": [], "fullyComprehensiveInsurance": [],
+                                                "glassTireProtection": [], "underbodyProtection": []});
 
 
     const setFiltersState = (filterKey, filterValue, deleteValue=false) => {
@@ -32,7 +31,6 @@ const CarFilterPage = props => {
             });
             setFilters({...filters, [filterKey]: filters[filterKey]});
         }
-
     }
 
     const checkFilterArray = (carValue, filterValues) => {
@@ -52,18 +50,6 @@ const CarFilterPage = props => {
             <Container>
                 <Row>
                     <Col>
-                        {/*<FilterSectionWithCards filterName="Fahrzeugklasse" dataKey="class" filters={filters} setFiltersState={setFiltersState}
-                                names={["Sportwagen", "Oberklasse", "Mittelklasse", "Kompaktklasse"]}
-                                selectedNames={{"Sportwagen": false, "Oberklasse": false, "Mittelklasse": false, "Kompaktklasse": false}}/>
-                        <FilterSectionWithCards filterName="Anzahl Sitze" dataKey="seats" filters={filters} setFiltersState={setFiltersState}
-                                names={["2", "4", "5"]}
-                                selectedNames={{"2": false, "4": false, "5": false}}/>
-                        <FilterSectionWithCards filterName="Anzahl Türen" dataKey="doors" filters={filters} setFiltersState={setFiltersState}
-                                names={["2", "4"]}
-                                selectedNames={{"2": false, "4": false}}/>
-                        <FilterSectionWithCards filterName="Getriebe" dataKey="gearbox" filters={filters} setFiltersState={setFiltersState}
-                                names={["Automatik", "Manuell"]}
-                                selectedNames={{"Automatik": false, "Manuell": false}}/>*/}
                         <FilterSection sectionName="Fahrzeugklasse" groupCards={false} cards={[
                             <FilterCards dataKey="class"
                                          groupCards={false}
@@ -136,6 +122,34 @@ const CarFilterPage = props => {
                                          selected={{"true": false}}
                             />
                         ]}/>
+                        <FilterSection sectionName="Schutzleistungen" groupCards={true} cards={[
+                            <FilterCards dataKey="fullyComprehensiveInsurance"
+                                         groupCards={true}
+                                         filters={filters}
+                                         key="0"
+                                         selectedNames={["true"]}
+                                         names={["Vollkaskoversicherung"]}
+                                         setFiltersState={setFiltersState}
+                                         selected={{"true": false}} />,
+                            <FilterCards dataKey="glassTireProtection"
+                                         groupCards={true}
+                                         filters={filters}
+                                         key="1"
+                                         selectedNames={["true"]}
+                                         names={["Glas- und Reifenschutz"]}
+                                         setFiltersState={setFiltersState}
+                                         selected={{"true": false}}
+                            />,
+                            <FilterCards dataKey="underbodyProtection"
+                                         groupCards={true}
+                                         filters={filters}
+                                         key="2"
+                                         selectedNames={["true"]}
+                                         names={["Unterbodenschutz"]}
+                                         setFiltersState={setFiltersState}
+                                         selected={{"true": false}}
+                            />
+                        ]}/>
                     </Col>
                     <Col>
                         {carsData.filter(car => {
@@ -145,7 +159,10 @@ const CarFilterPage = props => {
                                 && checkFilterArray(car.details.doors, filters.doors)
                                 && checkFilterArray(car.details.aircon, filters.aircon)
                                 && checkFilterArray(car.details.infotainment, filters.infotainment)
-                                && checkFilterArray(car.details.navigation, filters.navigation);
+                                && checkFilterArray(car.details.navigation, filters.navigation)
+                                && checkFilterArray(car.protectionServices.fullyComprehensiveInsurance, filters.fullyComprehensiveInsurance)
+                                && checkFilterArray(car.protectionServices.glassTireProtection, filters.glassTireProtection)
+                                && checkFilterArray(car.protectionServices.underbodyProtection, filters.underbodyProtection);
                         }).map((car, index) => {
                             return <CarTile car={car} key={index}/>;
                         })}

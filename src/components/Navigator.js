@@ -30,11 +30,7 @@ const Navigator = props => {
                         width: 100
                         }} href="/" alt="car-img"></img>
                     </a>
-
-                    <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="/carFilter">Auto mieten</Nav.Link>
-                    </Nav>
+                    <Nav className="me-auto"/>
                     {accountData === null || Object.keys(accountData).length === 0
                         ? <>
                             <LoginButton onLogin={handleLogin}/>

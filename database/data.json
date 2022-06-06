@@ -153,8 +153,8 @@
             },
             "protectionServices": {
                 "fullyComprehensiveInsurance": "true",
-                "glassTireProtection": "true",
-                "underbodyProtection":"true"
+                "glassTireProtection": "false",
+                "underbodyProtection":"false"
             }
         }
     ]
