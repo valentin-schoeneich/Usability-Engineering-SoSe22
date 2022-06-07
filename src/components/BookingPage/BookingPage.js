@@ -1,6 +1,6 @@
 import "./Bookingpage.css"
 import React from 'react';
-import {Container, Form} from "react-bootstrap";
+import {Col, Container, Form, Row} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import paypalIcon from "../../imgs/BookingPage/Paypal.png";
 import kreditkarteIcon from "../../imgs/BookingPage/Kreditkarte.png";
@@ -30,46 +30,55 @@ const BookingPage = props => {
         <Container>
             <h1>Letzter Schritt zum Auto</h1>
             <Form onSubmit={switchSuccessPopUp}>
-                <Form.Group className="group">
-                    <Form.Label htmlFor="forename">Vorname</Form.Label>
-                    <Form.Control id="forename" name="forename" required/>
+                <Form.Group className="mb-3" as={Row} >
+                    <Form.Label column sm={3} md={5} lg={3} htmlFor="forename">Vorname</Form.Label>
+                    <Col>
+                        <Form.Control column sm={9} md={7} lg={9} id="forename" name="forename" required/>
+                    </Col>
                 </Form.Group>
-                <Form.Group className="group">
-                    <Form.Label htmlFor="surname">Nachname</Form.Label>
-                    <Form.Control id="surname" name="surname" required/>
+                <Form.Group className="mb-3" as={Row}>
+                    <Form.Label column sm={3} md={5} lg={3} htmlFor="surname">Nachname</Form.Label>
+                    <Col>
+                        <Form.Control column sm={9} md={7} lg={9} id="surname" name="surname" required/>
+                    </Col>
                 </Form.Group>
-                <Form.Group className="group">
-                    <Form.Label htmlFor="email">E-Mail Adresse</Form.Label>
-                    <Form.Control type="email" id="email" name="email" required/>
+                <Form.Group className="mb-3" as={Row}>
+                    <Form.Label column sm={3} md={5} lg={3} htmlFor="email">E-Mail Adresse</Form.Label>
+                    <Col>
+                        <Form.Control column sm={9} md={7} lg={9} type="email" id="email" name="email" required/>
+                    </Col>
                 </Form.Group>
-                <Form.Group className="group">
-                    <Form.Label>Zahlungsart</Form.Label>
-                    <Form.Check type="radio">
-                        <Form.Check.Input onClick={refreshPaymentMethode} id="paypal" name="zahlungsart" type="radio" value={"via Paypal"} required/>
-                        <Form.Check.Label htmlFor="paypal"><img src={paypalIcon} className={"icon"}/> Paypal</Form.Check.Label>
-                    </Form.Check>
-                    <Form.Check type="radio">
-                        <Form.Check.Input onClick={refreshPaymentMethode} id="kreditkarte" name="zahlungsart" type="radio" value={"via Kreditkarte"}/>
-                        <Form.Check.Label htmlFor="kreditkarte"><img src={kreditkarteIcon} className={"icon"}/> Kreditkarte</Form.Check.Label>
-                    </Form.Check>
-                    <Form.Check type="radio">
-                        <Form.Check.Input onClick={refreshPaymentMethode} id="bar" name="zahlungsart" type="radio" value={"in Bar bei Abholung"}/>
-                        <Form.Check.Label htmlFor="bar"><img src={barIcon} className={"icon"}/> Bar bei Abholung</Form.Check.Label>
-                    </Form.Check>
+                <Form.Group className="mb-3" as={Row}>
+                    <Form.Label column sm={3} md={5} lg={3}>Zahlungsart</Form.Label>
+                    <Col sm={9} md={7} lg={9}>
+                        <Form.Check type="radio">
+                            <Form.Check.Input onClick={refreshPaymentMethode} id="paypal" name="zahlungsart" type="radio" value={"via Paypal"} required/>
+                            <Form.Check.Label htmlFor="paypal"><img src={paypalIcon} className={"icon"}/> Paypal</Form.Check.Label>
+                        </Form.Check>
+                        <Form.Check type="radio">
+                            <Form.Check.Input onClick={refreshPaymentMethode} id="kreditkarte" name="zahlungsart" type="radio" value={"via Kreditkarte"}/>
+                            <Form.Check.Label htmlFor="kreditkarte"><img src={kreditkarteIcon} className={"icon"}/> Kreditkarte</Form.Check.Label>
+                        </Form.Check>
+                        <Form.Check type="radio">
+                            <Form.Check.Input onClick={refreshPaymentMethode} id="bar" name="zahlungsart" type="radio" value={"in Bar bei Abholung"}/>
+                            <Form.Check.Label htmlFor="bar"><img src={barIcon} className={"icon"}/> Bar bei Abholung</Form.Check.Label>
+                        </Form.Check>
+                    </Col>
                 </Form.Group>
 
                 <hr/>
 
                 <h3>Zusammenfassung</h3>
-                <h4>Ihre Auswahl</h4>
-                <p>
-                    S-Klasse Mercedes für den Zeitraum 04.05.2022 - 17.05.2022
-                </p>
-                <h4>Kosten</h4>
+                <p></p>
+                <p><strong>Das Auto:</strong> S-Klasse Mercedes für den Zeitraum 04.05.2022 - 17.05.2022</p>
+
                 <div>
-                    5 Tage je 50€<br/>
-                    Kaution: 100€<br/>
                     <strong>Gesammtpreis (Inkl. Kaution): 350€</strong> <span id="Zahlungsart">Zahlungsart noch zu wählen</span>
+                    <ul>
+                        <li>5 Tage je 50€</li>
+                        <li>Kaution: 100€</li>
+                    </ul>
+
                 </div>
 
                 <Button variant="primary" type="submit">
