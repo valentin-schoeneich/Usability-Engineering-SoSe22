@@ -1,4 +1,3 @@
-
 import SearchFields from "./SearchFields";
 import CarSuggestions from "./CarSuggestions";
 import Container from "react-bootstrap/cjs/Container";

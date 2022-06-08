@@ -28,7 +28,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Homepage/>} />
                     <Route path="/myAccount" element={<MyAccount/>} />
-                    <Route path="/carFilter" element={<CarFilterPage/>} />
+                    <Route path="/carFilter/:location/:startDate/:endDate" element={<CarFilterPage/>} />
                 </Routes>
             </BrowserRouter>
             <div style={{position: "absolute",

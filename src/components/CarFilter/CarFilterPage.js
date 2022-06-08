@@ -6,8 +6,14 @@ import Container from "react-bootstrap/cjs/Container";
 import {Row} from "react-bootstrap";
 import FilterSection from "./FilterSection";
 import FilterCards from "./FilterCards";
+import Sportwagen from "../../imgs/sportwagen.png";
+import Oberkkasse from "../../imgs/Oberklasse.png";
+import Mittelklasse from "../../imgs/mittelklasse.png";
+import Kompaktklasse from "../../imgs/kompaktklasse.png";
+import Sitze from "../../imgs/sitze.png";
+import Tueren from "../../imgs/tueren.png";
 
-// TODO: FILTER BUG, find out which action causes the filters not to work
+
 
 const CarFilterPage = props => {
     const { location, startDate, endDate } = useParams();
@@ -59,6 +65,7 @@ const CarFilterPage = props => {
                                          names={["Sportwagen", "Oberklasse", "Mittelklasse", "Kompaktklasse"]}
                                          selectedNames={["Sportwagen", "Oberklasse", "Mittelklasse", "Kompaktklasse"]}
                                          selected={{"Sportwagen": false, "Oberklasse": false, "Mittelklasse": false, "Kompaktklasse": false}}
+                                         imgs={[Sportwagen, Oberkkasse, Mittelklasse, Kompaktklasse]}
                             />
                         ]}/>
                         <FilterSection sectionName="Anzahl Sitze" groupCards={false} cards={[
@@ -70,6 +77,7 @@ const CarFilterPage = props => {
                                          names={["2", "4", "5"]}
                                          selectedNames={["2", "4", "5"]}
                                          selected={{"2": false, "4": false, "5": false}}
+                                         imgs={[Sitze, Sitze, Sitze]}
                             />
                         ]}/>
                         <FilterSection sectionName="Anzahl Türen" groupCards={false} cards={[
@@ -81,6 +89,7 @@ const CarFilterPage = props => {
                                          names={["2", "4"]}
                                          selectedNames={["2", "4"]}
                                          selected={{"2": false, "4": false}}
+                                         imgs={[Tueren, Tueren, Tueren]}
                             />
                         ]}/>
                         <FilterSection sectionName="Getriebe" groupCards={false} cards={[

@@ -37,8 +37,10 @@ const SearchFields = props => {
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
         }else{
-            window.location.href = "http://localhost:3000/carFilter/"+searchData.location+searchData.startDate
-            +searchData.endDate;
+            window.location.href = "http://localhost:3000/carFilter"
+                + "/" + searchData.location
+                + "/" + searchData.startDate
+                + "/" + searchData.endDate;
         }
 
     }
@@ -50,8 +52,9 @@ const SearchFields = props => {
                         name="location"
                         onChange= {handleChange}
                         isInvalid={!!errors.location}
+                        defaultValue="Ort"
                     >
-                        <option disabled selected hidden>Ort</option>
+                        <option disabled hidden>Ort</option>
                         <option>Frankfurt</option>
                         <option>Mainz</option>
                         <option>Oestrich</option>
