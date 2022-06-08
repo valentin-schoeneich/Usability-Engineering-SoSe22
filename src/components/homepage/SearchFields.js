@@ -92,11 +92,10 @@ const SearchFields = props => {
                         isInvalid={!!errors.startDate}
                     />
                     <Form.Control.Feedback type="invalid">
-                        {errors.startDate}
+                        {errors.endDate}
                     </Form.Control.Feedback>
                 </Col>
-                <Button variant="outline-success" type="submit"
-                        href={`/carFilter`}>
+                <Button variant="outline-success" type="submit">
                     Suche
                 </Button>
             </Form>

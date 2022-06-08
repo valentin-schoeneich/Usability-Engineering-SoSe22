@@ -1,9 +1,17 @@
 .suggestions{
-    margin-top: 7%;
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 2%;
 }
-.search {
-    margin-top: 7%;
+#carArea{
+    height:auto;
+    background-color: #282c34;
+    display: flex;
+}
+#searchArea{
+    height: 20em;
+    display: flex;
+    align-items: center;
 }

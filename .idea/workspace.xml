@@ -7,7 +7,8 @@
     <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Placed all filters + bug fixes + styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,9 @@
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/homepage" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="homepage" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,17 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/imgs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vince\workspace\Usability-Engineering-SoSe22\src\imgs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\valen\Documents\Usability-Engineering-SoSe22\src\components\LoginRegistration" />
     </key>
@@ -118,6 +121,7 @@
       <workItem from="1654419175902" duration="7082000" />
       <workItem from="1654437779896" duration="2247000" />
       <workItem from="1654506091449" duration="6076000" />
+      <workItem from="1654681217136" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -247,6 +251,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic setup with navigator and routing" />
@@ -266,5 +271,11 @@
     <MESSAGE value="Redesign of filter componenets for more flexibility" />
     <MESSAGE value="Placed all filters + bug fixes + styling" />
     <option name="LAST_COMMIT_MESSAGE" value="Placed all filters + bug fixes + styling" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="297" y="151" key="run.anything.popup" timestamp="1654681225898">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1654681225898" />
   </component>
 </project>
