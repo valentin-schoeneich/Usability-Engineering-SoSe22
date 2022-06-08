@@ -70,7 +70,7 @@ const BookingPage = props => {
 
                 <h3>Zusammenfassung</h3>
                 <p></p>
-                <p><strong>Das Auto:</strong> S-Klasse Mercedes für den Zeitraum 04.05.2022 - 17.05.2022</p>
+                <p><strong>Das Auto:</strong> S-Klasse Mercedes von 04.05.2022 bis 17.05.2022</p>
 
                 <div>
                     <strong>Gesammtpreis (Inkl. Kaution): 350€</strong> <span id="Zahlungsart">Zahlungsart noch zu wählen</span>
@@ -81,7 +81,7 @@ const BookingPage = props => {
 
                 </div>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" id={"submit"}>
                     Zahlungspflichtig Buchen
                 </Button>
                 {successPopUp

@@ -9,3 +9,7 @@
 .group label{
     margin-bottom: 0;
 }
+
+#submit{
+    margin-right: 16px;
+}

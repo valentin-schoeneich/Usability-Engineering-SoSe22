@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Placed all filters + bug fixes + styling">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Format an Registrierung angepasst&#10;Zusammenfassung umstrukturiert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/SuccessPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/SuccessPopup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +106,7 @@
       <workItem from="1653065823188" duration="4917000" />
       <workItem from="1653922404230" duration="104000" />
       <workItem from="1654179654678" duration="3557000" />
+      <workItem from="1654708913454" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -169,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653826682269</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Format an Registrierung angepasst&#10;Zusammenfassung umstrukturiert">
+      <created>1654612318337</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654612318337</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +205,7 @@
     <MESSAGE value="Fix: being logged out after reload/routing" />
     <MESSAGE value="Bug: window.localStorage null on app start" />
     <MESSAGE value="first idee for the booking page" />
-    <option name="LAST_COMMIT_MESSAGE" value="first idee for the booking page" />
+    <MESSAGE value="Format an Registrierung angepasst&#10;Zusammenfassung umstrukturiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Format an Registrierung angepasst&#10;Zusammenfassung umstrukturiert" />
   </component>
 </project>
