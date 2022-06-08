@@ -50,8 +50,9 @@ const SearchFields = props => {
                         name="location"
                         onChange= {handleChange}
                         isInvalid={!!errors.location}
+                        defaultValue="Ort"
                     >
-                        <option disabled selected hidden>Ort</option>
+                        <option disabled hidden>Ort</option>
                         <option>Frankfurt</option>
                         <option>Mainz</option>
                         <option>Oestrich</option>

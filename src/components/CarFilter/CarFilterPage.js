@@ -7,7 +7,6 @@ import {Row} from "react-bootstrap";
 import FilterSection from "./FilterSection";
 import FilterCards from "./FilterCards";
 
-// TODO: FILTER BUG, find out which action causes the filters not to work
 
 const CarFilterPage = props => {
     const { location, startDate, endDate } = useParams();
