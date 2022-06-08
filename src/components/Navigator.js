@@ -19,7 +19,7 @@ const Navigator = props => {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark" >
+            <Navbar bg="dark" variant="dark" style={{position: "sticky", top: 0, zIndex: 100}}>
                 <Container>
                     <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
                     <Nav className="me-auto">

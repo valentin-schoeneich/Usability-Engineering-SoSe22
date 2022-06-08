@@ -64,9 +64,9 @@ function extras(){
     let insurencehas = document.getElementById("insurence");
     let insurencedidnthave = document.getElementById("didntHaveinsurence");
 
-    let ausstatung = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
-    let assistence = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
-    let insurence = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Teilkasko", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Dachfenster", true], ["Einstiegshilfen", true], ["Glasversicherung", false], ["Parkpilot", false], ["Bremsassistent", false], ["Anhängerkuplung", false]];
+    let ausstatung = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Sitzheizung", true], ["Dachfenster", false], ["Einstiegshilfen", true], ["Android Auto/Apple Car", false], ["Massage Sitze", false], ["Anhängerkuplung", false]];
+    let assistence = [["Scheibenwischautomatik", true], ["Lichtautomatik", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Parkpilot", false], ["Bremsassistent", false], ["Spurhalteassistent", false]];
+    let insurence = [["Haftpflichtversicherung", true], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", false], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false]];
 
     createList(ausstatunghas, ausstatungdidnthave, ausstatung);
     createList(assistencehas, assistencedidnthave, assistence);
@@ -108,7 +108,7 @@ const DetailPage = props => {
                         <li>Schatung: <span>manuel</span></li>
                         <li><p>S-Klasse Merceds</p></li>
                     </ul>
-                    <NavLink href={"#scrollTo"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
+                    <NavLink href={"#top"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
                 </Col>
                 <Col>
                     <div id="bordered">
@@ -124,9 +124,10 @@ const DetailPage = props => {
                 </Col>
             </Row>
             <hr/>
+            <a className="anchor" id="top"/>
             <Row >
                 <Col>
-                    <h3 id="scrollTo">Ausstatung</h3>
+                    <h3>Ausstatung</h3>
                     <ul id={"unimportantDetails"} className="has_or_not">
                     </ul>
                     <ul id={"didntHaveUnimportantDetails"} className="has_or_not">
