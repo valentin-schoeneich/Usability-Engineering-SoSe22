@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Placed all filters + bug fixes + styling">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="footer fix">
+      <change afterPath="$PROJECT_DIR$/src/imgs/porsche.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
@@ -56,14 +56,27 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vince\workspace\Usability-Engineering-SoSe22\src\imgs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\valen\Documents\Usability-Engineering-SoSe22\src\components\LoginRegistration" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vince\workspace\Usability-Engineering-SoSe22\src\imgs" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -121,7 +134,7 @@
       <workItem from="1654419175902" duration="7082000" />
       <workItem from="1654437779896" duration="2247000" />
       <workItem from="1654506091449" duration="6076000" />
-      <workItem from="1654681217136" duration="1183000" />
+      <workItem from="1654681217136" duration="7260000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -235,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654519842698</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="footer fix">
+      <created>1654682442085</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654682442085</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,9 +290,22 @@
     <MESSAGE value="Samll filter fix + TODOS for further filter concepts" />
     <MESSAGE value="Redesign of filter componenets for more flexibility" />
     <MESSAGE value="Placed all filters + bug fixes + styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Placed all filters + bug fixes + styling" />
+    <MESSAGE value="footer fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer fix" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1654682784234">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1654682784234" />
+    <state x="238" y="0" key="CommitChangelistDialog2" timestamp="1654682440489">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="238" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1654682440489" />
+    <state x="233" y="61" key="Vcs.Push.Dialog.v2" timestamp="1654682449775">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="61" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1654682449775" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1654681225898">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

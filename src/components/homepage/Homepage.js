@@ -5,7 +5,8 @@ import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 import './Homepage.css';
 import React, {useEffect, useState} from "react";
-import carFam from "../../imgs/familyCar.png";
+import carImg from "../../imgs/porsche.jpg"
+import Card from "react-bootstrap/Card";
 const Homepage = props => {
     const [carsData, setCarsData] = useState(null);
 
@@ -29,18 +30,12 @@ const Homepage = props => {
     return (
         <div>
             <div id="searchArea">
-                <Container className= "search">
-                    <SearchFields/>
-                </Container>
+                <Card style={{alignContent:"center"}}>
+                    <Container className= "search" style={{marginTop: "2%", marginBottom: "2%"}}>
+                        <SearchFields/>
+                    </Container>
+                </Card>
             </div>
-            <container>
-                <img src={carFam} style={{
-                    resizeMode: "stretch",
-                    height: 100,
-                    width: 200,
-                    marginLeft:"80%"
-                }}/>
-            </container>
             <div id="carArea">
                 <Container className="suggestions">
                     <Col>

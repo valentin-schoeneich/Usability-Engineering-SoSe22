@@ -73,6 +73,7 @@ const SearchFields = props => {
                         id = "von"
                         isInvalid={!!errors.startDate}
                         onChange= {handleChange}
+                        style={{width:"15em"}}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.startDate}
@@ -90,6 +91,7 @@ const SearchFields = props => {
                         id="bis"
                         onChange= {handleChange}
                         isInvalid={!!errors.startDate}
+                        style={{width:"15em"}}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.endDate}
