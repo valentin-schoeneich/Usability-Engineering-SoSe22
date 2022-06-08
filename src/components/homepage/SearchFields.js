@@ -37,8 +37,10 @@ const SearchFields = props => {
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
         }else{
-            window.location.href = "http://localhost:3000/carFilter/"+searchData.location+searchData.startDate
-            +searchData.endDate;
+            window.location.href = "http://localhost:3000/carFilter"
+                + "/" + searchData.location
+                + "/" + searchData.startDate
+                + "/" + searchData.endDate;
         }
 
     }

@@ -1,11 +1,12 @@
-
 import SearchFields from "./SearchFields";
 import CarSuggestions from "./CarSuggestions";
 import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 import './Homepage.css';
 import React, {useEffect, useState} from "react";
-import carFam from "../../imgs/familyCar.png";
+//import carFam from "../../imgs/familyCar.png";
+
+
 const Homepage = props => {
     const [carsData, setCarsData] = useState(null);
 
@@ -34,12 +35,12 @@ const Homepage = props => {
                 </Container>
             </div>
             <container>
-                <img src={carFam} style={{
+                {/*<img src={carFam} style={{
                     resizeMode: "stretch",
                     height: 100,
                     width: 200,
                     marginLeft:"80%"
-                }}/>
+                }}/>*/}
             </container>
             <div id="carArea">
                 <Container className="suggestions">

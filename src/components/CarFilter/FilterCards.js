@@ -4,6 +4,7 @@ import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 
 
+
 const FilterCards = props => {
     const [selected, setSelected] = useState(props.selected);
     let cards = [];
@@ -29,9 +30,13 @@ const FilterCards = props => {
             {props.names ? props.names.forEach((name, index) =>{
                 cards.push(
                     <Col key={index}>
-                        <Card border={selected[props.selectedNames[index]] ? "dark" : ""} style={{ width: '10rem' }} onClick={handleFilterClick} >
-                            <Card.Header name={props.selectedNames[index]}>{name}</Card.Header>
-                            <Card.Body name={props.selectedNames[index]}>
+                        <Card border={selected[props.selectedNames[index]] ? "dark" : ""} style={{ width: "8rem", margin: "1rem", fontSize: "10px"}}
+                              onClick={handleFilterClick} >
+                            {/*<Card.Header name={props.selectedNames[index]}>{name}</Card.Header>*/}
+                            <Card.Img src={props.imgs ? props.imgs[index] : ""} alt={name + " Image"} style={{width: "40%", display: "block",
+                                marginLeft: "auto", marginRight: "auto"}} name={props.selectedNames[index]} />
+                            <Card.Body name={props.selectedNames[index]} style={{height: "1rem", display: "block",
+                                marginLeft: "auto", marginRight: "auto"}} >
                                 {name}
                             </Card.Body>
                         </Card>
