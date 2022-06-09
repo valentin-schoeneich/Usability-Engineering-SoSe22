@@ -12,20 +12,26 @@ const Homepage = props => {
 
     return (
         <div>
-            <Container className= "search">
-                <SearchFields/>
-            </Container>
-            <Container className="suggestions">
-                <Col>
-                    <CarSuggestions carData = {carsData ? carsData[0] : ""}/>
-                </Col>
-                <Col>
-                    <CarSuggestions carData = {carsData ? carsData[1] : ""}/>
-                </Col>
-                <Col>
-                    <CarSuggestions carData = {carsData ? carsData[2] : ""}/>
-                </Col>
-            </Container>
+            <div id="searchArea">
+                <Card style={{alignContent:"center"}}>
+                    <Container className= "search" style={{marginTop: "2%", marginBottom: "2%"}}>
+                        <SearchFields/>
+                    </Container>
+                </Card>
+            </div>
+            <div id="carArea">
+                <Container className="suggestions">
+                    <Col>
+                        <CarSuggestions carData = {carsData ? carsData[0] : ""}/>
+                    </Col>
+                    <Col style={{marginRight:"2%",marginLeft:"2%"}}>
+                        <CarSuggestions carData = {carsData ? carsData[1] : ""}/>
+                    </Col>
+                    <Col>
+                        <CarSuggestions carData = {carsData ? carsData[2] : ""}/>
+                    </Col>
+                </Container>
+            </div>
         </div>
     );  
 }

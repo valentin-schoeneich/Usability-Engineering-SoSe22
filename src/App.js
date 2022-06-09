@@ -32,7 +32,6 @@ function App() {
                 </Routes>
             </BrowserRouter>
             <div style={{position: "absolute",
-                bottom: "0",
                 width: "100%"}}>
                 <Footer/>
             </div>
