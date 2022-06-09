@@ -1,10 +1,10 @@
-
 import SearchFields from "./SearchFields";
 import CarSuggestions from "./CarSuggestions";
 import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 import './Homepage.css';
 import React, { useState } from "react";
+import {Card} from "react-bootstrap";
 
 const Homepage = props => {
     const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
