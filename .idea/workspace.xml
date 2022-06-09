@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Placed all filters + bug fixes + styling">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="merge errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654519842698</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="merge errors">
+      <created>1654523003471</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654523003471</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +277,7 @@
     <MESSAGE value="Samll filter fix + TODOS for further filter concepts" />
     <MESSAGE value="Redesign of filter componenets for more flexibility" />
     <MESSAGE value="Placed all filters + bug fixes + styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Placed all filters + bug fixes + styling" />
+    <MESSAGE value="merge errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge errors" />
   </component>
 </project>

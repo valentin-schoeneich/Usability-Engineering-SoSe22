@@ -7,11 +7,10 @@ import {Row} from "react-bootstrap";
 import FilterSection from "./FilterSection";
 import FilterCards from "./FilterCards";
 
-// TODO: FILTER BUG, find out which action causes the filters not to work
 
 const CarFilterPage = props => {
     const { location, startDate, endDate } = useParams();
-    const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+    const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
     const [filters, setFilters] = useState({"class": [], "seats": [], "gearbox": [],
                                                 "doors": [], "aircon": [], "infotainment": [],
                                                 "navigation": [], "fullyComprehensiveInsurance": [],
@@ -45,8 +44,15 @@ const CarFilterPage = props => {
     }
 
 
+    const checkFilterDate = (bookedPeriods) => {
+        //debugger
+        return true;
+    }
+
+
     return (
         <>
+            {location + ", den " + startDate + " bis " + endDate}
             <Container>
                 <Row>
                     <Col>
@@ -153,7 +159,9 @@ const CarFilterPage = props => {
                     </Col>
                     <Col>
                         {carsData.filter(car => {
-                            return checkFilterArray(car.details.class, filters.class)
+                            return car.location === location
+                                && checkFilterDate(car.booked)
+                                && checkFilterArray(car.details.class, filters.class)
                                 && checkFilterArray(car.details.seats, filters.seats)
                                 && checkFilterArray(car.details.gearbox, filters.gearbox)
                                 && checkFilterArray(car.details.doors, filters.doors)

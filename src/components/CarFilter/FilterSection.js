@@ -1,7 +1,6 @@
 import React,  { useState } from 'react';
 import {Card, Collapse, Row} from "react-bootstrap";
 import Container from "react-bootstrap/cjs/Container";
-//import "./FilterStyle.css";
 
 const FilterSection = props => {
     const [openFilterSection, setOpenFilterSection] = useState(false);

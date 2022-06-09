@@ -1,7 +1,6 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
-//import Homepage from "./Homepage";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
 
@@ -37,11 +36,15 @@ const SearchFields = props => {
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
         }else{
-            window.location.href = "http://localhost:3000/carFilter/"+searchData.location+searchData.startDate
-            +searchData.endDate;
+            window.location.href = "http://localhost:3000/carFilter"
+                + "/" + searchData.location
+                + "/" + searchData.startDate
+                + "/" + searchData.endDate;
         }
 
     }
+
+
     return (
         <Container >
             <Form style={{display: "flex"}} onSubmit={handleSubmit}>
@@ -50,8 +53,9 @@ const SearchFields = props => {
                         name="location"
                         onChange= {handleChange}
                         isInvalid={!!errors.location}
+                        defaultValue="Ort"
                     >
-                        <option disabled selected hidden>Ort</option>
+                        <option disabled hidden>Ort</option>
                         <option>Frankfurt</option>
                         <option>Mainz</option>
                         <option>Oestrich</option>
@@ -95,8 +99,7 @@ const SearchFields = props => {
                         {errors.startDate}
                     </Form.Control.Feedback>
                 </Col>
-                <Button variant="outline-success" type="submit"
-                        href={`/carFilter`}>
+                <Button variant="outline-success" type="submit">
                     Suche
                 </Button>
             </Form>
@@ -104,8 +107,4 @@ const SearchFields = props => {
     );
 }
 export default SearchFields;
-/*
-${searchData.location ? "/" + searchData.location : ""}
-${searchData.startDate ? "/" + searchData.startDate : ""}
-${searchData.endDate ? "/" + searchData.endDate : ""}
-*/
+
