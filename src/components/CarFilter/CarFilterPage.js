@@ -17,7 +17,7 @@ import Tueren from "../../imgs/tueren.png";
 
 const CarFilterPage = props => {
     const { location, startDate, endDate } = useParams();
-    const [carsData, setCarsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+    const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
     const [filters, setFilters] = useState({"class": [], "seats": [], "gearbox": [],
                                                 "doors": [], "aircon": [], "infotainment": [],
                                                 "navigation": [], "fullyComprehensiveInsurance": [],
@@ -163,7 +163,9 @@ const CarFilterPage = props => {
                     </Col>
                     <Col>
                         {carsData.filter(car => {
-                            return checkFilterArray(car.details.class, filters.class)
+                            return car.location === location
+                                && checkFilterDate(car.booked)
+                                && checkFilterArray(car.details.class, filters.class)
                                 && checkFilterArray(car.details.seats, filters.seats)
                                 && checkFilterArray(car.details.gearbox, filters.gearbox)
                                 && checkFilterArray(car.details.doors, filters.doors)

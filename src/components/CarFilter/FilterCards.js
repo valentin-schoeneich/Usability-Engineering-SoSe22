@@ -1,5 +1,5 @@
 import React,  { useState } from 'react';
-import {Card, Collapse, Row} from "react-bootstrap";
+import {Card, Row} from "react-bootstrap";
 import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 

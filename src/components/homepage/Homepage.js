@@ -1,29 +1,13 @@
+
 import SearchFields from "./SearchFields";
 import CarSuggestions from "./CarSuggestions";
 import Container from "react-bootstrap/cjs/Container";
 import Col from "react-bootstrap/cjs/Col";
 import './Homepage.css';
-import React, {useEffect, useState} from "react";
-import carImg from "../../imgs/porsche.jpg"
-import Card from "react-bootstrap/Card";
+import React, { useState } from "react";
+
 const Homepage = props => {
-    const [carsData, setCarsData] = useState(null);
-
-
-    const handleRent = event => {
-        window.location="http://localhost:3000/f40";
-    }
-
-
-    useEffect(() => {
-        fetch('http://localhost:3001/cars')
-            .then(responseData => {
-                return responseData.json()
-            })
-            .then(data => {
-                setCarsData(data);
-            })
-    }, [] );
+    const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
 
 
     return (

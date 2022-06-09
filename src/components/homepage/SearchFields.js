@@ -1,7 +1,6 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
-//import Homepage from "./Homepage";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
 
@@ -44,6 +43,8 @@ const SearchFields = props => {
         }
 
     }
+
+
     return (
         <Container >
             <Form style={{display: "flex"}} onSubmit={handleSubmit}>
@@ -108,8 +109,4 @@ const SearchFields = props => {
     );
 }
 export default SearchFields;
-/*
-${searchData.location ? "/" + searchData.location : ""}
-${searchData.startDate ? "/" + searchData.startDate : ""}
-${searchData.endDate ? "/" + searchData.endDate : ""}
-*/
+
