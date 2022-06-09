@@ -51,15 +51,9 @@ const CarFilterPage = props => {
     }
 
 
-    const checkFilterDate = (bookedPeriods) => {
-        //debugger
-        return true;
-    }
-
-
     return (
         <>
-            {location + ", den " + startDate + " bis " + endDate}
+            {"Ort und Zeitraum: " + location + ", den " + startDate + " bis " + endDate}
             <Container>
                 <Row>
                     <Col>
