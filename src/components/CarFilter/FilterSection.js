@@ -8,7 +8,7 @@ const FilterSection = props => {
 
     return (
         <>
-            <Card style={{ width: '30rem' }}>
+            <Card style={{ width: '25rem' }}>
                 <Card.Header
                     onClick={() => setOpenFilterSection(!openFilterSection)}
                     aria-controls="collapse-text"

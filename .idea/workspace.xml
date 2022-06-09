@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="footer fix">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="fixed routing + filter design">
       <change afterPath="$PROJECT_DIR$/src/imgs/porsche.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
@@ -25,9 +28,6 @@
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/homepage" />
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="homepage" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -53,6 +53,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/imgs" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -271,7 +272,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic setup with navigator and routing" />

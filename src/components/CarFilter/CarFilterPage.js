@@ -53,6 +53,7 @@ const CarFilterPage = props => {
 
     return (
         <>
+            {"Ort und Zeitraum: " + location + ", den " + startDate + " bis " + endDate}
             <Container>
                 <Row>
                     <Col>
