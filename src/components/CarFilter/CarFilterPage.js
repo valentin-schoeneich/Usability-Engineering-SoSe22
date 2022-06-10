@@ -164,7 +164,6 @@ const CarFilterPage = props => {
                     <Col>
                         {carsData.filter(car => {
                             return car.location === location
-                                && checkFilterDate(car.booked)
                                 && checkFilterArray(car.details.class, filters.class)
                                 && checkFilterArray(car.details.seats, filters.seats)
                                 && checkFilterArray(car.details.gearbox, filters.gearbox)
