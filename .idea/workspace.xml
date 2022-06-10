@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Card import">
-      <change afterPath="$PROJECT_DIR$/src/imgs/manuell.png" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="added missing image">
+      <change afterPath="$PROJECT_DIR$/src/imgs/automatik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imgs/infotainment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imgs/insurance.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/FilterCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/Allrad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/Kombi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/elektro-hybrid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/kleinwagen.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +124,8 @@
       <workItem from="1654437779896" duration="2247000" />
       <workItem from="1654506091449" duration="6076000" />
       <workItem from="1654796028262" duration="954000" />
-      <workItem from="1654850934200" duration="139000" />
+      <workItem from="1654850934200" duration="228000" />
+      <workItem from="1654852927397" duration="2962000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -254,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654796690375</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added missing image">
+      <created>1654851156028</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654851156028</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +304,7 @@
     <MESSAGE value="merge errors" />
     <MESSAGE value="Commit for merge" />
     <MESSAGE value="Card import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Card import" />
+    <MESSAGE value="added missing image" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing image" />
   </component>
 </project>

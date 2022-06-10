@@ -12,7 +12,12 @@ import Mittelklasse from "../../imgs/mittelklasse.png";
 import Kompaktklasse from "../../imgs/kompaktklasse.png";
 import Sitze from "../../imgs/sitze.png";
 import Tueren from "../../imgs/tueren.png";
-
+import Automatik from "../../imgs/automatik.png"
+import Manuell from "../../imgs/manuell.png"
+import Klimaanlage from "../../imgs/Klimaanlage.png"
+import Navigation from "../../imgs/navigation.png"
+import Infotainment from "../../imgs/infotainment.png"
+import Insurance from "../../imgs/insurance.jpg"
 
 
 const CarFilterPage = props => {
@@ -102,6 +107,7 @@ const CarFilterPage = props => {
                                          names={["Automatik", "Manuell"]}
                                          selectedNames={["Automatik", "Manuell"]}
                                          selected={{"Automatik": false, "Manuell": false}}
+                                         imgs={[Automatik, Manuell]}
                             />
                         ]}/>
                         <FilterSection sectionName="Ausstatung" groupCards={true} cards={[
@@ -112,7 +118,9 @@ const CarFilterPage = props => {
                                          selectedNames={["true"]}
                                          names={["Klimaanlage"]}
                                          setFiltersState={setFiltersState}
-                                         selected={{"true": false}} />,
+                                         selected={{"true": false}}
+                                         imgs={[Klimaanlage]}
+                            />,
                             <FilterCards dataKey="infotainment"
                                          groupCards={true}
                                          filters={filters}
@@ -121,6 +129,7 @@ const CarFilterPage = props => {
                                          names={["Infotainmentsystem"]}
                                          setFiltersState={setFiltersState}
                                          selected={{"true": false}}
+                                         imgs={[Infotainment]}
                             />,
                             <FilterCards dataKey="navigation"
                                          groupCards={true}
@@ -130,6 +139,7 @@ const CarFilterPage = props => {
                                          names={["Navigationssystem"]}
                                          setFiltersState={setFiltersState}
                                          selected={{"true": false}}
+                                         imgs={[Navigation]}
                             />
                         ]}/>
                         <FilterSection sectionName="Schutzleistungen" groupCards={true} cards={[
@@ -140,7 +150,9 @@ const CarFilterPage = props => {
                                          selectedNames={["true"]}
                                          names={["Vollkaskoversicherung"]}
                                          setFiltersState={setFiltersState}
-                                         selected={{"true": false}} />,
+                                         selected={{"true": false}}
+                                         imgs={[Insurance]}
+                            />,
                             <FilterCards dataKey="glassTireProtection"
                                          groupCards={true}
                                          filters={filters}
@@ -149,6 +161,7 @@ const CarFilterPage = props => {
                                          names={["Glas- und Reifenschutz"]}
                                          setFiltersState={setFiltersState}
                                          selected={{"true": false}}
+                                         imgs={[Insurance]}
                             />,
                             <FilterCards dataKey="underbodyProtection"
                                          groupCards={true}
@@ -158,6 +171,7 @@ const CarFilterPage = props => {
                                          names={["Unterbodenschutz"]}
                                          setFiltersState={setFiltersState}
                                          selected={{"true": false}}
+                                         imgs={[Insurance]}
                             />
                         ]}/>
                     </Col>
