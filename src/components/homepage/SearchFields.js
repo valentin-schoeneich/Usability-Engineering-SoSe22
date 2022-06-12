@@ -11,7 +11,10 @@ const SearchFields = props => {
     let mm = String(today.getMonth() + 1).padStart(2, '0');
     let yyyy = today.getFullYear();
     let todayDate = yyyy + '-' + mm + '-' + dd;
-    const [searchData, setSearchData] = useState({"location": "", "startDate": "", "endDate":""});
+    const [searchData, setSearchData] = useState({
+        "location": props.valueSelect ? props.valueSelect : "",
+        "startDate": props.valueStartDate ? props.valueStartDate : "",
+        "endDate": props.valueEndDate ? props.valueEndDate : ""});
     const [errors, setErrors] = useState({});
 
 
@@ -31,7 +34,7 @@ const SearchFields = props => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        const newErrors = findFormErrors();
+        let newErrors = findFormErrors();
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
@@ -53,7 +56,9 @@ const SearchFields = props => {
                         name="location"
                         onChange= {handleChange}
                         isInvalid={!!errors.location}
-                        defaultValue="Ort"
+                        defaultValue={props.valueSelect ? props.valueSelect : "Ort"}
+                        style={{width: props.selectWidth ? props.selectWidth: ""}}
+                        id="locationSelect"
                     >
                         <option disabled hidden>Ort</option>
                         <option>Frankfurt</option>
@@ -73,11 +78,12 @@ const SearchFields = props => {
                         onFocus={(e) => (e.target.type = "date")}
                         onBlur={(e) => (e.target.type = "text")}
                         max="2023-12-31"
+                        defaultValue={props.valueStartDate ? props.valueStartDate : ""}
                         name="startDate"
                         id = "von"
                         isInvalid={!!errors.startDate}
                         onChange= {handleChange}
-                        style={{width:"15em"}}
+                        style={{width: props.startDateWidth ? props.startDateWidth : "15rem"}}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.startDate}
@@ -91,11 +97,12 @@ const SearchFields = props => {
                         onBlur={(e) => (e.target.type = "text")}
                         min= {todayDate}
                         max="2023-12-31"
+                        defaultValue={props.valueEndDate ? props.valueEndDate : ""}
                         name="endDate"
                         id="bis"
                         onChange= {handleChange}
                         isInvalid={!!errors.startDate}
-                        style={{width:"15em"}}
+                        style={{width: props.endDateWidth ? props.endDateWidth : "15rem"}}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.endDate}

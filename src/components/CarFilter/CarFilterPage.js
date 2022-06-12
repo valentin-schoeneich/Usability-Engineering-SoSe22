@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import Col from "react-bootstrap/cjs/Col";
 import CarTile from "./CarTile";
 import Container from "react-bootstrap/cjs/Container";
-import {Row} from "react-bootstrap";
+import {Card, Row} from "react-bootstrap";
 import FilterSection from "./FilterSection";
 import FilterCards from "./FilterCards";
 import Sportwagen from "../../imgs/sportwagen.png";
@@ -18,6 +18,7 @@ import Klimaanlage from "../../imgs/Klimaanlage.png"
 import Navigation from "../../imgs/navigation.png"
 import Infotainment from "../../imgs/infotainment.png"
 import Insurance from "../../imgs/insurance.jpg"
+import SearchField from "../homepage/SearchFields"
 
 
 const CarFilterPage = props => {
@@ -56,10 +57,38 @@ const CarFilterPage = props => {
     }
 
 
+    const checkFilterDates = (bookedPeriods) => {
+        let filterStartDate = new Date(startDate);
+        let filterEndDate = new Date(endDate);
+
+        for(let i = 0; i < bookedPeriods.length; i++){
+            let bookedPeriod = bookedPeriods[i];
+            let from = new Date(bookedPeriod.from);
+            let to = new Date(bookedPeriod.to);
+
+            if(filterStartDate > from && filterStartDate < to){
+                return false;
+            } else if(from.getTime() === filterStartDate.getTime() && filterStartDate < to){
+                return false;
+            } else if(filterStartDate > from && filterStartDate.getTime() === to.getTime()){
+                return false;
+            } else if(filterEndDate > from && filterEndDate < to){
+                return false;
+            } else if(filterEndDate.getTime() === from.getTime() && filterEndDate < to){
+                return false;
+            } else if(filterEndDate > from && filterEndDate.getTime() === to.getTime()){
+                return false;
+            } else if(filterStartDate < from && filterEndDate > to){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     return (
         <>
-            {"Ort und Zeitraum: " + location + ", den " + startDate + " bis " + endDate}
-            <Container>
+            <Container style={{marginTop: "2rem"}}>
                 <Row>
                     <Col>
                         <FilterSection sectionName="Fahrzeugklasse" groupCards={false} cards={[
@@ -176,8 +205,17 @@ const CarFilterPage = props => {
                         ]}/>
                     </Col>
                     <Col>
+                        <Card style={{width: '40rem', marginBottom: "2rem"}}>
+                            <Card.Header>Ort und Zeitraum</Card.Header>
+                            <Card.Body>
+                                <SearchField selectWidth="8rem" startDateWidth="8rem" endDateWidth="8rem"
+                                             valueStartDate={startDate} valueEndDate={endDate}
+                                             valueSelect={location}/>
+                            </Card.Body>
+                        </Card>
                         {carsData.filter(car => {
                             return car.location === location
+                                && checkFilterDates(car.booked)
                                 && checkFilterArray(car.details.class, filters.class)
                                 && checkFilterArray(car.details.seats, filters.seats)
                                 && checkFilterArray(car.details.gearbox, filters.gearbox)

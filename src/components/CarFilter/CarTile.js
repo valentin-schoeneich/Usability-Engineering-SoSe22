@@ -7,7 +7,7 @@ const CarTile = props => {
 
     return (
         <>
-            <Card style={{ width: '30rem' }}>
+            <Card style={{ width: '40rem' }}>
                 <Card.Header>{props.car.details.brand + " " + props.car.details.model}</Card.Header>
                 <Card.Body>
                     Details<br/>
