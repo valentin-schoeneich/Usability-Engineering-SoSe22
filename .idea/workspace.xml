@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="added images">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Filter by location and date on the filter page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarFilterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +124,7 @@
       <workItem from="1654850934200" duration="228000" />
       <workItem from="1654852927397" duration="4248000" />
       <workItem from="1655022581470" duration="9819000" />
+      <workItem from="1655069483550" duration="1909000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>

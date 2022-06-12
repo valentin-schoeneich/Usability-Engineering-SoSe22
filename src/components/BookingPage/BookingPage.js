@@ -53,15 +53,15 @@ const BookingPage = props => {
                     <Col sm={9} md={7} lg={9}>
                         <Form.Check type="radio">
                             <Form.Check.Input onClick={refreshPaymentMethode} id="paypal" name="zahlungsart" type="radio" value={"via Paypal"} required/>
-                            <Form.Check.Label htmlFor="paypal"><img src={paypalIcon} className={"icon"}/> Paypal</Form.Check.Label>
+                            <Form.Check.Label htmlFor="paypal"><img src={paypalIcon} className={"icon"} alt="paypal"/> Paypal</Form.Check.Label>
                         </Form.Check>
                         <Form.Check type="radio">
                             <Form.Check.Input onClick={refreshPaymentMethode} id="kreditkarte" name="zahlungsart" type="radio" value={"via Kreditkarte"}/>
-                            <Form.Check.Label htmlFor="kreditkarte"><img src={kreditkarteIcon} className={"icon"}/> Kreditkarte</Form.Check.Label>
+                            <Form.Check.Label htmlFor="kreditkarte"><img src={kreditkarteIcon} className={"icon"} alt="kreditkarte"/> Kreditkarte</Form.Check.Label>
                         </Form.Check>
                         <Form.Check type="radio">
                             <Form.Check.Input onClick={refreshPaymentMethode} id="bar" name="zahlungsart" type="radio" value={"in Bar bei Abholung"}/>
-                            <Form.Check.Label htmlFor="bar"><img src={barIcon} className={"icon"}/> Bar bei Abholung</Form.Check.Label>
+                            <Form.Check.Label htmlFor="Barzahlung"><img src={barIcon} className={"icon"} alt="Barzahlung"/> Bar bei Abholung</Form.Check.Label>
                         </Form.Check>
                     </Col>
                 </Form.Group>

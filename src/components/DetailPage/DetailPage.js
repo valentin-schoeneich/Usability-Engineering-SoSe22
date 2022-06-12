@@ -1,5 +1,5 @@
 import './DetailPage.css';
-import React from 'react';
+import React, {useState} from 'react';
 import car from "../../imgs/car.png";
 import car2 from "../../imgs/car2.png";
 import arrow from "../../imgs/arrow.svg"
@@ -7,6 +7,7 @@ import has from "../../imgs/hasDetail.png"
 import didntHave from "../../imgs/didntHasDetail.png"
 import {Button, Col, Container, NavLink, Row} from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
+import {useParams} from "react-router-dom";
 
 
 function showHiddeDetails(){
@@ -81,6 +82,8 @@ function onLoad(){
 
 
 const DetailPage = props => {
+    // const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+    const { id } = useParams();
 
     const images = [
         {
@@ -119,7 +122,7 @@ const DetailPage = props => {
                             <li>Kilometerlimit: <span>100</span>km</li>
                         </ul>
                         <div id={"summary"}><span id={"finalPrice"}>X</span>€ (inkl. Kaution) vom <span id={"from"}>11.11.2022</span> bis <span id={"to"}>11.12.2022</span></div>
-                        <Button id={"bookButton"}>Jetzt Buchen </Button>
+                        <Button id={"bookButton"} href={"/bookingPage/" + id}>Jetzt Buchen </Button>
                     </div>
                 </Col>
             </Row>

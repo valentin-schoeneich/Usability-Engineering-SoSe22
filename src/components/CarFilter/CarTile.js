@@ -1,9 +1,9 @@
 import React from 'react';
 import {Card} from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 
 const CarTile = props => {
-
 
     return (
         <>
@@ -15,6 +15,7 @@ const CarTile = props => {
                     Türen {props.car.details.doors}<br/>
                     Getriebe {props.car.details.gearbox}<br/>
                     ...<br/>
+                    <Button href={"/detailPage/" + props.car.id}>Auswählen</Button>
                 </Card.Body>
             </Card>
         </>
