@@ -21,7 +21,7 @@ const Navigator = props => {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark" >
+            <Navbar bg="dark" variant="dark" style={{position: "sticky", top: 0, zIndex: 100}}>
                 <Container>
                     <a href="/">
                         <img src={carlogo} style={{

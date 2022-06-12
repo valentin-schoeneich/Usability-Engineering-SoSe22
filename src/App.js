@@ -7,6 +7,7 @@ import MyAccount from "./components/LoginRegistration/MyAccount"
 import CarFilterPage from "./components/CarFilter/CarFilterPage";
 import Footer from "./components/Footer";
 import BookingPage from "./components/BookingPage/BookingPage";
+import DetailPage from "./components/DetailPage/DetailPage";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/myAccount" element={<MyAccount/>} />
                     <Route path="/carFilter/:location/:startDate/:endDate" element={<CarFilterPage/>} />
                     <Route path="/bookingPage" element={<BookingPage/>} />
+                    <Route path="/detailPage" element={<DetailPage />} />
                 </Routes>
             </BrowserRouter>
             <div style={{position: "absolute",
