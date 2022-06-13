@@ -1,9 +1,13 @@
 import React from 'react';
 import {Card} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import {useParams} from "react-router-dom";
 
 
 const CarTile = props => {
+
+
+    const { location, startDate, endDate } = useParams();
 
     return (
         <>
@@ -15,7 +19,7 @@ const CarTile = props => {
                     Türen {props.car.details.doors}<br/>
                     Getriebe {props.car.details.gearbox}<br/>
                     ...<br/>
-                    <Button href={"/detailPage/" + props.car.id}>Auswählen</Button>
+                    <Button href={"/detailPage/" + props.car.id+ "/" + startDate + "/" + endDate}>Auswählen</Button>
                 </Card.Body>
             </Card>
         </>

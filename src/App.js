@@ -33,8 +33,8 @@ function App() {
                     <Route path="/" element={<Homepage/>} />
                     <Route path="/myAccount" element={<MyAccount/>} />
                     <Route path="/carFilter/:location/:startDate/:endDate" element={<CarFilterPage/>} />
-                    <Route path="/bookingPage/:id" element={<BookingPage/>} />
-                    <Route path="/detailPage/:id" element={<DetailPage />} />
+                    <Route path="/bookingPage/:id/:startDate/:endDate" element={<BookingPage/>} />
+                    <Route path="/detailPage/:id/:startDate/:endDate" element={<DetailPage />} />
                 </Routes>
             </BrowserRouter>
             <div style={{position: "absolute",
