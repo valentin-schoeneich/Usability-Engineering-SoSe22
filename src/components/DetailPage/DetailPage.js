@@ -89,6 +89,19 @@ function importantDetails(){
     document.getElementById("modelBrand").textContent = carInfo.details.model + " " +carInfo.details.brand;
 }
 
+window.addEventListener('scroll', function(ev) {
+
+    var someDiv = document.getElementById('header');
+    var distanceToTop = someDiv.getBoundingClientRect().top;
+
+    if(distanceToTop < -230){
+        document.getElementById("bordered").style.position = "fixed";
+    }else {
+        document.getElementById("bordered").style.position = "unset"
+    }
+    console.log(distanceToTop);
+});
+
 let carsData;
 let carInfo;
 let start;
@@ -116,7 +129,7 @@ const DetailPage = props => {
 
     return (
         <Container onLoad={onLoad}>
-            <h1>Dein Auton</h1>
+            <h1 id={"header"}>Dein Auton</h1>
             <Row>
                 <Col>
                     <ImageGallery items={images} showPlayButton={false} />
