@@ -47,6 +47,22 @@ const SearchFields = props => {
 
     }
 
+    function changeDateToTextInput(target){
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        let date = new Date(target.value);
+        target.type = "text";
+        target.value = date.toLocaleDateString('de-DE', options);
+    }
+
+    function changeTextToDateInput(target){
+        if(target.type === "text"){
+            let dateString = target.value.substr(6,4) + "-" + target.value.substr(3,2) + "-" + (target.value.substr(0,2))
+            target.type = "date";
+            target.value = dateString;
+        }
+    }
+
+
 
     return (
         <Container >
@@ -75,9 +91,11 @@ const SearchFields = props => {
                         type="text"
                         placeholder="Von"
                         min={todayDate}
-                        onFocus={(e) => (e.target.type = "date")}
-                        onBlur={(e) => (e.target.type = "text")}
+
+                        onFocus={(e) => (changeTextToDateInput(e.target))}
+                        onBlur={(e) => (changeDateToTextInput(e.target))}
                         max="2023-12-31"
+
                         defaultValue={props.valueStartDate ? props.valueStartDate : ""}
                         name="startDate"
                         id = "von"
@@ -93,8 +111,8 @@ const SearchFields = props => {
                     <Form.Control
                         type="text"
                         placeholder ="Bis"
-                        onFocus={(e) => (e.target.type = "date")}
-                        onBlur={(e) => (e.target.type = "text")}
+                        onFocus={(e) => (changeTextToDateInput(e.target))}
+                        onBlur={(e) => (changeDateToTextInput(e.target))}
                         min= {todayDate}
                         max="2023-12-31"
                         defaultValue={props.valueEndDate ? props.valueEndDate : ""}

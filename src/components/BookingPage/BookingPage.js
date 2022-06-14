@@ -31,21 +31,27 @@ const BookingPage = props => {
             <h1>Letzter Schritt zum Auto</h1>
             <Form onSubmit={switchSuccessPopUp}>
                 <Form.Group className="mb-3" as={Row} >
-                    <Form.Label column sm={3} md={5} lg={3} htmlFor="forename">Vorname</Form.Label>
-                    <Col>
-                        <Form.Control column sm={9} md={7} lg={9} id="forename" name="forename" required/>
+                    <Col sm={3} md={5} lg={3}>
+                        <Form.Label htmlFor="forename">Vorname</Form.Label>
+                    </Col>
+                    <Col sm={9} md={7} lg={9}>
+                        <Form.Control id="forename" name="forename" required/>
                     </Col>
                 </Form.Group>
                 <Form.Group className="mb-3" as={Row}>
-                    <Form.Label column sm={3} md={5} lg={3} htmlFor="surname">Nachname</Form.Label>
-                    <Col>
-                        <Form.Control column sm={9} md={7} lg={9} id="surname" name="surname" required/>
+                    <Col sm={3} md={5} lg={3}>
+                        <Form.Label htmlFor="surname">Nachname</Form.Label>
+                    </Col>
+                    <Col sm={9} md={7} lg={9}>
+                        <Form.Control id="surname" name="surname" required/>
                     </Col>
                 </Form.Group>
                 <Form.Group className="mb-3" as={Row}>
-                    <Form.Label column sm={3} md={5} lg={3} htmlFor="email">E-Mail Adresse</Form.Label>
-                    <Col>
-                        <Form.Control column sm={9} md={7} lg={9} type="email" id="email" name="email" required/>
+                    <Col sm={3} md={5} lg={3}>
+                        <Form.Label  htmlFor="email">E-Mail Adresse</Form.Label>
+                    </Col>
+                    <Col sm={9} md={7} lg={9}>
+                        <Form.Control  type="email" id="email" name="email" required/>
                     </Col>
                 </Form.Group>
                 <Form.Group className="mb-3" as={Row}>
