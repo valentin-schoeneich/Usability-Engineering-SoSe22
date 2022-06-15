@@ -27,18 +27,20 @@ function App() {
 
     return (
         <div>
-            <Navigator/>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Homepage/>} />
-                    <Route path="/myAccount" element={<MyAccount/>} />
-                    <Route path="/carFilter/:location/:startDate/:endDate" element={<CarFilterPage/>} />
-                    <Route path="/bookingPage/:id/:startDate/:endDate" element={<BookingPage/>} />
-                    <Route path="/detailPage/:id/:startDate/:endDate" element={<DetailPage />} />
-                </Routes>
-            </BrowserRouter>
-            <div style={{position: "absolute",
-                width: "100%"}}>
+            <div style={{minHeight: "59rem"}}>
+                <Navigator/>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Homepage/>} />
+                        <Route path="/myAccount" element={<MyAccount/>} />
+                        <Route path="/carFilter/:location/:startDate/:endDate" element={<CarFilterPage/>} />
+                        <Route path="/bookingPage/:id/:startDate/:endDate" element={<BookingPage/>} />
+                        <Route path="/detailPage/:id/:startDate/:endDate" element={<DetailPage />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
+            <div style={{
+                width: "100%", marginTop:"auto"}}>
                 <Footer/>
             </div>
         </div>

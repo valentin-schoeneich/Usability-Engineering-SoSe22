@@ -160,6 +160,40 @@
                 "glassTireProtection": "false",
                 "underbodyProtection":"false"
             }
+        },
+        {
+            "id": 4,
+            "pricePerDay": "180",
+            "deposit": "200",
+            "kilometerLimit": "",
+            "img": "https://awscdn.audi.com.co/media/FullWidthSlider_Detail_Image_Component/59028-602185-371144-607881-371145-image/dh-1185-d7c8a4/2b5967f2/1654266522/front-side.jpg",
+            "location": "Frankfurt",
+            "booked": [
+                {
+                    "from": "2022-06-29",
+                    "to":  "2022-07-04"
+                },
+                {
+                    "from": "2022-09-03",
+                    "to":  "2022-09-05"
+                }
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "Audi",
+                "model": "A6",
+                "seats": "5",
+                "doors": "5",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection":"true"
+            }
         }
     ]
 }

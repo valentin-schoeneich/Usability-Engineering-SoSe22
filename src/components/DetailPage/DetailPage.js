@@ -28,7 +28,7 @@ function calculateFinalPrice(){
     document.getElementById("finalPrice").textContent = (pricePerDay * days + deposit)+ "";
 
     if(carInfo.kilometerLimit !== ""){
-        document.getElementById("limit").getElementsByTagNameNS("span")[0].textContent = carInfo.kilometerLimit
+        document.getElementById("limit").getElementsByTagName("span")[0].textContent = carInfo.kilometerLimit
     }else {
         document.getElementById("limit").textContent = "kein Kilometerlimit"
     }
