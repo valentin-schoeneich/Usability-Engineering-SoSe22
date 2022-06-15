@@ -11,8 +11,7 @@ const AbortPopup = props => {
                     <Modal.Title>Buchungsvorgang wirklich Abbrechen?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Button variant="danger" type="button"
-                            className="mx-2">
+                    <Button variant="danger" type="button" className="mx-2" href={"javascript:history.back()"}>
                         Abbrechen
                     </Button>
                         <Button variant="primary" type="button" onClick={props.switchPopUp}>

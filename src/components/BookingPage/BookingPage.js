@@ -8,28 +8,81 @@ import barIcon from "../../imgs/BookingPage/Bargeld.png";
 import {useState} from 'react';
 import AbortPopup from "./AbortPopup";
 import SuccessPopup from "./SuccessPopup";
+import {useParams} from "react-router-dom";
+import successPopup from "./SuccessPopup";
 
 function refreshPaymentMethode(){
     document.getElementById("Zahlungsart").textContent = document.querySelector('input[name="zahlungsart"]:checked').value;
 }
 
+function onLoad(){
+    let pricePerDay = parseFloat(carInfo.pricePerDay);
+    document.getElementById("pricePerDay").textContent = pricePerDay + "";
+    let deposit = parseFloat(carInfo.deposit);
+    document.getElementById("deposit").textContent = deposit + "";
+
+    let from = new Date(start);
+    let to = new Date(end);
+
+    document.getElementById("from").textContent = from.toLocaleDateString("de-DE")
+    document.getElementById("to").textContent = to.toLocaleDateString("de-DE")
+
+    let days = ((to-from)/1000/60/60/24)+1;
+    document.getElementById("days").textContent = days;
+
+    document.getElementById("finalPrice").textContent = (pricePerDay * days + deposit)+ "";
+
+
+    document.getElementById("modelBrand").textContent = carInfo.details.model + " " +carInfo.details.brand;
+
+
+    let form = document.getElementById('my-form');
+    if (form.attachEvent) {
+        form.attachEvent("submit", processForm);
+    } else {
+        form.addEventListener("submit", processForm);
+    }
+}
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+    window.localStorage.setItem("showSuccessPopup", "true")
+    window.location.href="/";
+    return false;
+}
+
+
+
+let carsData;
+let carInfo;
+let start;
+let end;
+
+
 const BookingPage = props => {
 
     const [abortPopUp, setAbortPopUp] = useState(false);
-    const [successPopUp, setSuccessPopUp] = useState(false);
+
 
     const switchAbortPopUp = () => {
         setAbortPopUp(show => !show);
     }
 
-    const switchSuccessPopUp = () => {
-        setSuccessPopUp(show => !show);
-    }
+
+
+    [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+
+    const {id, startDate, endDate} = useParams();
+
+    start = startDate;
+    end = endDate;
+
+    carInfo = carsData.find(car => car.id == id);
 
     return (
-        <Container>
+        <Container onLoad={onLoad}>
             <h1>Letzter Schritt zum Auto</h1>
-            <Form onSubmit={switchSuccessPopUp}>
+            <Form id={"my-form"}>
                 <Form.Group className="mb-3" as={Row} >
                     <Col sm={3} md={5} lg={3}>
                         <Form.Label htmlFor="forename">Vorname</Form.Label>
@@ -75,14 +128,13 @@ const BookingPage = props => {
                 <hr/>
 
                 <h3>Zusammenfassung</h3>
-                <p></p>
-                <p><strong>Das Auto:</strong> S-Klasse Mercedes von 04.05.2022 bis 17.05.2022</p>
+                <p><strong>Das Auto:</strong> <span id={"modelBrand"}/> von <span id={"from"}/> bis <span id={"to"}/></p>
 
                 <div>
-                    <strong>Gesammtpreis (Inkl. Kaution): 350€</strong> <span id="Zahlungsart">Zahlungsart noch zu wählen</span>
+                    <strong>Gesammtpreis (Inkl. Kaution): <span id={"finalPrice"}/>€</strong> <span id="Zahlungsart">Zahlungsart noch zu wählen</span>
                     <ul>
-                        <li>5 Tage je 50€</li>
-                        <li>Kaution: 100€</li>
+                        <li><span id={"days"}/> Tage je <span id={"pricePerDay"}/>€</li>
+                        <li>Kaution: <span id={"deposit"}/>€</li>
                     </ul>
 
                 </div>
@@ -90,9 +142,7 @@ const BookingPage = props => {
                 <Button variant="primary" type="submit" id={"submit"}>
                     Zahlungspflichtig Buchen
                 </Button>
-                {successPopUp
-                    ? <SuccessPopup showPopUp={successPopUp} switchPopUp={switchSuccessPopUp}/>
-                    : null}
+
                 <Button variant="danger" type="button" onClick={switchAbortPopUp}>
                     Abbrechen
                 </Button>

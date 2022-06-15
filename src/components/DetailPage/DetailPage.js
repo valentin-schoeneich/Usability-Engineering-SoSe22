@@ -10,29 +10,29 @@ import ImageGallery from 'react-image-gallery';
 import {useParams} from "react-router-dom";
 
 
-function showHiddeDetails(){
-    if(document.getElementById("unimportantDetails").style.display==="block"){
-        document.getElementById("unimportantDetails").style.display="none";
-        document.getElementById("moreDetailText").textContent="Alle Details anzeigen";
-        document.getElementById("arrow").style.transform = "rotate(180deg)";
-    }else {
-        document.getElementById("unimportantDetails").style.display="block";
-        document.getElementById("moreDetailText").textContent="Weniger Details anzeigen";
-        document.getElementById("arrow").style.transform = "rotate(0deg)";
-    }
-}
-
 function calculateFinalPrice(){
-    let pricePerDay = parseFloat(document.getElementById("pricePerDay").textContent);
-    let deposit = parseFloat(document.getElementById("deposit").textContent);
+    let pricePerDay = parseFloat(carInfo.pricePerDay);
+    document.getElementById("pricePerDay").textContent = pricePerDay + "";
+    let deposit = parseFloat(carInfo.deposit);
+    document.getElementById("deposit").textContent = deposit + "";
 
-    let from = new Date(document.getElementById("from").textContent);
-    let to = new Date(document.getElementById("to").textContent);
+    let from = new Date(start);
+    let to = new Date(end);
+
+    document.getElementById("from").textContent = from.toLocaleDateString("de-DE")
+    document.getElementById("to").textContent = to.toLocaleDateString("de-DE")
 
     let days = ((to-from)/1000/60/60/24)+1;
-    console.log(days)
+    document.getElementById("days").textContent = days;
 
-    document.getElementById("finalPrice").textContent = pricePerDay * days + deposit;
+    document.getElementById("finalPrice").textContent = (pricePerDay * days + deposit)+ "";
+
+    if(carInfo.kilometerLimit !== ""){
+        document.getElementById("limit").getElementsByTagNameNS("span")[0].textContent = carInfo.kilometerLimit
+    }else {
+        document.getElementById("limit").textContent = "kein Kilometerlimit"
+    }
+
 }
 
 function createList(ulhas, uldidnthave, list){
@@ -65,9 +65,11 @@ function extras(){
     let insurencehas = document.getElementById("insurence");
     let insurencedidnthave = document.getElementById("didntHaveinsurence");
 
-    let ausstatung = [["Navi", true],["Infotainment", false],["Klimaanlage", true], ["Ersatzrad", true], ["Sitzheizung", true], ["Dachfenster", false], ["Einstiegshilfen", true], ["Android Auto/Apple Car", false], ["Massage Sitze", false], ["Anhängerkuplung", false]];
+    let ausstatung = [["Navi", (carInfo.details.navigation === "true")],["Infotainment", (carInfo.details.infotainment === "true")],["Klimaanlage", (carInfo.details.aircon === "true")], ["Ersatzrad", true], ["Sitzheizung", true], ["Dachfenster", false], ["Einstiegshilfen", true], ["Android Auto/Apple Car", false], ["Massage Sitze", false], ["Anhängerkuplung", false]];
     let assistence = [["Scheibenwischautomatik", true], ["Lichtautomatik", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Parkpilot", false], ["Bremsassistent", false], ["Spurhalteassistent", false]];
-    let insurence = [["Haftpflichtversicherung", true], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", false], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false]];
+    let insurence = [["Haftpflichtversicherung", (carInfo.protectionServices.fullyComprehensiveInsurance === "true")], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", (carInfo.protectionServices.glassTireProtection === "true")], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false], ["Unterbodenschutz", (carInfo.protectionServices.underbodyProtection === "true")]];
+
+    console.log(carInfo)
 
     createList(ausstatunghas, ausstatungdidnthave, ausstatung);
     createList(assistencehas, assistencedidnthave, assistence);
@@ -77,13 +79,42 @@ function extras(){
 function onLoad(){
     calculateFinalPrice();
     extras();
+    importantDetails();
 }
 
+function importantDetails(){
+    document.getElementById("doors").textContent = carInfo.details.doors;
+    document.getElementById("seats").textContent = carInfo.details.seats;
+    document.getElementById("gearbox").textContent = carInfo.details.gearbox;
+    document.getElementById("modelBrand").textContent = carInfo.details.model + " " +carInfo.details.brand;
+}
 
+window.addEventListener('scroll', function(ev) {
+
+    var someDiv = document.getElementById('header');
+    var distanceToTop = someDiv.getBoundingClientRect().top;
+
+    if(distanceToTop < -230){
+        document.getElementById("bordered").style.position = "fixed";
+    }else {
+        document.getElementById("bordered").style.position = "unset"
+    }
+    console.log(distanceToTop);
+});
+
+let carsData;
+let carInfo;
+let start;
+let end;
 
 const DetailPage = props => {
-    // const [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
-    const { id } = useParams();
+    [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+
+    const {id, startDate, endDate} = useParams();
+    start = startDate;
+    end = endDate;
+
+    carInfo = carsData.find(car => car.id == id);
 
     const images = [
         {
@@ -98,7 +129,7 @@ const DetailPage = props => {
 
     return (
         <Container onLoad={onLoad}>
-            <h1>Dein Auton</h1>
+            <h1 id={"header"}>Dein Auton</h1>
             <Row>
                 <Col>
                     <ImageGallery items={images} showPlayButton={false} />
@@ -106,10 +137,10 @@ const DetailPage = props => {
                 <Col>
                     <h2>Details</h2>
                     <ul>
-                        <li>Türen: <span>5</span></li>
-                        <li>Sitze: <span>5</span></li>
-                        <li>Schatung: <span>manuel</span></li>
-                        <li><p>S-Klasse Merceds</p></li>
+                        <li>Türen: <span id={"doors"}/></li>
+                        <li>Sitze: <span id={"seats"}/></li>
+                        <li>Schatung: <span id={"gearbox"}/></li>
+                        <li><p id={"modelBrand"}/></li>
                     </ul>
                     <NavLink href={"#top"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
                 </Col>
@@ -117,12 +148,12 @@ const DetailPage = props => {
                     <div id="bordered">
                         <h2>Preis</h2>
                         <ul >
-                            <li>€/Tag: <span id="pricePerDay">50</span>€</li>
-                            <li>Kautoin: <span id={"deposit"} >200</span>€</li>
-                            <li>Kilometerlimit: <span>100</span>km</li>
+                            <li>€/Tag: <span id="pricePerDay"/>€</li>
+                            <li>Kautoin: <span id={"deposit"}/>€</li>
+                            <li id={"limit"}>Kilometerlimit: <span/>km</li>
                         </ul>
-                        <div id={"summary"}><span id={"finalPrice"}>X</span>€ (inkl. Kaution) vom <span id={"from"}>11.11.2022</span> bis <span id={"to"}>11.12.2022</span></div>
-                        <Button id={"bookButton"} href={"/bookingPage/" + id}>Jetzt Buchen </Button>
+                        <div id={"summary"}><span id={"finalPrice"}/>€ (inkl. Kaution) für <span id={"days"}/> Tage, vom <span id={"from"}/> bis <span id={"to"}/></div>
+                        <Button id={"bookButton"} href={"/bookingPage/" + id + "/" + start + "/" + end}>Jetzt Buchen </Button>
                     </div>
                 </Col>
             </Row>
@@ -148,7 +179,7 @@ const DetailPage = props => {
             </Row>
             <Row >
                 <Col>
-                    <h3>Versicherungen</h3>
+                    <h3>Schutz</h3>
                     <ul id={"insurence"} className="has_or_not">
                     </ul>
                     <ul id={"didntHaveinsurence"} className="has_or_not">
