@@ -80,6 +80,18 @@ function onLoad(){
     calculateFinalPrice();
     extras();
     importantDetails();
+    window.addEventListener('scroll', function(ev) {
+
+        var someDiv = document.getElementById('header');
+        var distanceToTop = someDiv.getBoundingClientRect().top;
+
+        if(distanceToTop < -230){
+            document.getElementById("bordered").style.position = "fixed";
+        }else {
+            document.getElementById("bordered").style.position = "unset"
+        }
+        console.log(distanceToTop);
+    });
 }
 
 function importantDetails(){
@@ -89,18 +101,7 @@ function importantDetails(){
     document.getElementById("modelBrand").textContent = carInfo.details.model + " " +carInfo.details.brand;
 }
 
-window.addEventListener('scroll', function(ev) {
 
-    var someDiv = document.getElementById('header');
-    var distanceToTop = someDiv.getBoundingClientRect().top;
-
-    if(distanceToTop < -230){
-        document.getElementById("bordered").style.position = "fixed";
-    }else {
-        document.getElementById("bordered").style.position = "unset"
-    }
-    console.log(distanceToTop);
-});
 
 let carsData;
 let carInfo;
@@ -114,7 +115,7 @@ const DetailPage = props => {
     start = startDate;
     end = endDate;
 
-    carInfo = carsData.find(car => car.id == id);
+    carInfo = carsData.find(car => car.id.toString() === id);
 
     const images = [
         {

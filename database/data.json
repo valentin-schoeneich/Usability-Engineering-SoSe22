@@ -34,7 +34,7 @@
             "pricePerDay": "250",
             "deposit": "500",
             "kilometerLimit": "",
-            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "img": "https://www.nicepng.com/png/detail/443-4431462_2018-mercedes-benz-s-class-sedan-s-560.png",
             "location": "Wiesbaden",
             "booked": [
                 {
@@ -132,7 +132,7 @@
             }
         },
         {
-            "id": 2,
+            "id": 3,
             "pricePerDay": "80",
             "deposit": "100",
             "kilometerLimit": "",
