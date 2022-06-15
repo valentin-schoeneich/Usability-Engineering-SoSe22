@@ -5,14 +5,18 @@ import Button from "react-bootstrap/Button";
 //import Homepage from "./Homepage";
 const CarSuggestions = props => {
     const handleRent = event => {
-        window.location.href = "http://localhost:3000/"+props.carData?props.carData.id:"";
+        window.location.href="/detailPage/" + props.carData.id + "/" + "2022-07-18" + "/" + "2022-07-18";
     }
     return (
         <Card id="card" onClick={handleRent}>
-            <Card.Img variant="top" src={props.carData?props.carData.img:""}
-                      onClick={handleRent}/>
+            <div style={{display: "flex",
+                alignItems: "center",
+                justifyContent: "center", minHeight:"20rem"}}>
+                <Card.Img variant="top" src={props.carData?props.carData.img:""}
+                          onClick={handleRent} style={{}}/>
+            </div>
             <Card.Body>
-                <Card.Title>Nur {props.carData?props.carData.pricePerDay:""} € pro Tag</Card.Title>
+                <Card.Title> <b>{props.carData?props.carData.pricePerDay:""} €</b> pro Tag</Card.Title>
                 <div>
                     {props.carData?props.carData.details.brand:""} {props.carData?props.carData.details.model:""}
                 </div>

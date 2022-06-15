@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
+import {getElement} from "bootstrap/js/src/util";
 
 
 const SearchFields = props => {
@@ -11,6 +12,7 @@ const SearchFields = props => {
     let mm = String(today.getMonth() + 1).padStart(2, '0');
     let yyyy = today.getFullYear();
     let todayDate = yyyy + '-' + mm + '-' + dd;
+    let startD = document.getElementById("von");
     const [searchData, setSearchData] = useState({
         "location": props.valueSelect ? props.valueSelect : "",
         "startDate": props.valueStartDate ? props.valueStartDate : "",
@@ -113,7 +115,7 @@ const SearchFields = props => {
                         placeholder ="Bis"
                         onFocus={(e) => (changeTextToDateInput(e.target))}
                         onBlur={(e) => (changeDateToTextInput(e.target))}
-                        min= {todayDate}
+                        min= {startD?startD.value:todayDate}
                         max="2023-12-31"
                         defaultValue={props.valueEndDate ? props.valueEndDate : ""}
                         name="endDate"

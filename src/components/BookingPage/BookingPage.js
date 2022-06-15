@@ -77,7 +77,7 @@ const BookingPage = props => {
     start = startDate;
     end = endDate;
 
-    carInfo = carsData.find(car => car.id === id);
+    carInfo = carsData.find(car => car.id.toString() === id);
 
     return (
         <Container onLoad={onLoad}>
