@@ -45,7 +45,7 @@ const CarTile = props => {
                         {props.car.deposit
                             ? <img src={tick} style={{height: "20px"}} alt="img"/>
                             : <img src={cross} style={{height: "20px"}} alt="img"/>}
-                            {" Kaution: " + props.car.deposit + "€"}<br/>
+                            {" Kaution: " + props.car.deposit + " €"}<br/>
 
                         <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "50px"}}>
                             <img src={Sitze} style={{height: "20px"}} alt="img"/>
@@ -72,7 +72,7 @@ const CarTile = props => {
 
                 </Card.Body>
                 <Card.Footer>
-                    <span style={{fontSize: "2rem"}}>{props.car.pricePerDay + "€"}</span> <span>pro Tag</span>
+                    <span style={{fontSize: "2rem"}}>{props.car.pricePerDay + " €"}</span> <span>pro Tag</span>
                     <Button
                         href={"/detailPage/" + props.car.id + "/" + startDate + "/" + endDate}
                         style={{float: "right"}}
