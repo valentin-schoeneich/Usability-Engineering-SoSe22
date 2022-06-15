@@ -12,13 +12,13 @@ import Mittelklasse from "../../imgs/mittelklasse.png";
 import Kompaktklasse from "../../imgs/kompaktklasse.png";
 import Sitze from "../../imgs/sitze.png";
 import Tueren from "../../imgs/tueren.png";
-import Automatik from "../../imgs/automatik.png"
-import Manuell from "../../imgs/manuell.png"
-import Klimaanlage from "../../imgs/Klimaanlage.png"
-import Navigation from "../../imgs/navigation.png"
-import Infotainment from "../../imgs/infotainment.png"
-import Insurance from "../../imgs/insurance.jpg"
-import SearchField from "../homepage/SearchFields"
+import Automatik from "../../imgs/automatik.png";
+import Manuell from "../../imgs/manuell.png";
+import Klimaanlage from "../../imgs/Klimaanlage.png";
+import Navigation from "../../imgs/navigation.png";
+import Infotainment from "../../imgs/infotainment.png";
+import Insurance from "../../imgs/insurance.jpg";
+import SearchField from "../homepage/SearchFields";
 
 
 const CarFilterPage = props => {
