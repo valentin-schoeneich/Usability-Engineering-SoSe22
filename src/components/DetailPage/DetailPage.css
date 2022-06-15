@@ -2,8 +2,8 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 #bordered{
-    border: 2px solid black;
-    position: fixed;
+
+    position: unset;
     background-color: white;
     z-index: 100;
 }
@@ -40,7 +40,14 @@
 a.anchor {
     display: block;
     position: relative;
-    top: -55px;
+    top: -70px;
     visibility: hidden;
 }
 
+#detailList li{
+    margin-bottom: 8px;
+}
+
+#detailList{
+    list-style: none;
+}

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="CarTile design 2">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Filter by location and date on the filter page">
+      <change afterPath="$PROJECT_DIR$/src/imgs/kofferraum.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imgs/lenkrad.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/car2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +51,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="ts.external.directory.path" value="C:\Users\NoahLanger\AppData\Local\JetBrains\WebStorm 2021.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\valen\Documents\Usability-Engineering-SoSe22\src\components\LoginRegistration" />
@@ -267,28 +270,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654856733431</updated>
     </task>
-    <task id="LOCAL-00022" summary="fixes">
-      <created>1655284073031</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1655284073031</updated>
-    </task>
-    <task id="LOCAL-00023" summary="CarTile design">
-      <created>1655287746310</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1655287746310</updated>
-    </task>
-    <task id="LOCAL-00024" summary="CarTile design 2">
-      <created>1655288257009</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1655288257009</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,9 +309,6 @@
     <MESSAGE value="Card import" />
     <MESSAGE value="added missing image" />
     <MESSAGE value="added images" />
-    <MESSAGE value="fixes" />
-    <MESSAGE value="CarTile design" />
-    <MESSAGE value="CarTile design 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="CarTile design 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added images" />
   </component>
 </project>
