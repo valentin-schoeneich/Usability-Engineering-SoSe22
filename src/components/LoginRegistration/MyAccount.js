@@ -29,11 +29,11 @@ const Homepage = props => {
                         {"E-Mail Adresse"}<br/>
                     </Col>
                     <Col xs lg="2">
-                        {accountData.forename}<br/>
-                        {accountData.surname}<br/>
-                        {accountData.gender}<br/>
-                        {accountData.birthdate}<br/>
-                        {accountData.email}<br/>
+                        {accountData.forename ? accountData.forename: ""}<br/>
+                        {accountData.surname ? accountData.surname : ""}<br/>
+                        {accountData.gender ? accountData.gender: ""}<br/>
+                        {accountData.birthdate ? accountData.birthdate: ""}<br/>
+                        {accountData.email ? accountData.email : ""}<br/>
                     </Col>
                 </Row>
             </Container>
