@@ -20,8 +20,8 @@
         },
         {
             "forename": "test",
-            "surname": "tester",
-            "gender": "male",
+            "surname": "testerin",
+            "gender": "female",
             "birthdate": "1985-07-15",
             "email": "1",
             "password": "1",

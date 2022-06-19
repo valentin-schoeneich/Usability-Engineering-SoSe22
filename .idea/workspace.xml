@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="CarTile design 3">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="CarTile design 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/MyAccount.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +46,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -119,6 +123,9 @@
       <workItem from="1654852927397" duration="4248000" />
       <workItem from="1655022581470" duration="9819000" />
       <workItem from="1655069483550" duration="1909000" />
+      <workItem from="1655376513607" duration="689000" />
+      <workItem from="1655458041038" duration="269000" />
+      <workItem from="1655630732945" duration="2093000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -295,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655288920305</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="CarTile design 4">
+      <created>1655376576754</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655376576754</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +327,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Basic setup with navigator and routing" />
     <MESSAGE value="Login Popup" />
     <MESSAGE value="Registration Popup" />
     <MESSAGE value="Registration form, validation, post request" />
@@ -338,6 +351,7 @@
     <MESSAGE value="CarTile design" />
     <MESSAGE value="CarTile design 2" />
     <MESSAGE value="CarTile design 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="CarTile design 3" />
+    <MESSAGE value="CarTile design 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="CarTile design 4" />
   </component>
 </project>
