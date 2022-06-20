@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
-import {getElement} from "bootstrap/js/src/util";
+//import {getElement} from "bootstrap/js/src/util";
 
 
 const SearchFields = props => {
@@ -57,6 +57,7 @@ const SearchFields = props => {
     function helper(value){
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
         let date = new Date(value);
+        // TODO was war hier die intention? vergleich mit sich selbst wirft warning
         if(date.getTime() === date.getTime()){
             return date.toLocaleDateString('de-DE', options);
         }

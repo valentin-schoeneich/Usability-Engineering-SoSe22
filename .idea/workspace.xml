@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="AccountData design">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Added proper images for our cars">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/MyAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/CarSuggestions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +129,9 @@
       <workItem from="1655069483550" duration="1909000" />
       <workItem from="1655376513607" duration="689000" />
       <workItem from="1655458041038" duration="269000" />
-      <workItem from="1655630732945" duration="3518000" />
+      <workItem from="1655630732945" duration="3799000" />
+      <workItem from="1655674615331" duration="606000" />
+      <workItem from="1655713496589" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -316,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655632869873</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added proper images for our cars">
+      <created>1655634729769</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1655634729769</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +347,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Registration Popup" />
     <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
     <MESSAGE value="Navbar changes on successfull login" />
@@ -359,6 +371,7 @@
     <MESSAGE value="CarTile design 3" />
     <MESSAGE value="CarTile design 4" />
     <MESSAGE value="AccountData design" />
-    <option name="LAST_COMMIT_MESSAGE" value="AccountData design" />
+    <MESSAGE value="Added proper images for our cars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added proper images for our cars" />
   </component>
 </project>

@@ -11,6 +11,7 @@ const AbortPopup = props => {
                     <Modal.Title>Buchungsvorgang wirklich Abbrechen?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    {/* TODO warning: Script URL is a form of eval, laut stackoverflow sind href mit javascript: zu vermeiden*/}
                     <Button variant="danger" type="button" className="mx-2" href={"javascript:history.back()"}>
                         Abbrechen
                     </Button>

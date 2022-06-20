@@ -29,7 +29,6 @@ function App() {
         var p = document.getElementById("footer");
         var footerHeight = window.getComputedStyle(p).height;
         document.getElementById("dynamicHeight").style.minHeight = (windowheight - Number(footerHeight.slice(0, -2)) -1).toString() + "px";
-        console.log(windowheight - Number(footerHeight.slice(0, -2)));
     }
 
     return (

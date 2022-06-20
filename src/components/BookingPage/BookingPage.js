@@ -7,9 +7,9 @@ import kreditkarteIcon from "../../imgs/BookingPage/Kreditkarte.png";
 import barIcon from "../../imgs/BookingPage/Bargeld.png";
 import {useState} from 'react';
 import AbortPopup from "./AbortPopup";
-import SuccessPopup from "./SuccessPopup";
+//import SuccessPopup from "./SuccessPopup";
 import {useParams} from "react-router-dom";
-import successPopup from "./SuccessPopup";
+//import successPopup from "./SuccessPopup";
 
 function refreshPaymentMethode(){
     document.getElementById("Zahlungsart").textContent = document.querySelector('input[name="zahlungsart"]:checked').value;

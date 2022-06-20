@@ -10,11 +10,11 @@ import ImageGallery from 'react-image-gallery';
 import {useParams} from "react-router-dom";
 import Sitze from "../../imgs/sitze.png";
 import Tueren from "../../imgs/tueren.png";
-import Automatik from "../../imgs/automatik.png";
+//import Automatik from "../../imgs/automatik.png";
 import Manuell from "../../imgs/manuell.png";
-import Klimaanlage from "../../imgs/Klimaanlage.png";
-import Navigation from "../../imgs/navigation.png";
-import Infotainment from "../../imgs/infotainment.png";
+//import Klimaanlage from "../../imgs/Klimaanlage.png";
+//import Navigation from "../../imgs/navigation.png";
+//import Infotainment from "../../imgs/infotainment.png";
 import Sportwagen from "../../imgs/sportwagen.png";
 import Oberkkasse from "../../imgs/Oberklasse.png";
 import Mittelklasse from "../../imgs/mittelklasse.png";
@@ -115,10 +115,11 @@ function importantDetails(){
 
 function classPicture(){
     switch (carInfo.details.class){
-        case "Oberklasse": return <img src={Oberkkasse}/>;
-        case "Kompaktklasse": return <img src={Kompaktklasse}/>;
-        case "Mittelklasse": return <img src={Mittelklasse}/>;
-        case "Sportwagen": return <img src={Sportwagen}/>;
+        case "Oberklasse": return <img src={Oberkkasse} alt="img"/>;
+        case "Kompaktklasse": return <img src={Kompaktklasse} alt="img"/>;
+        case "Mittelklasse": return <img src={Mittelklasse} alt="img"/>;
+        case "Sportwagen": return <img src={Sportwagen} alt="img"/>;
+        default: return "";
     }
 }
 
@@ -166,9 +167,9 @@ const DetailPage = props => {
                 <Col>
                     <h2>Details</h2>
                     <ul id={"detailList"}>
-                        <li><img src={Tueren}/> <span id={"doors"}/></li>
-                        <li><img src={Sitze}/> <span id={"seats"}/></li>
-                        <li><img src={Manuell}/> <span id={"gearbox"}/></li>
+                        <li><img src={Tueren} alt="img"/> <span id={"doors"}/></li>
+                        <li><img src={Sitze} alt="img"/> <span id={"seats"}/></li>
+                        <li><img src={Manuell} alt="img"/> <span id={"gearbox"}/></li>
                         <li>{classPicture()} <span id={"class"}/></li>
                     </ul>
                     <NavLink href={"#top"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
@@ -191,8 +192,9 @@ const DetailPage = props => {
                 </Col>
             </Row>
             <hr style={{height: "3px"}}/>
-            <a className="anchor" id="top"/>
-            <Row >
+            {/*TODO hier kommt einen warning zu dem anchor dass da wohl ein href benötigt wird*/}
+            <a className="anchor" id="top"> </a>
+            <Row>
                 <Col>
                     <h3>Ausstatung</h3>
                     <ul id={"unimportantDetails"} className="has_or_not">
