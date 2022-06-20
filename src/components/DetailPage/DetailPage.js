@@ -1,13 +1,24 @@
 import './DetailPage.css';
 import React, {useState} from 'react';
-import car from "../../imgs/car.png";
-import car2 from "../../imgs/car2.png";
+import innen from "../../imgs/lenkrad.jpg";
+import kofferraum from "../../imgs/kofferraum.jpg";
 import arrow from "../../imgs/arrow.svg"
 import has from "../../imgs/hasDetail.png"
 import didntHave from "../../imgs/didntHasDetail.png"
-import {Button, Col, Container, NavLink, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, NavLink, Row} from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import {useParams} from "react-router-dom";
+import Sitze from "../../imgs/sitze.png";
+import Tueren from "../../imgs/tueren.png";
+//import Automatik from "../../imgs/automatik.png";
+import Manuell from "../../imgs/manuell.png";
+//import Klimaanlage from "../../imgs/Klimaanlage.png";
+//import Navigation from "../../imgs/navigation.png";
+//import Infotainment from "../../imgs/infotainment.png";
+import Sportwagen from "../../imgs/sportwagen.png";
+import Oberkkasse from "../../imgs/Oberklasse.png";
+import Mittelklasse from "../../imgs/mittelklasse.png";
+import Kompaktklasse from "../../imgs/kompaktklasse.png";
 
 
 function calculateFinalPrice(){
@@ -69,8 +80,6 @@ function extras(){
     let assistence = [["Scheibenwischautomatik", true], ["Lichtautomatik", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Parkpilot", false], ["Bremsassistent", false], ["Spurhalteassistent", false]];
     let insurence = [["Haftpflichtversicherung", (carInfo.protectionServices.fullyComprehensiveInsurance === "true")], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", (carInfo.protectionServices.glassTireProtection === "true")], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false], ["Unterbodenschutz", (carInfo.protectionServices.underbodyProtection === "true")]];
 
-    console.log(carInfo)
-
     createList(ausstatunghas, ausstatungdidnthave, ausstatung);
     createList(assistencehas, assistencedidnthave, assistence);
     createList(insurencehas, insurencedidnthave, insurence);
@@ -85,12 +94,15 @@ function onLoad(){
         var someDiv = document.getElementById('header');
         var distanceToTop = someDiv.getBoundingClientRect().top;
 
-        if(distanceToTop < -230){
+        if(distanceToTop < -326){
             document.getElementById("bordered").style.position = "fixed";
+            var p = document.getElementById("container");
+            document.getElementById("bordered").style.marginRight = window.getComputedStyle(p).marginRight;
         }else {
-            document.getElementById("bordered").style.position = "unset"
+            document.getElementById("bordered").style.position = "unset";
+            document.getElementById("bordered").style.marginRight = "0";
         }
-        console.log(distanceToTop);
+        //console.log(distanceToTop);
     });
 }
 
@@ -98,10 +110,18 @@ function importantDetails(){
     document.getElementById("doors").textContent = carInfo.details.doors;
     document.getElementById("seats").textContent = carInfo.details.seats;
     document.getElementById("gearbox").textContent = carInfo.details.gearbox;
-    document.getElementById("modelBrand").textContent = carInfo.details.model + " " +carInfo.details.brand;
+    document.getElementById("class").textContent = carInfo.details.class;
 }
 
-
+function classPicture(){
+    switch (carInfo.details.class){
+        case "Oberklasse": return <img src={Oberkkasse} alt="img"/>;
+        case "Kompaktklasse": return <img src={Kompaktklasse} alt="img"/>;
+        case "Mittelklasse": return <img src={Mittelklasse} alt="img"/>;
+        case "Sportwagen": return <img src={Sportwagen} alt="img"/>;
+        default: return "";
+    }
+}
 
 let carsData;
 let carInfo;
@@ -117,50 +137,64 @@ const DetailPage = props => {
 
     carInfo = carsData.find(car => car.id.toString() === id);
 
+
     const images = [
         {
-            original: car,
-            thumbnail: car
+            original: carInfo.img,
+            thumbnail: carInfo.img,
+            originalHeight: 250,
         },
         {
-            original: car2,
-            thumbnail: car2
+            original: innen,
+            thumbnail: innen,
+            originalHeight: 250,
+        },
+        {
+            original: kofferraum,
+            thumbnail: kofferraum,
+            originalHeight: 250,
         }
     ]
 
     return (
-        <Container onLoad={onLoad}>
-            <h1 id={"header"}>Dein Auton</h1>
+        <Container onLoad={onLoad} id={"container"}>
+            <h1 id={"header"}>{carInfo.details.model + " " +carInfo.details.brand}</h1>
             <Row>
+
                 <Col>
                     <ImageGallery items={images} showPlayButton={false} />
                 </Col>
                 <Col>
                     <h2>Details</h2>
-                    <ul>
-                        <li>Türen: <span id={"doors"}/></li>
-                        <li>Sitze: <span id={"seats"}/></li>
-                        <li>Schatung: <span id={"gearbox"}/></li>
-                        <li><p id={"modelBrand"}/></li>
+                    <ul id={"detailList"}>
+                        <li><img src={Tueren} alt="img"/> <span id={"doors"}/></li>
+                        <li><img src={Sitze} alt="img"/> <span id={"seats"}/></li>
+                        <li><img src={Manuell} alt="img"/> <span id={"gearbox"}/></li>
+                        <li>{classPicture()} <span id={"class"}/></li>
                     </ul>
                     <NavLink href={"#top"}><span id="moreDetailText">Zu allen Details</span><img id="arrow" src={arrow} alt={"arrow"}/></NavLink>
                 </Col>
                 <Col>
-                    <div id="bordered">
-                        <h2>Preis</h2>
-                        <ul >
-                            <li>€/Tag: <span id="pricePerDay"/>€</li>
-                            <li>Kautoin: <span id={"deposit"}/>€</li>
-                            <li id={"limit"}>Kilometerlimit: <span/>km</li>
-                        </ul>
-                        <div id={"summary"}><span id={"finalPrice"}/>€ (inkl. Kaution) für <span id={"days"}/> Tage, vom <span id={"from"}/> bis <span id={"to"}/></div>
-                        <Button id={"bookButton"} href={"/bookingPage/" + id + "/" + start + "/" + end}>Jetzt Buchen </Button>
-                    </div>
+                    <Card id="bordered">
+                        <Card.Header>
+                            <h2>Preis</h2>
+                        </Card.Header>
+                        <Card.Body>
+                            <ul >
+                                <li>€/Tag: <span id="pricePerDay"/>€</li>
+                                <li>Kautoin: <span id={"deposit"}/>€</li>
+                                <li id={"limit"}>Kilometerlimit: <span/>km</li>
+                            </ul>
+                            <div id={"summary"}><span id={"finalPrice"}/>€ (inkl. Kaution) für <span id={"days"}/> Tage, vom <span id={"from"}/> bis <span id={"to"}/></div>
+                            <Button id={"bookButton"} href={"/bookingPage/" + id + "/" + start + "/" + end}>Jetzt Buchen </Button>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
-            <hr/>
-            <a className="anchor" id="top"/>
-            <Row >
+            <hr style={{height: "3px"}}/>
+            {/*TODO hier kommt einen warning zu dem anchor dass da wohl ein href benötigt wird*/}
+            <a className="anchor" id="top"> </a>
+            <Row>
                 <Col>
                     <h3>Ausstatung</h3>
                     <ul id={"unimportantDetails"} className="has_or_not">

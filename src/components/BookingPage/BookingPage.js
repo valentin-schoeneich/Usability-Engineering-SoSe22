@@ -7,9 +7,9 @@ import kreditkarteIcon from "../../imgs/BookingPage/Kreditkarte.png";
 import barIcon from "../../imgs/BookingPage/Bargeld.png";
 import {useState} from 'react';
 import AbortPopup from "./AbortPopup";
-import SuccessPopup from "./SuccessPopup";
+//import SuccessPopup from "./SuccessPopup";
 import {useParams} from "react-router-dom";
-import successPopup from "./SuccessPopup";
+//import successPopup from "./SuccessPopup";
 
 function refreshPaymentMethode(){
     document.getElementById("Zahlungsart").textContent = document.querySelector('input[name="zahlungsart"]:checked').value;
@@ -51,7 +51,26 @@ function processForm(e) {
     return false;
 }
 
+const originalSetItem = localStorage.setItem;
 
+localStorage.setItem = function(key, value) {
+    const event = new Event('itemInserted');
+
+    event.value = value; // Optional..
+    event.key = key; // Optional..
+
+    if(key === "accountData"){
+        document.dispatchEvent(event);
+    }
+
+    originalSetItem.apply(this, arguments);
+};
+
+const localStorageSetHandler = function(e) {
+    window.location.reload();
+};
+
+document.addEventListener("itemInserted", localStorageSetHandler, false);
 
 let carsData;
 let carInfo;
@@ -68,9 +87,11 @@ const BookingPage = props => {
         setAbortPopUp(show => !show);
     }
 
-
-
     [carsData] = useState(JSON.parse(window.localStorage.getItem("carsData")));
+
+    const [accountData] = useState(JSON.parse(window.localStorage.getItem("accountData")));
+
+    console.log(accountData);
 
     const {id, startDate, endDate} = useParams();
 
@@ -83,30 +104,34 @@ const BookingPage = props => {
         <Container onLoad={onLoad}>
             <h1>Letzter Schritt zum Auto</h1>
             <Form id={"my-form"}>
-                <Form.Group className="mb-3" as={Row} >
-                    <Col sm={3} md={5} lg={3}>
-                        <Form.Label htmlFor="forename">Vorname</Form.Label>
-                    </Col>
-                    <Col sm={9} md={7} lg={9}>
-                        <Form.Control id="forename" name="forename" required/>
-                    </Col>
-                </Form.Group>
-                <Form.Group className="mb-3" as={Row}>
-                    <Col sm={3} md={5} lg={3}>
-                        <Form.Label htmlFor="surname">Nachname</Form.Label>
-                    </Col>
-                    <Col sm={9} md={7} lg={9}>
-                        <Form.Control id="surname" name="surname" required/>
-                    </Col>
-                </Form.Group>
-                <Form.Group className="mb-3" as={Row}>
-                    <Col sm={3} md={5} lg={3}>
-                        <Form.Label  htmlFor="email">E-Mail Adresse</Form.Label>
-                    </Col>
-                    <Col sm={9} md={7} lg={9}>
-                        <Form.Control  type="email" id="email" name="email" required/>
-                    </Col>
-                </Form.Group>
+                {(accountData === null || Object.keys(accountData).length === 0) ?
+                    <div>
+                    <Form.Group className="mb-3" as={Row} >
+                        <Col sm={3} md={5} lg={3}>
+                            <Form.Label htmlFor="forename">Vorname</Form.Label>
+                        </Col>
+                        <Col sm={9} md={7} lg={9}>
+                            <Form.Control id="forename" name="forename" required/>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group className="mb-3" as={Row}>
+                        <Col sm={3} md={5} lg={3}>
+                            <Form.Label htmlFor="surname">Nachname</Form.Label>
+                        </Col>
+                        <Col sm={9} md={7} lg={9}>
+                            <Form.Control id="surname" name="surname" required/>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group className="mb-3" as={Row}>
+                        <Col sm={3} md={5} lg={3}>
+                            <Form.Label  htmlFor="email">E-Mail Adresse</Form.Label>
+                        </Col>
+                        <Col sm={9} md={7} lg={9}>
+                            <Form.Control  type="email" id="email" name="email" required/>
+                        </Col>
+                    </Form.Group>
+                    </div>
+                    : null}
                 <Form.Group className="mb-3" as={Row}>
                     <Form.Label column sm={3} md={5} lg={3}>Zahlungsart</Form.Label>
                     <Col sm={9} md={7} lg={9}>
@@ -125,7 +150,7 @@ const BookingPage = props => {
                     </Col>
                 </Form.Group>
 
-                <hr/>
+                <hr style={{height: "3px"}}/>
 
                 <h3>Zusammenfassung</h3>
                 <p><strong>Das Auto:</strong> <span id={"modelBrand"}/> von <span id={"from"}/> bis <span id={"to"}/></p>

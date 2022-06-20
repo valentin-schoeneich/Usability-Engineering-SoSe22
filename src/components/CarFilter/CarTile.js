@@ -20,13 +20,13 @@ const CarTile = props => {
 
     return (
         <>
-            <Card style={{ width: '40rem' }}>
+            <Card style={{ width: '40rem', marginBottom: "1rem"}}>
                 <Card.Header>
                     {props.car.details.brand + " " + props.car.details.model}
                 </Card.Header>
                 <Card.Body>
                     <div style={{float: "left", paddingLeft: "1rem"}}>
-                        <img src={props.car.img} style={{height: "150px"}} alt="img"/>
+                        <img src={props.car.img} style={{height: "140px"}} alt="img"/>
                     </div>
                     <div style={{float: "right", paddingRight: "1rem"}}>
                         <span style={{fontSize: "25px"}}>{props.car.details.class}</span><br/>
@@ -45,7 +45,7 @@ const CarTile = props => {
                         {props.car.deposit
                             ? <img src={tick} style={{height: "20px"}} alt="img"/>
                             : <img src={cross} style={{height: "20px"}} alt="img"/>}
-                            {" Kaution: " + props.car.deposit + "€"}<br/>
+                            {" Kaution: " + props.car.deposit + " €"}<br/>
 
                         <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "50px"}}>
                             <img src={Sitze} style={{height: "20px"}} alt="img"/>
@@ -55,7 +55,7 @@ const CarTile = props => {
                             <img src={Tueren} style={{height: "20px"}} alt="img"/>
                             <span style={{display: "block", fontSize: "12px"}}>{props.car.details.doors}</span>
                         </span>
-                        <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "50px"}}>
+                        <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "60px"}}>
                             <img src={props.car.details.gearbox === "Automatik" ? Automatik: Manuell} alt="img" style={{height: "20px"}}/>
                             <span style={{display: "block", fontSize: "12px"}}>{props.car.details.gearbox}</span>
                         </span>
@@ -72,7 +72,7 @@ const CarTile = props => {
 
                 </Card.Body>
                 <Card.Footer>
-                    <span style={{fontSize: "2rem"}}>{props.car.pricePerDay + "€"}</span> <span>pro Tag</span>
+                    <span style={{fontSize: "2rem"}}>{props.car.pricePerDay + " €"}</span> <span>pro Tag</span>
                     <Button
                         href={"/detailPage/" + props.car.id + "/" + startDate + "/" + endDate}
                         style={{float: "right"}}

@@ -20,8 +20,8 @@
         },
         {
             "forename": "test",
-            "surname": "tester",
-            "gender": "male",
+            "surname": "testerin",
+            "gender": "female",
             "birthdate": "1985-07-15",
             "email": "1",
             "password": "1",
@@ -34,7 +34,7 @@
             "pricePerDay": "250",
             "deposit": "500",
             "kilometerLimit": "",
-            "img": "https://www.nicepng.com/png/detail/443-4431462_2018-mercedes-benz-s-class-sedan-s-560.png",
+            "img": "https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/chrome/white/2019MBC910002_1280_01",
             "location": "Wiesbaden",
             "booked": [
                 {
@@ -65,8 +65,8 @@
         },
         {
             "id": 1,
-            "pricePerDay": "600",
-            "deposit": "700",
+            "pricePerDay": "1500",
+            "deposit": "20000",
             "kilometerLimit": "",
             "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
             "location": "Oestrich",
@@ -102,7 +102,7 @@
             "pricePerDay": "180",
             "deposit": "300",
             "kilometerLimit": "",
-            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "img": "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/c-class/range-overview/_jcr_content/swipeableteaserbox/par/swipeableteaser_2067572924/asset.MQ6.12.20210811155357.jpeg",
             "location": "Mainz",
             "booked": [
                 {
@@ -136,7 +136,7 @@
             "pricePerDay": "80",
             "deposit": "100",
             "kilometerLimit": "",
-            "img": "https://cdn.motor1.com/images/mgl/3zoJ6/s1/4x3/ferrari-feiert-30-jahre-f40.webp",
+            "img": "https://www.synergycarleasing.co.uk/media/4622/20200731_a35_blue_450.png?mode=boxpad&width=575&height=431&rnd=132410099450000000&bgcolor=white",
             "location": "Frankfurt",
             "booked": [
                 {
@@ -151,7 +151,7 @@
                 "seats": "5",
                 "doors": "4",
                 "gearbox": "Manuell",
-                "aircon": "true",
+                "aircon": "false",
                 "infotainment": "true",
                 "navigation": "true"
             },
@@ -193,6 +193,437 @@
                 "fullyComprehensiveInsurance": "true",
                 "glassTireProtection": "false",
                 "underbodyProtection":"true"
+            }
+        },
+        {
+            "id": 5,
+            "pricePerDay": "80",
+            "deposit": "200",
+            "kilometerLimit": "1500",
+            "img": "https://cdn.motor1.com/images/mgl/1XgwK/s3/bmw-3er-2019-front.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "BMW",
+                "model": "3er",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "false",
+                "navigation": "false"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 6,
+            "pricePerDay": "60",
+            "deposit": "200",
+            "kilometerLimit": "1500",
+            "img": "https://cdn.motor1.com/images/mgl/1XgwK/s3/bmw-3er-2019-front.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "BMW",
+                "model": "3er",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "false"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 7,
+            "pricePerDay": "300",
+            "deposit": "1000",
+            "kilometerLimit": "",
+            "img": "https://cdn-ds.com/blogs-media/sites/540/2019/06/19140924/2019-Porsche-Panamera-dolomite-silver_o.jpg",
+            "location": "Wiesbaden",
+            "booked": [
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Porsche",
+                "model": "Panamera",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 8,
+            "pricePerDay": "500",
+            "deposit": "3000",
+            "kilometerLimit": "500",
+            "img": "https://images.finder.porsche.com/a02d2374-a146-42c1-8775-8838f68226d2/1920x1440",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Sportwagen",
+                "brand": "Porsche",
+                "model": "911 GT3 RS",
+                "seats": "2",
+                "doors": "2",
+                "gearbox": "Automatik",
+                "aircon": "false",
+                "infotainment": "false",
+                "navigation": "false"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 9,
+            "pricePerDay": "50",
+            "deposit": "300",
+            "kilometerLimit": "2000",
+            "img": "https://cdn.euroncap.com/media/60162/audi-a3.png",
+            "location": "Wiesbaden",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Kompaktwagen",
+                "brand": "Audi",
+                "model": "A3",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "false"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 10,
+            "pricePerDay": "55",
+            "deposit": "200",
+            "kilometerLimit": "2000",
+            "img": "https://www.futuredriving.at/wp/wp-content/uploads/2016/06/wei%C3%9F-2.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Kompaktklasse",
+                "brand": "VW",
+                "model": "Golf",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "false",
+                "navigation": "false"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection": "false"
+            }
+        },
+        {
+            "id": 11,
+            "pricePerDay": "250",
+            "deposit": "700",
+            "kilometerLimit": "1000",
+            "img": "https://cdn.wheel-size.com/automobile/body/bmw-5-series-2020-2022-1625462461.3904066.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "BMW",
+                "model": "5er",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 12,
+            "pricePerDay": "300",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://images.product.finder.porsche.com/2021/Y1ADB1/equipment/4GP/0/1440.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Porsche",
+                "model": "Taycan",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 13,
+            "pricePerDay": "280",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://cdn.motor1.com/images/mgl/R0bl9/s1/most-expensive-2022-audi-rs-e-tron-gt.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Audi",
+                "model": "E-Tron GT",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 14,
+            "pricePerDay": "200",
+            "deposit": "600",
+            "kilometerLimit": "500",
+            "img": "https://www.motorbiscuit.com/wp-content/uploads/2021/06/2021-Audi-A4-1-1024x768.jpg",
+            "location": "Wiesbaden",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Mittelklasse",
+                "brand": "Audi",
+                "model": "A4",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Manuell",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "false",
+                "underbodyProtection": "false"
+            }
+        },
+        {
+            "id": 15,
+            "pricePerDay": "500",
+            "deposit": "2000",
+            "kilometerLimit": "",
+            "img": "https://mediaservice.audi.com/media/cdb/data/e082c6fd-d2ff-48f6-bd94-7c8d7aca47d9.jpg",
+            "location": "Frankfurt",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Audi",
+                "model": "RS6",
+                "seats": "5",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 12,
+            "pricePerDay": "300",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://images.product.finder.porsche.com/2021/Y1ADB1/equipment/4GP/0/1440.jpg",
+            "location": "Wiesbaden",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Porsche",
+                "model": "Taycan",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 13,
+            "pricePerDay": "280",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://cdn.motor1.com/images/mgl/R0bl9/s1/most-expensive-2022-audi-rs-e-tron-gt.jpg",
+            "location": "Wiesbaden",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Audi",
+                "model": "E-Tron GT",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 12,
+            "pricePerDay": "300",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://images.product.finder.porsche.com/2021/Y1ADB1/equipment/4GP/0/1440.jpg",
+            "location": "Mainz",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Porsche",
+                "model": "Taycan",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 13,
+            "pricePerDay": "280",
+            "deposit": "1000",
+            "kilometerLimit": "500",
+            "img": "https://cdn.motor1.com/images/mgl/R0bl9/s1/most-expensive-2022-audi-rs-e-tron-gt.jpg",
+            "location": "Mainz",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Oberklasse",
+                "brand": "Audi",
+                "model": "E-Tron GT",
+                "seats": "4",
+                "doors": "4",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
+            }
+        },
+        {
+            "id": 8,
+            "pricePerDay": "500",
+            "deposit": "3000",
+            "kilometerLimit": "500",
+            "img": "https://images.finder.porsche.com/a02d2374-a146-42c1-8775-8838f68226d2/1920x1440",
+            "location": "Oestrich",
+            "booked": [
+
+            ],
+            "details": {
+                "class": "Sportwagen",
+                "brand": "Porsche",
+                "model": "911 GT3 RS",
+                "seats": "2",
+                "doors": "2",
+                "gearbox": "Automatik",
+                "aircon": "true",
+                "infotainment": "true",
+                "navigation": "true"
+            },
+            "protectionServices": {
+                "fullyComprehensiveInsurance": "true",
+                "glassTireProtection": "true",
+                "underbodyProtection": "true"
             }
         }
     ]

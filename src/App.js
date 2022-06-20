@@ -24,10 +24,16 @@ function App() {
             })
     }, [] );
 
+    function dynamicHeight(){
+        var windowheight = window.innerHeight;
+        var p = document.getElementById("footer");
+        var footerHeight = window.getComputedStyle(p).height;
+        document.getElementById("dynamicHeight").style.minHeight = (windowheight - Number(footerHeight.slice(0, -2)) -1).toString() + "px";
+    }
 
     return (
         <div>
-            <div style={{minHeight: "59rem"}}>
+            <div id={"dynamicHeight"} style={{minHeight: "722px"}} onLoad={dynamicHeight}>
                 <Navigator/>
                 <BrowserRouter>
                     <Routes>
@@ -40,7 +46,7 @@ function App() {
                 </BrowserRouter>
             </div>
             <div style={{
-                width: "100%", marginTop:"auto"}}>
+                width: "100%", marginTop:"auto"}} id={"footer"}>
                 <Footer/>
             </div>
         </div>

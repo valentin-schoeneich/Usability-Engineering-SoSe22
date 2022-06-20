@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
-import {getElement} from "bootstrap/js/src/util";
+//import {getElement} from "bootstrap/js/src/util";
 
 
 const SearchFields = props => {
@@ -50,10 +50,18 @@ const SearchFields = props => {
     }
 
     function changeDateToTextInput(target){
-        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-        let date = new Date(target.value);
         target.type = "text";
-        target.value = date.toLocaleDateString('de-DE', options);
+        target.value = helper(target.value)
+    }
+
+    function helper(value){
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        let date = new Date(value);
+        // TODO was war hier die intention? vergleich mit sich selbst wirft warning
+        if(date.getTime() === date.getTime()){
+            return date.toLocaleDateString('de-DE', options);
+        }
+        return "";
     }
 
     function changeTextToDateInput(target){
@@ -61,6 +69,7 @@ const SearchFields = props => {
             let dateString = target.value.substr(6,4) + "-" + target.value.substr(3,2) + "-" + (target.value.substr(0,2))
             target.type = "date";
             target.value = dateString;
+            target.showPicker()
         }
     }
 
@@ -98,7 +107,7 @@ const SearchFields = props => {
                         onBlur={(e) => (changeDateToTextInput(e.target))}
                         max="2023-12-31"
 
-                        defaultValue={props.valueStartDate ? props.valueStartDate : ""}
+                        defaultValue={props.valueStartDate ? helper(props.valueStartDate) : ""}
                         name="startDate"
                         id = "von"
                         isInvalid={!!errors.startDate}
@@ -117,7 +126,7 @@ const SearchFields = props => {
                         onBlur={(e) => (changeDateToTextInput(e.target))}
                         min= {startD?startD.value:todayDate}
                         max="2023-12-31"
-                        defaultValue={props.valueEndDate ? props.valueEndDate : ""}
+                        defaultValue={props.valueEndDate ? helper(props.valueEndDate) : ""}
                         name="endDate"
                         id="bis"
                         onChange= {handleChange}

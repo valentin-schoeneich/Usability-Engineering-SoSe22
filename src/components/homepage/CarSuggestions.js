@@ -4,9 +4,11 @@ import Button from "react-bootstrap/Button";
 //import {useEffect, useState} from "react";
 //import Homepage from "./Homepage";
 const CarSuggestions = props => {
+
     const handleRent = event => {
-        window.location.href="/detailPage/" + props.carData.id + "/" + "2022-07-18" + "/" + "2022-07-18";
+        window.location.href= "/detailPage/" + props.carData.id + "/2022-07-18/2022-07-18";
     }
+
     return (
         <Card id="card" onClick={handleRent}>
             <div style={{display: "flex",
