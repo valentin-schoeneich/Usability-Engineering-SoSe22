@@ -26,7 +26,7 @@ const CarTile = props => {
                 </Card.Header>
                 <Card.Body>
                     <div style={{float: "left", paddingLeft: "1rem"}}>
-                        <img src={props.car.img} style={{height: "150px"}} alt="img"/>
+                        <img src={props.car.img} style={{height: "140px"}} alt="img"/>
                     </div>
                     <div style={{float: "right", paddingRight: "1rem"}}>
                         <span style={{fontSize: "25px"}}>{props.car.details.class}</span><br/>
@@ -55,7 +55,7 @@ const CarTile = props => {
                             <img src={Tueren} style={{height: "20px"}} alt="img"/>
                             <span style={{display: "block", fontSize: "12px"}}>{props.car.details.doors}</span>
                         </span>
-                        <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "50px"}}>
+                        <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "60px"}}>
                             <img src={props.car.details.gearbox === "Automatik" ? Automatik: Manuell} alt="img" style={{height: "20px"}}/>
                             <span style={{display: "block", fontSize: "12px"}}>{props.car.details.gearbox}</span>
                         </span>
