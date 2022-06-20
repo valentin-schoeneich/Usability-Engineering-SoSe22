@@ -44,6 +44,7 @@ function onLoad(){
     }
 }
 
+
 function processForm(e) {
     if (e.preventDefault) e.preventDefault();
     window.localStorage.setItem("showSuccessPopup", "true")
@@ -76,6 +77,7 @@ let carsData;
 let carInfo;
 let start;
 let end;
+let carId;
 
 
 const BookingPage = props => {
@@ -91,12 +93,12 @@ const BookingPage = props => {
 
     const [accountData] = useState(JSON.parse(window.localStorage.getItem("accountData")));
 
-    console.log(accountData);
 
     const {id, startDate, endDate} = useParams();
 
     start = startDate;
     end = endDate;
+    carId = id;
 
     carInfo = carsData.find(car => car.id.toString() === id);
 

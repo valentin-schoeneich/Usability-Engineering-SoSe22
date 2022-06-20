@@ -22,9 +22,12 @@ import Kompaktklasse from "../../imgs/kompaktklasse.png";
 
 
 function calculateFinalPrice(){
-    let pricePerDay = parseFloat(carInfo.pricePerDay);
+
+    let pricePerDay = 0;
+    if(carInfo) pricePerDay = parseFloat(carInfo.pricePerDay);
     document.getElementById("pricePerDay").textContent = pricePerDay + "";
-    let deposit = parseFloat(carInfo.deposit);
+    let deposit = 0;
+    if(carInfo) deposit = parseFloat(carInfo.deposit);
     document.getElementById("deposit").textContent = deposit + "";
 
     let from = new Date(start);
@@ -38,7 +41,7 @@ function calculateFinalPrice(){
 
     document.getElementById("finalPrice").textContent = (pricePerDay * days + deposit)+ "";
 
-    if(carInfo.kilometerLimit !== ""){
+    if(carInfo && carInfo.kilometerLimit !== ""){
         document.getElementById("limit").getElementsByTagName("span")[0].textContent = carInfo.kilometerLimit
     }else {
         document.getElementById("limit").textContent = "kein Kilometerlimit"
@@ -76,13 +79,18 @@ function extras(){
     let insurencehas = document.getElementById("insurence");
     let insurencedidnthave = document.getElementById("didntHaveinsurence");
 
-    let ausstatung = [["Navi", (carInfo.details.navigation === "true")],["Infotainment", (carInfo.details.infotainment === "true")],["Klimaanlage", (carInfo.details.aircon === "true")], ["Ersatzrad", true], ["Sitzheizung", true], ["Dachfenster", false], ["Einstiegshilfen", true], ["Android Auto/Apple Car", false], ["Massage Sitze", false], ["Anhängerkuplung", false]];
-    let assistence = [["Scheibenwischautomatik", true], ["Lichtautomatik", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Parkpilot", false], ["Bremsassistent", false], ["Spurhalteassistent", false]];
-    let insurence = [["Haftpflichtversicherung", (carInfo.protectionServices.fullyComprehensiveInsurance === "true")], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", (carInfo.protectionServices.glassTireProtection === "true")], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false], ["Unterbodenschutz", (carInfo.protectionServices.underbodyProtection === "true")]];
+    if(carInfo){
+        let ausstatung = [["Navi", (carInfo.details.navigation === "true")],["Infotainment", (carInfo.details.infotainment === "true")],["Klimaanlage", (carInfo.details.aircon === "true")], ["Ersatzrad", true], ["Sitzheizung", true], ["Dachfenster", false], ["Einstiegshilfen", true], ["Android Auto/Apple Car", false], ["Massage Sitze", false], ["Anhängerkuplung", false]];
+        let assistence = [["Scheibenwischautomatik", true], ["Lichtautomatik", true], ["Parkpiepser", true], ["Rückfahrkamera", true], ["Parkpilot", false], ["Bremsassistent", false], ["Spurhalteassistent", false]];
+        let insurence = [["Haftpflichtversicherung", (carInfo.protectionServices.fullyComprehensiveInsurance === "true")], ["Reifenversicherung", true], ["Vollkasko", true], ["Glasversicherung", (carInfo.protectionServices.glassTireProtection === "true")], ["mehr Personen Versicherung", false], ["Rechtsschutzversicherung", false], ["Unterbodenschutz", (carInfo.protectionServices.underbodyProtection === "true")]];
 
-    createList(ausstatunghas, ausstatungdidnthave, ausstatung);
-    createList(assistencehas, assistencedidnthave, assistence);
-    createList(insurencehas, insurencedidnthave, insurence);
+        createList(ausstatunghas, ausstatungdidnthave, ausstatung);
+        createList(assistencehas, assistencedidnthave, assistence);
+        createList(insurencehas, insurencedidnthave, insurence);
+    }
+
+
+
 }
 
 function onLoad(){
@@ -107,14 +115,17 @@ function onLoad(){
 }
 
 function importantDetails(){
-    document.getElementById("doors").textContent = carInfo.details.doors;
-    document.getElementById("seats").textContent = carInfo.details.seats;
-    document.getElementById("gearbox").textContent = carInfo.details.gearbox;
-    document.getElementById("class").textContent = carInfo.details.class;
+    if(carInfo){
+        document.getElementById("doors").textContent = carInfo.details.doors;
+        document.getElementById("seats").textContent = carInfo.details.seats;
+        document.getElementById("gearbox").textContent = carInfo.details.gearbox;
+        document.getElementById("class").textContent = carInfo.details.class;
+    }
 }
 
 function classPicture(){
-    switch (carInfo.details.class){
+    let carClass = carInfo ? carInfo.details.class : "";
+    switch (carClass){
         case "Oberklasse": return <img src={Oberkkasse} alt="img"/>;
         case "Kompaktklasse": return <img src={Kompaktklasse} alt="img"/>;
         case "Mittelklasse": return <img src={Mittelklasse} alt="img"/>;
@@ -135,13 +146,14 @@ const DetailPage = props => {
     start = startDate;
     end = endDate;
 
-    carInfo = carsData.find(car => car.id.toString() === id);
-
+    if(carsData){
+        carInfo = carsData.find(car => car.id.toString() === id);
+    }
 
     const images = [
         {
-            original: carInfo.img,
-            thumbnail: carInfo.img,
+            original: carInfo ? carInfo.img : "",
+            thumbnail: carInfo ? carInfo.img : "",
             originalHeight: 250,
         },
         {
@@ -158,7 +170,7 @@ const DetailPage = props => {
 
     return (
         <Container onLoad={onLoad} id={"container"}>
-            <h1 id={"header"}>{carInfo.details.model + " " +carInfo.details.brand}</h1>
+            <h1 id={"header"}>{carInfo ? carInfo.details.model + " " +carInfo.details.brand : ""}</h1>
             <Row>
 
                 <Col>
