@@ -15,7 +15,7 @@ const CarSuggestions = props => {
                 alignItems: "center",
                 justifyContent: "center", minHeight:"20rem"}}>
                 <Card.Img variant="top" src={props.carData?props.carData.img:""}
-                          onClick={handleRent} style={{}}/>
+                          onClick={handleRent} style={{marginLeft:"1rem", marginRight:"1rem"}}/>
             </div>
             <Card.Body>
                 <Card.Title> <b>{props.carData?props.carData.pricePerDay:""} €</b> pro Tag</Card.Title>
