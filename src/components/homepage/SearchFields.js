@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
 import Col from "react-bootstrap/cjs/Col";
 import Container from "react-bootstrap/cjs/Container";
+import "../HoverEffect.css";
 //import {getElement} from "bootstrap/js/src/util";
 
 
@@ -86,6 +87,7 @@ const SearchFields = props => {
                         defaultValue={props.valueSelect ? props.valueSelect : "Ort"}
                         style={{width: props.selectWidth ? props.selectWidth: ""}}
                         id="locationSelect"
+                        className={"hover"}
                     >
                         <option disabled hidden>Ort</option>
                         <option>Frankfurt</option>

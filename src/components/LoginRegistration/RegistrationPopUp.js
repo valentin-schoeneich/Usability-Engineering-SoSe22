@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import {Form, Modal, Row, Col} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import "../HoverEffect.css";
 
 
 const RegistrationPopUp = props => {
@@ -82,9 +83,9 @@ const RegistrationPopUp = props => {
                     <Form onSubmit={handleSubmit}>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Vorname</Form.Label>
+                            <Form.Label htmlFor={"forename"} column sm={3} md={5} lg={3}>Vorname</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="forename" isInvalid={!!errors.forename}/>
+                            <Form.Control id={"forename"} onChange={handleChange} name="forename" isInvalid={!!errors.forename}/>
                             <Form.Control.Feedback type="invalid">
                                 {errors.forename}
                             </Form.Control.Feedback>
@@ -92,9 +93,9 @@ const RegistrationPopUp = props => {
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Nachname</Form.Label>
+                            <Form.Label htmlFor={"surname"} column sm={3} md={5} lg={3}>Nachname</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="surname" isInvalid={!!errors.surname}/>
+                            <Form.Control id={"surname"} onChange={handleChange} name="surname" isInvalid={!!errors.surname}/>
                             <Form.Control.Feedback type="invalid">
                                 {errors.surname}
                             </Form.Control.Feedback>
@@ -102,10 +103,10 @@ const RegistrationPopUp = props => {
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Geschlecht</Form.Label>
+                            <Form.Label htmlFor={"gender"} column sm={3} md={5} lg={3}>Geschlecht</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Select defaultValue="Bitte auswählen" onChange={handleChange}
-                                         name="gender" isInvalid={!!errors.gender}>
+                            <Form.Select id={"gender"} defaultValue="Bitte auswählen" onChange={handleChange}
+                                         name="gender" isInvalid={!!errors.gender} className={"hover"}>
                                 <option value="Bitte auswählen" disabled hidden>Bitte auswählen</option>
                                 <option value="male">Männlich</option>
                                 <option value="female">Weiblich</option>
@@ -117,9 +118,9 @@ const RegistrationPopUp = props => {
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Geburtsdatum</Form.Label>
+                            <Form.Label htmlFor={"birthdate"} column sm={3} md={5} lg={3}>Geburtsdatum</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control type="date" onChange={handleChange} name="birthdate" isInvalid={!!errors.birthdate}/>
+                            <Form.Control id={"birthdate"} type="date" onChange={handleChange} name="birthdate" isInvalid={!!errors.birthdate} className={"text-hover"}/>
                             <Form.Control.Feedback type="invalid">
                                 {errors.birthdate}
                             </Form.Control.Feedback>
@@ -127,9 +128,9 @@ const RegistrationPopUp = props => {
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>E-Mail Adresse</Form.Label>
+                            <Form.Label htmlFor={"email"} column sm={3} md={5} lg={3}>E-Mail Adresse</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="email" isInvalid={!!errors.email}/>
+                            <Form.Control id={"email"} onChange={handleChange} name="email" isInvalid={!!errors.email}/>
                             <Form.Control.Feedback type="invalid">
                                 {errors.email}
                             </Form.Control.Feedback>
@@ -137,9 +138,9 @@ const RegistrationPopUp = props => {
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Passwort</Form.Label>
+                            <Form.Label htmlFor={"password"} column sm={3} md={5} lg={3}>Passwort</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="password" isInvalid={!!errors.password}/>
+                            <Form.Control id={"password"} onChange={handleChange} name="password" isInvalid={!!errors.password}/>
                             <Form.Control.Feedback type="invalid">
                                 {errors.password}
                             </Form.Control.Feedback>

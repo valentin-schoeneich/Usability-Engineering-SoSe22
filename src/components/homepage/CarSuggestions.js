@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import "../HoverEffect.css";
 //import {useEffect, useState} from "react";
 //import Homepage from "./Homepage";
 const CarSuggestions = props => {
@@ -10,7 +11,7 @@ const CarSuggestions = props => {
     }
 
     return (
-        <Card id="card" onClick={handleRent}>
+        <Card id="card" onClick={handleRent} className={"hover"}>
             <div style={{display: "flex",
                 alignItems: "center",
                 justifyContent: "center", minHeight:"20rem"}}>

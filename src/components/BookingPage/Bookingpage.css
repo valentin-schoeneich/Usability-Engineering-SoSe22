@@ -13,3 +13,11 @@
 #submit{
     margin-right: 16px;
 }
+
+input[type=radio]:hover{
+    cursor: pointer;
+}
+
+label:hover{
+    cursor: pointer;
+}

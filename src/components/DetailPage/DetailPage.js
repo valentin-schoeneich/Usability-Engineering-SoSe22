@@ -19,6 +19,7 @@ import Sportwagen from "../../imgs/sportwagen.png";
 import Oberkkasse from "../../imgs/Oberklasse.png";
 import Mittelklasse from "../../imgs/mittelklasse.png";
 import Kompaktklasse from "../../imgs/kompaktklasse.png";
+import {forEach} from "react-bootstrap/ElementChildren";
 
 
 function calculateFinalPrice(){
@@ -154,17 +155,14 @@ const DetailPage = props => {
         {
             original: carInfo ? carInfo.img : "",
             thumbnail: carInfo ? carInfo.img : "",
-            originalHeight: 250,
         },
         {
             original: innen,
             thumbnail: innen,
-            originalHeight: 250,
         },
         {
             original: kofferraum,
             thumbnail: kofferraum,
-            originalHeight: 250,
         }
     ]
 

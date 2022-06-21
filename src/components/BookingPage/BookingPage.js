@@ -135,7 +135,7 @@ const BookingPage = props => {
                     </div>
                     : null}
                 <Form.Group className="mb-3" as={Row}>
-                    <Form.Label column sm={3} md={5} lg={3}>Zahlungsart</Form.Label>
+                    <Col sm={3} md={5} lg={3}>Zahlungsart</Col>
                     <Col sm={9} md={7} lg={9}>
                         <Form.Check type="radio">
                             <Form.Check.Input onClick={refreshPaymentMethode} id="paypal" name="zahlungsart" type="radio" value={"via Paypal"} required/>
@@ -147,7 +147,7 @@ const BookingPage = props => {
                         </Form.Check>
                         <Form.Check type="radio">
                             <Form.Check.Input onClick={refreshPaymentMethode} id="bar" name="zahlungsart" type="radio" value={"in Bar bei Abholung"}/>
-                            <Form.Check.Label htmlFor="Barzahlung"><img src={barIcon} className={"icon"} alt="Barzahlung"/> Bar bei Abholung</Form.Check.Label>
+                            <Form.Check.Label htmlFor="bar"><img src={barIcon} className={"icon"} alt="Barzahlung"/> Bar bei Abholung</Form.Check.Label>
                         </Form.Check>
                     </Col>
                 </Form.Group>

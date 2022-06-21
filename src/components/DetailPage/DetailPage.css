@@ -51,3 +51,14 @@ a.anchor {
 #detailList{
     list-style: none;
 }
+
+
+.image-gallery-slide img {
+    height: 250px;
+    cursor: default;
+}
+
+.fullscreen .image-gallery-slide img {
+    height: auto;
+}
+

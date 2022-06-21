@@ -1,0 +1,7 @@
+.hover:hover{
+    cursor: pointer;
+}
+
+.text-hover:hover{
+    cursor: text;
+}

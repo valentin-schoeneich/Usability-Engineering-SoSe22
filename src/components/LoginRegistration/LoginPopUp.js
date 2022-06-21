@@ -48,16 +48,16 @@ const LoginPopUp = props => {
                     <Form onSubmit={handleSubmit}>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>E-Mail</Form.Label>
+                            <Form.Label htmlFor="email" column sm={3} md={5} lg={3}>E-Mail</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="email"/>
+                            <Form.Control id="email" onChange={handleChange} name="email" />
                             </Col>
                         </Form.Group>
 
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label column sm={3} md={5} lg={3}>Passwort</Form.Label>
+                            <Form.Label htmlFor={"password"} column sm={3} md={5} lg={3}>Passwort</Form.Label>
                             <Col sm={9} md={7} lg={9}>
-                            <Form.Control onChange={handleChange} name="password" isInvalid={loginErr}/>
+                            <Form.Control id={"password"} onChange={handleChange} name="password" isInvalid={loginErr}/>
                             <Form.Control.Feedback type="invalid">
                                 E-Mail oder Password falsch!
                             </Form.Control.Feedback>
