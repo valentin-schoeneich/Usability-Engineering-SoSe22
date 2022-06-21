@@ -58,8 +58,7 @@ const SearchFields = props => {
     function helper(value){
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
         let date = new Date(value);
-        // TODO was war hier die intention? vergleich mit sich selbst wirft warning
-        if(date.getTime() === date.getTime()){
+        if(!isNaN(date.getTime())){
             return date.toLocaleDateString('de-DE', options);
         }
         return "";
@@ -67,9 +66,10 @@ const SearchFields = props => {
 
     function changeTextToDateInput(target){
         if(target.type === "text"){
+            let dateString = target.value.substr(6,4) + "-" + target.value.substr(3,2) + "-" + (target.value.substr(0,2))
             target.type = "date";
-            if(target.value !== ""){
-                target.value = target.value.substr(6, 4) + "-" + target.value.substr(3, 2) + "-" + (target.value.substr(0, 2));
+            if(dateString !== "--"){
+                target.value = dateString;
             }
             target.showPicker()
         }

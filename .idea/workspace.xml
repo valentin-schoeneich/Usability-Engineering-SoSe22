@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Cursoränderungen bei Klickbaren Objekten">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/AbortPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/SearchFields.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -303,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655812590772</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="warnings">
+      <created>1655813358503</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655813358503</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +325,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login Popup" />
     <MESSAGE value="Registration Popup" />
     <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
@@ -346,6 +349,7 @@
     <MESSAGE value="CarTile design 2" />
     <MESSAGE value="CarTile design 3" />
     <MESSAGE value="Cursoränderungen bei Klickbaren Objekten" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cursoränderungen bei Klickbaren Objekten" />
+    <MESSAGE value="warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="warnings" />
   </component>
 </project>
