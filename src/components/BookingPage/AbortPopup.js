@@ -2,7 +2,13 @@ import React from 'react';
 import {Modal} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
+function back(){
+    window.history.back();
+}
+
 const AbortPopup = props => {
+
+
 
     return (
         <div>
@@ -11,8 +17,7 @@ const AbortPopup = props => {
                     <Modal.Title>Buchungsvorgang wirklich Abbrechen?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    {/* TODO warning: Script URL is a form of eval, laut stackoverflow sind href mit javascript: zu vermeiden*/}
-                    <Button variant="danger" type="button" className="mx-2" href={"javascript:history.back()"}>
+                    <Button variant="danger" type="button" className="mx-2" onClick={back}>
                         Abbrechen
                     </Button>
                         <Button variant="primary" type="button" onClick={props.switchPopUp}>

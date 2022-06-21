@@ -67,9 +67,10 @@ const SearchFields = props => {
 
     function changeTextToDateInput(target){
         if(target.type === "text"){
-            let dateString = target.value.substr(6,4) + "-" + target.value.substr(3,2) + "-" + (target.value.substr(0,2))
             target.type = "date";
-            target.value = dateString;
+            if(target.value !== ""){
+                target.value = target.value.substr(6, 4) + "-" + target.value.substr(3, 2) + "-" + (target.value.substr(0, 2));
+            }
             target.showPicker()
         }
     }

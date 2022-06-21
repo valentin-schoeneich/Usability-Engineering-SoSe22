@@ -202,8 +202,7 @@ const DetailPage = props => {
                 </Col>
             </Row>
             <hr style={{height: "3px"}}/>
-            {/*TODO hier kommt einen warning zu dem anchor dass da wohl ein href benötigt wird*/}
-            <a className="anchor" id="top"> </a>
+            <p className="anchor" id="top"> </p>
             <Row>
                 <Col>
                     <h3>Ausstatung</h3>
