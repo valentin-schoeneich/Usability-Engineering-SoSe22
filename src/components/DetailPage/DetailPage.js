@@ -190,12 +190,19 @@ const DetailPage = props => {
                             <h2>Preis</h2>
                         </Card.Header>
                         <Card.Body>
-                            <ul >
-                                <li>€/Tag: <span id="pricePerDay"/>€</li>
-                                <li>Kautoin: <span id={"deposit"}/>€</li>
-                                <li id={"limit"}>Kilometerlimit: <span/>km</li>
-                            </ul>
-                            <div id={"summary"}><span id={"finalPrice"}/>€ (inkl. Kaution) für <span id={"days"}/> Tage, vom <span id={"from"}/> bis <span id={"to"}/></div>
+                            <div>
+                                <div>
+                                    <strong>Gesammtpreis (Inkl. Kaution): <span id={"finalPrice"}/>€</strong>
+                                    <span> vom </span>
+                                    <span id={"from"}/> bis <span id={"to"}/>
+                                </div>
+                                <ul>
+                                    <li><span id={"days"}/> Tage je <span id={"pricePerDay"}/>€/Tag</li>
+                                    <li>Kaution: <span id={"deposit"}/>€</li>
+                                    <li id={"limit"}>Kilometerlimit: <span/>km</li>
+                                </ul>
+
+                            </div>
                             <Button id={"bookButton"} href={"/bookingPage/" + id + "/" + start + "/" + end}>Jetzt Buchen </Button>
                         </Card.Body>
                     </Card>
