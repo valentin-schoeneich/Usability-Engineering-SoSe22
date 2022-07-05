@@ -103,7 +103,7 @@ const SearchFields = props => {
                 <Col>
                     <Form.Control
                         type="text"
-                        placeholder="Von"
+                        placeholder="Abholdatum"
                         min={todayDate}
 
                         onFocus={(e) => (changeTextToDateInput(e.target))}
@@ -124,7 +124,7 @@ const SearchFields = props => {
                 <Col>
                     <Form.Control
                         type="text"
-                        placeholder ="Bis"
+                        placeholder ="Rückgabedatum"
                         onFocus={(e) => (changeTextToDateInput(e.target))}
                         onBlur={(e) => (changeDateToTextInput(e.target))}
                         min= {startD?startD.value:todayDate}
