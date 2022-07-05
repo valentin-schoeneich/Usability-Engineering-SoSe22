@@ -218,8 +218,6 @@ const DetailPage = props => {
                     <ul id={"didntHaveUnimportantDetails"} className="has_or_not">
                     </ul>
                 </Col>
-            </Row>
-            <Row >
                 <Col>
                     <h3>Assistenssysteme</h3>
                     <ul id={"assistence"} className="has_or_not">
@@ -227,8 +225,6 @@ const DetailPage = props => {
                     <ul id={"didntHaveassistence"} className="has_or_not">
                     </ul>
                 </Col>
-            </Row>
-            <Row >
                 <Col>
                     <h3>Schutz</h3>
                     <ul id={"insurence"} className="has_or_not">

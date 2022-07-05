@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="removedHardcodes" />
+        <entry key="$PROJECT_DIR$" value="24af39339fbbc264daf398fd21c6561a25f7cf71" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,6 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>
@@ -348,7 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Registration Popup" />
     <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
     <MESSAGE value="Navbar changes on successfull login" />
@@ -373,6 +373,7 @@
     <MESSAGE value="CarTile design 3" />
     <MESSAGE value="Cursoränderungen bei Klickbaren Objekten" />
     <MESSAGE value="warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="warnings" />
+    <MESSAGE value="fix 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 4" />
   </component>
 </project>
