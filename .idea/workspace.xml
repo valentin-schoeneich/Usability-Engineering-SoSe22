@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="warnings">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailPage/DetailPage.js" afterDir="false" />
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="fix 6">
+      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655814209746</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix 6">
+      <created>1657015214926</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1657015214926</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +355,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Registration form, validation, post request" />
     <MESSAGE value="Structure of cars json" />
     <MESSAGE value="Navbar changes on successfull login" />
     <MESSAGE value="Fix: being logged out after reload/routing" />
@@ -374,6 +379,7 @@
     <MESSAGE value="Cursoränderungen bei Klickbaren Objekten" />
     <MESSAGE value="warnings" />
     <MESSAGE value="fix 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 4" />
+    <MESSAGE value="fix 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 6" />
   </component>
 </project>

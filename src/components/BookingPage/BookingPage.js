@@ -155,7 +155,9 @@ const BookingPage = props => {
                 <hr style={{height: "3px"}}/>
 
                 <h3>Zusammenfassung</h3>
-                <p><strong>Das Auto:</strong> <span id={"modelBrand"}/> von <span id={"from"}/> bis <span id={"to"}/></p>
+                <p><strong>Das Auto:</strong> <span id={"modelBrand"}/></p>
+
+                <p><strong>Zeitraum:</strong> <span id={"from"}/> bis <span id={"to"}/></p>
 
                 <div>
                     <strong>Gesammtpreis (Inkl. Kaution): <span id={"finalPrice"}/>€</strong> <span id="Zahlungsart">Zahlungsart noch zu wählen</span>
