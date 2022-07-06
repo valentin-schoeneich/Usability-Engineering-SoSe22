@@ -14,9 +14,22 @@ import Infotainment from "../../imgs/infotainment.png";
 
 
 const CarTile = props => {
-
-
     const { startDate, endDate } = useParams();
+
+    const calcuateRentDays = () => {
+        let from = new Date(startDate);
+        let to = new Date(endDate);
+        let days = ((to - from) / 1000 / 60 / 60 / 24) + 1;
+        return days;
+    }
+
+    const calculatePrice = () => {
+        let days = calcuateRentDays();
+        let pricePerDay = props.car.pricePerDay? parseFloat(props.car.pricePerDay) : 0;
+        let deposit = props.car.deposit? parseFloat(props.car.deposit) : 0;
+
+        return days * pricePerDay + deposit;
+    }
 
     return (
         <>
@@ -46,6 +59,10 @@ const CarTile = props => {
                             ? <img src={tick} style={{height: "20px"}} alt="img"/>
                             : <img src={cross} style={{height: "20px"}} alt="img"/>}
                             {" Kaution: " + props.car.deposit + " €"}<br/>
+                        {props.car.pricePerDay
+                            ? <img src={tick} style={{height: "20px"}} alt="img"/>
+                            : <img src={cross} style={{height: "20px"}} alt="img"/>}
+                            {" Preis/Tag: " + props.car.pricePerDay + " €"}<br/>
 
                         <span className="img-with-text" style={{verticalAlign: "top", display: "inline-block", textAlign: "center", width: "50px"}}>
                             <img src={Sitze} style={{height: "20px"}} alt="img"/>
@@ -72,7 +89,7 @@ const CarTile = props => {
 
                 </Card.Body>
                 <Card.Footer>
-                    <span style={{fontSize: "2rem"}}>{props.car.pricePerDay + " €"}</span> <span>pro Tag</span>
+                    <span style={{fontSize: "2rem"}}>{calculatePrice() + " €"}</span> <span>Gesamtpreis inkl. Kaution für {calcuateRentDays()} Tage</span>
                     <Button
                         href={"/detailPage/" + props.car.id + "/" + startDate + "/" + endDate}
                         style={{float: "right"}}

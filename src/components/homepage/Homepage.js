@@ -33,13 +33,13 @@ const Homepage = props => {
             <div id="carArea">
                 <Container className="suggestions">
                     <Col>
-                        <CarSuggestions carData = {carsData ? carsData[0] : ""}/>
-                    </Col>
-                    <Col style={{marginRight:"2%",marginLeft:"2%"}}>
                         <CarSuggestions carData = {carsData ? carsData[1] : ""}/>
                     </Col>
-                    <Col>
+                    <Col style={{marginRight:"2%",marginLeft:"2%"}}>
                         <CarSuggestions carData = {carsData ? carsData[2] : ""}/>
+                    </Col>
+                    <Col>
+                        <CarSuggestions carData = {carsData ? carsData[5] : ""}/>
                     </Col>
                 </Container>
                 {successPopUp
