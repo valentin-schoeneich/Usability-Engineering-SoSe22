@@ -65,10 +65,10 @@
     },
     {
       "id": 1,
-      "pricePerDay": "1500",
-      "deposit": "20000",
+      "pricePerDay": "75",
+      "deposit": "200",
       "kilometerLimit": "",
-      "img": "https://content.homenetiol.com/2000157/2065512/0x0/427a4d0eb1a74a9fa00b66aab443995d.jpg",
+      "img": "https://cdn.wheel-size.com/automobile/body/opel-astra-2012-2017-1649338431.7017512.jpg",
       "location": "Oestrich",
       "booked": [
         {
@@ -81,11 +81,11 @@
         }
       ],
       "details": {
-        "class": "Sportwagen",
-        "brand": "Ferrari",
-        "model": "F40",
-        "seats": "2",
-        "doors": "2",
+        "class": "Kompaktwagen",
+        "brand": "Opel",
+        "model": "Astra",
+        "seats": "5",
+        "doors": "4",
         "gearbox": "Manuell",
         "aircon": "true",
         "infotainment": "false",
@@ -93,8 +93,8 @@
       },
       "protectionServices": {
         "fullyComprehensiveInsurance": "true",
-        "glassTireProtection": "true",
-        "underbodyProtection": "true"
+        "glassTireProtection": "false",
+        "underbodyProtection": "false"
       }
     },
     {
@@ -197,8 +197,8 @@
     },
     {
       "id": 5,
-      "pricePerDay": "80",
-      "deposit": "200",
+      "pricePerDay": "150",
+      "deposit": "250",
       "kilometerLimit": "1500",
       "img": "https://cdn.motor1.com/images/mgl/1XgwK/s3/bmw-3er-2019-front.jpg",
       "location": "Frankfurt",
@@ -272,27 +272,27 @@
     },
     {
       "id": 8,
-      "pricePerDay": "500",
-      "deposit": "3000",
+      "pricePerDay": "120",
+      "deposit": "300",
       "kilometerLimit": "500",
-      "img": "https://images.finder.porsche.com/a02d2374-a146-42c1-8775-8838f68226d2/1920x1440",
+      "img": "https://cdn-www.pod-point.com/skoda-octavia-white-background.jpg?mtime=20201203114418&focal=none",
       "location": "Frankfurt",
       "booked": [],
       "details": {
-        "class": "Sportwagen",
-        "brand": "Porsche",
-        "model": "911 GT3 RS",
-        "seats": "2",
-        "doors": "2",
+        "class": "Mittelklasse",
+        "brand": "Skoda",
+        "model": "Octavia",
+        "seats": "5",
+        "doors": "4",
         "gearbox": "Automatik",
-        "aircon": "false",
-        "infotainment": "false",
-        "navigation": "false"
+        "aircon": "true",
+        "infotainment": "true",
+        "navigation": "true"
       },
       "protectionServices": {
         "fullyComprehensiveInsurance": "true",
         "glassTireProtection": "true",
-        "underbodyProtection": "true"
+        "underbodyProtection": "false"
       }
     },
     {
@@ -406,7 +406,7 @@
       "details": {
         "class": "Oberklasse",
         "brand": "Audi",
-        "model": "E-Tron GT",
+        "model": "E-Tron",
         "seats": "4",
         "doors": "4",
         "gearbox": "Automatik",
@@ -454,7 +454,7 @@
       "location": "Frankfurt",
       "booked": [],
       "details": {
-        "class": "Oberklasse",
+        "class": "Sportwagen",
         "brand": "Audi",
         "model": "RS6",
         "seats": "5",
@@ -506,7 +506,7 @@
       "details": {
         "class": "Oberklasse",
         "brand": "Audi",
-        "model": "E-Tron GT",
+        "model": "E-Tron",
         "seats": "4",
         "doors": "4",
         "gearbox": "Automatik",
@@ -556,34 +556,9 @@
       "details": {
         "class": "Oberklasse",
         "brand": "Audi",
-        "model": "E-Tron GT",
+        "model": "E-Tron",
         "seats": "4",
         "doors": "4",
-        "gearbox": "Automatik",
-        "aircon": "true",
-        "infotainment": "true",
-        "navigation": "true"
-      },
-      "protectionServices": {
-        "fullyComprehensiveInsurance": "true",
-        "glassTireProtection": "true",
-        "underbodyProtection": "true"
-      }
-    },
-    {
-      "id": 20,
-      "pricePerDay": "500",
-      "deposit": "3000",
-      "kilometerLimit": "500",
-      "img": "https://images.finder.porsche.com/a02d2374-a146-42c1-8775-8838f68226d2/1920x1440",
-      "location": "Oestrich",
-      "booked": [],
-      "details": {
-        "class": "Sportwagen",
-        "brand": "Porsche",
-        "model": "911 GT3 RS",
-        "seats": "2",
-        "doors": "2",
         "gearbox": "Automatik",
         "aircon": "true",
         "infotainment": "true",

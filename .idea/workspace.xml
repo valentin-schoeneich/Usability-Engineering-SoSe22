@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="fix 6">
-      <change beforePath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookingPage/BookingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +49,10 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\NoahLanger\AppData\Local\JetBrains\WebStorm 2021.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -123,6 +130,7 @@
       <workItem from="1656408218009" duration="632000" />
       <workItem from="1656436303357" duration="607000" />
       <workItem from="1657014044653" duration="831000" />
+      <workItem from="1657093775105" duration="1897000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
