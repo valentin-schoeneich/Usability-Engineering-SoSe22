@@ -1,5 +1,5 @@
 import React,  { useState } from 'react';
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {ButtonGroup, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import LoginButton from "./LoginRegistration/LoginButton";
 import RegistrationButton from "./LoginRegistration/RegistrationButton";
 import carlogo from "../imgs/rent-a-car.png";
@@ -33,13 +33,15 @@ const Navigator = props => {
                     <Nav className="me-auto"/>
                     {accountData === null || Object.keys(accountData).length === 0
                         ? <>
-                            <LoginButton onLogin={handleLogin}/>
-                            <Navbar.Text>|</Navbar.Text>
-                            <RegistrationButton/>
+                            <ButtonGroup>
+                                <LoginButton onLogin={handleLogin}/>
+                                {/*<Navbar.Text>|</Navbar.Text>*/}
+                                <RegistrationButton/>
+                            </ButtonGroup>
                         </>
                         : <>
-                            <NavDropdown title={JSON.parse(window.localStorage.getItem("accountData")).forename
-                                        + " " + JSON.parse(window.localStorage.getItem("accountData")).surname}
+                            <NavDropdown title={<span className="text-light">{JSON.parse(window.localStorage.getItem("accountData")).forename
+                                + " " + JSON.parse(window.localStorage.getItem("accountData")).surname}</span>}
                             onSelect={handleSelect}>
                                 <NavDropdown.Item eventKey="0" href="/myAccount">Mein Konto</NavDropdown.Item>
                                 <NavDropdown.Item eventKey="1" href="/">Abmelden</NavDropdown.Item>

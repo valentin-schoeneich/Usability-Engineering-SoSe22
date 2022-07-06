@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="fix 6">
+    <list default="true" id="14cc07d4-fab8-40d3-9e5c-c7c6e6cc016c" name="Changes" comment="Calculate and show overall price for each car on filter page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarFilter/CarTile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/LoginButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/LoginButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginRegistration/RegistrationButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1656408218009" duration="632000" />
       <workItem from="1656436303357" duration="607000" />
       <workItem from="1657014044653" duration="831000" />
-      <workItem from="1657093775105" duration="1897000" />
+      <workItem from="1657093775105" duration="3144000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup with navigator and routing">
       <created>1651233415485</created>
@@ -335,7 +335,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657015214926</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Changed sample cars in data.json">
+      <created>1657095927493</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1657095927493</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Calculate and show overall price for each car on filter page">
+      <created>1657096061222</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1657096061222</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,8 +377,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Structure of cars json" />
-    <MESSAGE value="Navbar changes on successfull login" />
     <MESSAGE value="Fix: being logged out after reload/routing" />
     <MESSAGE value="Bug: window.localStorage null on app start" />
     <MESSAGE value="CarFilterPage expanded with filter and car tiles section" />
@@ -388,6 +400,8 @@
     <MESSAGE value="warnings" />
     <MESSAGE value="fix 4" />
     <MESSAGE value="fix 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 6" />
+    <MESSAGE value="Changed sample cars in data.json" />
+    <MESSAGE value="Calculate and show overall price for each car on filter page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculate and show overall price for each car on filter page" />
   </component>
 </project>

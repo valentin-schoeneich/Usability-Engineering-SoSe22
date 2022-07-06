@@ -12,7 +12,7 @@ const LoginButton = props => {
 
     return (
         <>
-            <Button variant="link" onClick={switchLoginPopUp} style={{ textDecoration: 'none' }}>Anmelden</Button>
+            <Button variant="primary" onClick={switchLoginPopUp} style={{ borderRight: "solid" }}>Anmelden</Button>
             {loginPopUp
                 ? <LoginPopUp showPopUp={loginPopUp} switchPopUp={switchLoginPopUp} onLogin={props.onLogin}/>
                 : null}

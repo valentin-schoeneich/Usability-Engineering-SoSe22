@@ -12,7 +12,7 @@ const RegistrationButton = props => {
 
     return (
         <>
-            <Button variant="link" onClick={switchRegistrationPopUp} style={{ textDecoration: 'none' }}>Registieren</Button>
+            <Button variant="primary" onClick={switchRegistrationPopUp} >Registieren</Button>
             {registrationPopUp
                 ? <RegistrationPopUp showPopUp={registrationPopUp} switchPopUp={switchRegistrationPopUp}/>
                 : null}
