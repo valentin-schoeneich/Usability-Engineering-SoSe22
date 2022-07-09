@@ -40,7 +40,7 @@ const LoginPopUp = props => {
 
     return (
         <div>
-            <Modal show={props.showPopUp} onHide={props.switchPopUp} size="xl">
+            <Modal show={props.showPopUp} onHide={props.switchPopUp} size="xl" centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Anmelden</Modal.Title>
                 </Modal.Header>
